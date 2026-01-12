@@ -1,0 +1,26 @@
+{
+  "SHELLY": {
+    "name": "Shelly",
+    "description": "La Brawler de départ. Elle est armée d'un fusil à pompe qui tire une large gerbe de plombs. Idéale pour le combat rapproché.",
+    "role": "Dégâts",
+    "tips": [
+      "Utilisez son Super pour détruire les murs et ouvrir le terrain.",
+      "Essayez de vous rapprocher un maximum pour infliger des dégâts dévastateurs."
+    ],
+    "counters": ["El Primo", "Mortis", "Edgar"],
+    "weak_against": ["Piper", "Brock", "Bea"],
+    "image": "images/shelly.png"
+  },
+  "COLT": {
+    "name": "Colt",
+    "description": "Colt tire une rafale précise de balles avec ses deux revolvers. Sa longue portée et sa haute cadence de tir en font une menace constante.",
+    "role": "Tireur d'élite",
+    "tips": [
+      "Gardez vos distances et prédisez les mouvements ennemis.",
+      "Son Super traverse les murs, utilisez-le pour finir un ennemi caché."
+    ],
+    "counters": ["Shelly (de loin)", "8-Bit"],
+    "weak_against": ["Mortis", "Leon"],
+    "image": "images/colt.png"
+  }
+}
