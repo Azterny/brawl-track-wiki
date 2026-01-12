@@ -1,0 +1,1143 @@
+/* =========================================
+   1. BASE & TYPOGRAPHIE
+   ========================================= */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: 0; 
+    padding: 0;
+    min-height: 100vh;
+    color-scheme: dark;
+    overflow-x: hidden; /* Évite le scroll horizontal indésirable */
+}
+
+h1, h2, h3 { 
+    font-family: 'Lilita One', cursive; 
+    text-transform: uppercase; 
+    color: #ffce00; 
+    letter-spacing: 1px;
+}
+
+/* Liens */
+a { text-decoration: none; transition: 0.2s; }
+a:hover { text-decoration: underline; }
+
+/* Conteneur Standard (Login / Petit Format) */
+.container {
+    padding: 25px;
+    max-width: 400px; 
+    margin: 40px auto;
+    background: #1e1e1e;
+    border-radius: 20px;
+    text-align: center;
+    border: 1px solid #333;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+}
+
+/* Conteneur Large (Dashboard) */
+.container.wide { 
+    max-width: 900px; 
+}
+
+/* Utilitaires */
+.hidden { display: none !important; }
+
+
+/* =========================================
+   2. EN-TÊTE & MENU BURGER (OPTIMISÉ MOBILE)
+   ========================================= */
+.header-bar { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    border-bottom: 2px solid #333; 
+    padding-bottom: 15px; 
+    margin-bottom: 20px; 
+    position: relative;
+}
+
+/* Gestion de l'espace Nom + Badge */
+.header-bar > div:first-child {
+    min-width: 0; 
+    flex: 1;      
+    margin-right: 15px; 
+}
+
+/* Ligne flex Nom + Badge */
+.header-bar > div:first-child > div {
+    display: flex; 
+    align-items: center; 
+    gap: 10px;
+    flex-wrap: nowrap; 
+}
+
+/* Nom du Joueur : Police Fluide (Responsive) */
+#player-name {
+    margin: 0;
+    font-size: clamp(1.2rem, 5vw, 2.2rem); /* S'adapte à la largeur d'écran */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    line-height: 1.2;
+}
+
+#tier-badge {
+    flex-shrink: 0; /* Le badge ne s'écrase jamais */
+}
+
+/* Menu Burger */
+.burger-icon { 
+    font-size: 2rem; 
+    cursor: pointer; 
+    user-select: none;
+    padding: 5px 10px; 
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+.burger-icon:hover { color: #ffce00; transform: scale(1.1); }
+.burger-icon:active { transform: scale(0.95); }
+
+/* Menu Déroulant */
+.menu-overlay {
+    position: absolute; 
+    top: 60px; right: 0; 
+    background: #252525; 
+    border: 1px solid #444; 
+    border-radius: 12px;
+    display: none; 
+    flex-direction: column; 
+    width: 220px; 
+    z-index: 1000; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+    overflow: hidden;
+}
+.menu-overlay.active { 
+    display: flex; 
+    animation: menuPop 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
+}
+
+.menu-item { 
+    padding: 15px; 
+    border-bottom: 1px solid #333; 
+    cursor: pointer; 
+    text-align: left; 
+    font-weight: bold; 
+    transition: background 0.2s, padding-left 0.2s;
+}
+.menu-item:hover { background: #333; color: #ffce00; padding-left: 20px; }
+.menu-item.logout { color: #ff5555; }
+.menu-item.logout:hover { background: #3a1a1a; }
+.menu-item-divider { height: 5px; background: #1a1a1a; }
+
+
+/* =========================================
+   3. ÉLÉMENTS UI (Badges, Inputs, Boutons)
+   ========================================= */
+/* Badges */
+.badge { 
+    padding: 4px 10px; 
+    border-radius: 6px; 
+    font-size: 0.75em; 
+    font-weight: bold; 
+    text-transform: uppercase; 
+    display: inline-block;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.badge-basic { background: #444; color: #ccc; border: 1px solid #666; }
+.badge-subscriber { background: linear-gradient(45deg, #0056b3, #007bff); color: #fff; border: 1px solid #0056b3; }
+.badge-premium { 
+    background: linear-gradient(45deg, #ffce00, #ffa500); 
+    color: #000; 
+    border: 1px solid #ffd700; 
+    box-shadow: 0 0 10px rgba(255, 206, 0, 0.3);
+}
+
+/* Inputs & Selects */
+input, select { 
+    width: 100%; 
+    padding: 12px; 
+    margin: 8px 0; 
+    border-radius: 8px; 
+    border: 2px solid #333; 
+    background: #2a2a2a; 
+    color: white; 
+    box-sizing: border-box; 
+    font-size: 1rem;
+    transition: all 0.2s ease;
+}
+input:focus, select:focus { 
+    outline: none; 
+    border-color: #ffce00; 
+    background: #333;
+}
+
+/* Boutons Style 3D */
+button { 
+    width: 100%; 
+    padding: 12px; 
+    background: linear-gradient(to bottom, #ffce00, #e6b800); 
+    color: black; 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    margin-top: 10px; 
+    position: relative;
+    font-size: 1rem;
+    box-shadow: 0 4px 0 #b38f00; 
+    transition: all 0.1s ease;
+}
+button:hover { filter: brightness(1.1); transform: translateY(-2px); box-shadow: 0 6px 0 #b38f00; }
+button:active { transform: translateY(2px); box-shadow: 0 0 0 #b38f00; }
+
+/* Variantes Boutons */
+.btn-save { background: linear-gradient(to bottom, #28a745, #218838); color: white; box-shadow: 0 4px 0 #1e7e34; }
+.btn-save:hover { box-shadow: 0 6px 0 #1e7e34; }
+.btn-save:active { box-shadow: 0 0 0 #1e7e34; }
+
+.btn-danger { background: linear-gradient(to bottom, #dc3545, #c82333); color: white; box-shadow: 0 4px 0 #bd2130; }
+.btn-danger:hover { box-shadow: 0 6px 0 #bd2130; }
+.btn-danger:active { box-shadow: 0 0 0 #bd2130; }
+
+
+/* =========================================
+   4. FILTRES GRAPHIQUE (SCROLL MOBILE)
+   ========================================= */
+.chart-filters {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+    
+    /* Scroll Horizontal sur mobile */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+    
+    /* Cache Scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 5px;
+}
+.chart-filters::-webkit-scrollbar { display: none; }
+
+.filter-btn {
+    width: auto !important;
+    margin-top: 0 !important;
+    flex: 0 0 auto; /* Empêche rétrécissement */
+    background: #333;
+    color: #ccc;
+    border: 1px solid #444;
+    padding: 8px 16px;
+    font-size: 0.85em;
+    border-radius: 20px;
+    box-shadow: none !important;
+}
+.filter-btn:hover { background: #444; color: white; transform: translateY(-1px); }
+.filter-btn.active {
+    background: #ffce00;
+    color: black;
+    border-color: #ffce00;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 206, 0, 0.4) !important;
+}
+
+
+/* =========================================
+   5. SECTIONS & GRILLES DASHBOARD
+   ========================================= */
+.view-section { display: none; }
+.view-section.active { display: block; animation: slideUpFade 0.4s ease-out; }
+
+/* Stats Grid */
+.stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 15px; }
+.stat-card { 
+    background: #252525; 
+    padding: 15px; 
+    border-radius: 12px; 
+    border: 1px solid #333; 
+    transition: transform 0.3s;
+}
+.stat-card:hover { transform: translateY(-5px); border-color: #444; }
+.stat-value { font-size: 1.6em; font-weight: bold; margin-top: 5px; }
+
+/* Brawlers Grid */
+#brawlers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(80px, 1fr)); gap: 12px; }
+.brawler-card { 
+    background: #222; 
+    border-radius: 8px; 
+    padding: 6px; 
+    text-align: center; 
+    border: 1px solid transparent;
+    transition: all 0.3s;
+}
+.brawler-card:hover { transform: scale(1.1) translateY(-5px); z-index: 10; background: #333; border-color: #ffce00; }
+.brawler-card[style*="grayscale"] { opacity: 0.5; filter: grayscale(100%); }
+.brawler-card[style*="grayscale"]:hover { filter: grayscale(0%); opacity: 1; }
+
+/* --- BOUTONS D'ACTION DASHBOARD --- */
+
+/* État 4 : CLAIM (Standard) */
+.btn-action-yellow {
+    background: linear-gradient(to bottom, #ffce00, #e6b800);
+    color: black;
+    box-shadow: 0 4px 0 #b38f00;
+}
+.btn-action-yellow:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #b38f00;
+}
+.btn-action-yellow:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 0 #b38f00;
+}
+
+/* État 5 : UNCLAIM (Rouge) */
+.btn-action-red {
+    background: linear-gradient(to bottom, #dc3545, #c82333);
+    color: white;
+    box-shadow: 0 4px 0 #bd2130;
+}
+.btn-action-red:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #bd2130;
+}
+.btn-action-red:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 0 #bd2130;
+}
+
+/* État 2 : CLAIMED (Gris désactivé) */
+.btn-disabled-grey {
+    background: #444;
+    color: #888;
+    border: 1px solid #555 !important;
+    box-shadow: none !important;
+}
+
+/* État 3 : RESERVED (Violet désactivé) */
+.btn-disabled-purple {
+    background: #4a148c; /* Violet sombre */
+    color: #e1bee7; /* Violet clair */
+    border: 1px solid #7b1fa2 !important;
+    box-shadow: none !important;
+}
+
+/* =========================================
+   6. PAGE D'ACCUEIL (SPLIT LAYOUT)
+   ========================================= */
+/* Wrapper Global Flexbox */
+.landing-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Important pour le mobile */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+/* Colonnes (Login & Events) */
+.landing-column {
+    flex: 1;
+    min-width: 300px; /* Si < 300px, ça passe à la ligne */
+    
+    background: #1e1e1e;
+    border-radius: 20px;
+    border: 1px solid #333;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    padding: 25px;
+    text-align: center;
+}
+
+/* Carte Événement */
+.event-card {
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    transition: transform 0.2s;
+}
+.event-card:hover { transform: scale(1.02); border-color: #555; }
+
+.event-header {
+    padding: 8px 12px;
+    background: linear-gradient(90deg, #333, #222);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #ffce00;
+}
+
+.event-body { padding: 12px; }
+.map-name { font-size: 1.1em; font-weight: bold; color: white; }
+.event-timer { font-size: 0.8em; color: #888; margin-top: 5px; }
+
+
+/* =========================================
+   7. OVERLAYS & VERROUILLAGE GRAPHIQUE
+   ========================================= */
+.chart-locked-container { position: relative; overflow: hidden; }
+
+/* Contenu flouté */
+.blur-content {
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* Message de verrouillage par dessus */
+.lock-overlay {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(18, 18, 18, 0.6);
+    z-index: 10;
+    text-align: center;
+}
+
+.lock-message {
+    background: #1e1e1e;
+    padding: 20px 30px;
+    border: 1px solid #ffce00;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+.lock-message h3 { margin: 0 0 10px 0; color: white; }
+.lock-message p { margin: 0 0 15px 0; color: #aaa; }
+
+
+/* =========================================
+   8. ANIMATIONS & MEDIA QUERIES
+   ========================================= */
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes menuPop {
+    from { opacity: 0; transform: scale(0.8) translateY(-10px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+/* Ajustements Mobile Fins */
+@media (max-width: 480px) {
+    .header-bar { padding-bottom: 10px; margin-bottom: 15px; }
+    .landing-column { min-width: 100%; } /* Force pleine largeur sur petit mobile */
+}
+
+/* =========================================
+   8. PAGE D'ACCUEIL (SPLIT LAYOUT)
+   ========================================= */
+
+/* Conteneur global qui englobe Login + Events */
+.landing-wrapper {
+    display: flex;
+    flex-wrap: wrap; /* Permet de passer à la ligne sur mobile */
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 10px;
+}
+
+/* Les deux colonnes (Login & Events) */
+.landing-column {
+    flex: 1;
+    min-width: 300px; /* Largeur min avant de passer en dessous */
+    
+    /* On réutilise le style .container mais on gère les marges ici */
+    background: #1e1e1e;
+    border-radius: 20px;
+    border: 1px solid #333;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+    padding: 25px;
+    text-align: center;
+}
+
+/* CARTE ÉVÉNEMENT */
+.event-card {
+    background: #252525;
+    border: 1px solid #333;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    position: relative;
+    text-align: left;
+    transition: transform 0.2s;
+}
+.event-card:hover { transform: scale(1.02); border-color: #555; }
+
+/* Bandeau couleur du mode */
+.event-header {
+    padding: 8px 12px;
+    background: linear-gradient(90deg, #333, #222);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: #ffce00;
+}
+
+/* Détails Map */
+.event-body {
+    padding: 12px;
+}
+.map-name { font-size: 1.1em; font-weight: bold; color: white; }
+.event-timer { font-size: 0.8em; color: #888; margin-top: 5px; }
+
+/* =========================================
+   9. NAVIGATION GRAPHIQUE
+   ========================================= */
+
+.chart-nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: #181818;
+    margin: 10px auto 15px auto; /* Auto permet de bien centrer le bloc */
+    padding: 8px 20px;
+    border-radius: 20px; /* Un peu plus arrondi pour le look "capsule" */
+    border: 1px solid #333;
+    width: fit-content;  /* Le conteneur s'adapte à la largeur du contenu */
+}
+
+/* Texte de la date (ex: "Aujourd'hui") */
+#chart-period-label {
+    font-weight: bold;
+    color: #fff;
+    font-size: 0.95em;
+    min-width: 140px;
+    text-align: center;
+    user-select: none;
+}
+
+/* --- BOUTONS FLÈCHES (< >) --- */
+.nav-arrow {
+    background: transparent !important;
+    border: 1px solid #444 !important;
+    color: #ffce00 !important;
+    width: 32px !important;
+    height: 32px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: none !important;
+}
+
+.nav-arrow:hover { 
+    background: #333 !important; 
+    border-color: #ffce00 !important;
+    transform: scale(1.1);
+}
+
+.nav-arrow:active {
+    transform: scale(0.95);
+}
+
+.nav-arrow:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    border-color: #333 !important;
+    color: #888 !important;
+    transform: none !important;
+    pointer-events: none;
+}
+
+/* --- SÉLECTEUR DE DATE (CALENDRIER 📅) --- */
+/* Style pour l'icône calendrier et son input caché */
+.date-picker-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.date-picker-wrapper:hover {
+    transform: scale(1.2);
+}
+
+/* L'input est invisible mais couvre l'icône pour intercepter le clic */
+#chart-date-picker {
+    cursor: pointer;
+}
+
+/* --- BOUTONS FILTRES (BRAWLERS) --- */
+/* (On garde ton code intact ici) */
+button.filter-btn.blue-active.active {
+    background-color: #00d2ff !important;
+    border-color: #00d2ff !important;
+    color: #000 !important;
+    box-shadow: 0 0 12px rgba(0, 210, 255, 0.6) !important;
+}
+
+button.filter-btn.blue-active:hover {
+    color: #00d2ff;
+    border-color: #00d2ff;
+}
+
+button.filter-btn.blue-active.active:hover {
+    background-color: #33cfff !important;
+    color: #000 !important;
+}
+
+/* Utilitaire pour cacher la barre quand nécessaire */
+.hidden {
+    display: none !important;
+}
+
+/* --- VUE BRAWLER DÉTAILS --- */
+
+/* En-tête (Titre + Bouton Retour) */
+.brawler-header-nav {
+    display: flex;
+    justify-content: space-between; /* Pousse le titre à gauche et le bouton à droite */
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 15px;
+}
+
+/* Bouton Retour */
+.btn-back {
+    background-color: #333;
+    color: white;
+    border: 1px solid #555;
+    
+    /* Taille et positionnement fixes */
+    width: auto;
+    min-width: 100px;
+    height: 40px;
+    padding: 0 20px;
+    
+    /* Centrage du texte */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9em;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.btn-back:hover {
+    background-color: #444;
+    border-color: #00d2ff;
+    box-shadow: 0 0 8px rgba(0, 210, 255, 0.2);
+}
+
+/* Carte d'identité (Image + Nom) */
+.brawler-identity-card {
+    display: flex;
+    align-items: center;
+    background: #252525;
+    padding: 15px;
+    border-radius: 12px;
+    border-left: 5px solid #00d2ff;
+    margin-bottom: 10px;
+}
+
+/* Image du Brawler */
+.brawler-identity-icon {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 2px solid #333;
+}
+
+/* Nom du Brawler */
+#selected-brawler-name {
+    margin: 0;
+    font-size: 1.8em;
+    line-height: 1.2;
+}
+
+/* =========================================
+   10. NAVIGATION HYBRIDE (MOBILE / DESKTOP)
+   ========================================= */
+
+/* Par défaut (Mobile) : On cache la version Desktop */
+.desktop-nav-container {
+    display: none;
+}
+.mobile-nav-container {
+    display: block;
+    position: relative;
+}
+
+/* Style des liens Desktop */
+.nav-link {
+    background: transparent;
+    border: 1px solid transparent;
+    color: #aaa;
+    padding: 8px 12px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: auto; /* Annule le width:100% global des boutons */
+    margin-top: 0;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-link:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    color: #ffce00;
+    background: rgba(255, 206, 0, 0.1);
+    border: 1px solid #ffce00;
+    box-shadow: 0 0 10px rgba(255, 206, 0, 0.2);
+}
+
+.nav-link.logout:hover {
+    color: #ff5555;
+    background: rgba(255, 85, 85, 0.1);
+}
+
+.nav-separator {
+    width: 1px;
+    height: 25px;
+    background: #444;
+    margin: 0 10px;
+}
+
+/* MEDIA QUERY : Écrans larges (Tablette paysage / PC > 768px) */
+@media (min-width: 769px) {
+    .mobile-nav-container {
+        display: none; /* Cache le burger */
+    }
+    
+    .desktop-nav-container {
+        display: flex; /* Affiche la barre */
+        align-items: center;
+        gap: 5px;
+    }
+}
+
+/* =========================================
+   GLOBAL NAVBAR (NOUVEAU)
+   ========================================= */
+.navbar {
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #333;
+    height: 60px;
+    width: 100%;
+    position: sticky; /* Reste en haut */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+/* LOGO */
+.nav-logo {
+    font-family: 'Audiowide', cursive; /* MODIFICATION ICI */
+    font-size: 1.5rem;
+    color: #ffce00;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase; /* Optionnel : force les majuscules */
+}
+
+.nav-logo:hover { 
+    color: #fff; 
+    text-decoration: none; 
+    text-shadow: 0 0 10px rgba(255, 206, 0, 0.5); /* Petit effet néon au survol */
+}
+/* LIENS BUREAU */
+.nav-links, .nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-link {
+    color: #ccc;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.nav-link:hover { color: white; text-decoration: none; }
+
+/* BOUTONS SPECIAUX */
+.nav-btn-cta {
+    background: #ffce00;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: transform 0.2s;
+}
+.nav-btn-cta:hover { transform: scale(1.05); text-decoration: none; }
+
+.nav-btn-user {
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: auto;
+    margin: 0;
+    font-size: 0.9rem;
+}
+.nav-btn-user:hover { background: #444; }
+
+/* DROPDOWNS */
+.dropdown { 
+    position: relative; 
+    display: inline-block;
+    height: 100%; /* Important: Occupe toute la hauteur de la barre */
+    display: flex; 
+    align-items: center; 
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Se place juste sous la barre */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #252525;
+    border: 1px solid #444;
+    border-radius: 8px;
+    min-width: 180px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    padding: 5px 0;
+    
+    /* L'espace visuel (10px sous la barre) */
+    margin-top: 10px; 
+}
+
+.dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -20px;  /* On remonte de 20px pour couvrir largement la marge de 10px */
+    left: 0;
+    width: 100%;
+    height: 20px; /* Hauteur de la zone de sécurité */
+    background: transparent; /* Invisible */
+}
+
+.dropdown-menu.right-aligned { 
+    left: auto; 
+    right: 0; 
+    transform: none; 
+}
+
+/* On garde le menu ouvert si on survole le bouton OU le menu (y compris le pont invisible) */
+.dropdown:hover .dropdown-menu { 
+    display: block; 
+    animation: slideUpFade 0.2s ease-out;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+.dropdown-menu a:hover { 
+    background: #333; 
+    color: #ffce00; 
+}
+.dropdown-divider { 
+    height: 1px; 
+    background: #444; 
+    margin: 5px 0; 
+}
+/* MOBILE / BURGER */
+.nav-burger {
+    display: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+.mobile-nav-overlay {
+    position: fixed; top: 0; right: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 2000;
+    display: flex;
+    justify-content: flex-end;
+}
+.mobile-nav-content {
+    width: 280px;
+    height: 100%;
+    background: #1a1a1a;
+    padding: 20px;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+}
+.mobile-link {
+    padding: 15px 0;
+    border-bottom: 1px solid #333;
+    color: #eee;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+.mobile-user-info {
+    background: #252525; padding: 10px; border-radius: 8px; margin-bottom: 10px; color: #aaa; font-size: 0.9em;
+}
+
+/* --- PERSONNALISATION FLATPICKR (Style Brawl Track) --- */
+
+/* 1. Conteneur global (Fond sombre) */
+.flatpickr-calendar, .flatpickr-calendar.hasWeeks .dayContainer {
+    background: #1e1e1e !important;
+    border: 1px solid #333 !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.9) !important;
+    border-radius: 12px !important;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+/* 2. En-tête (Mois/Année) */
+.flatpickr-months .flatpickr-month {
+    background: #1e1e1e !important;
+    color: #fff !important;
+    fill: #fff !important;
+    padding-top: 10px;
+}
+.flatpickr-current-month .flatpickr-monthDropdown-months,
+.flatpickr-current-month input.cur-year {
+    color: #fff !important;
+    font-weight: bold !important;
+}
+.flatpickr-months .flatpickr-prev-month, 
+.flatpickr-months .flatpickr-next-month {
+    color: #fff !important;
+    fill: #fff !important;
+}
+.flatpickr-months .flatpickr-prev-month:hover svg, 
+.flatpickr-months .flatpickr-next-month:hover svg {
+    fill: #ffce00 !important;
+}
+
+/* 3. Jours de la semaine */
+span.flatpickr-weekday {
+    background: #1e1e1e !important;
+    color: #888 !important;
+}
+
+/* 4. Les jours (Numéros actifs) */
+.flatpickr-day {
+    color: #ccc !important;
+}
+.flatpickr-day:hover, .flatpickr-day:focus {
+    background: #333 !important;
+    border-color: #444 !important;
+}
+
+/* 5. SÉLECTION (Le Jaune Important) */
+.flatpickr-day.selected, 
+.flatpickr-day.startRange, 
+.flatpickr-day.endRange, 
+.flatpickr-day.selected.inRange, 
+.flatpickr-day.startRange.inRange, 
+.flatpickr-day.endRange.inRange {
+    background: #ffce00 !important;
+    border-color: #ffce00 !important;
+    color: #000 !important; /* Texte noir sur jaune */
+    font-weight: bold !important;
+    box-shadow: none !important;
+}
+
+/* Aujourd'hui (Petit contour) */
+.flatpickr-day.today {
+    border-color: #ffce00 !important;
+    color: #ffce00 !important;
+}
+.flatpickr-day.today:hover {
+    background: #ffce00 !important;
+    color: #000 !important;
+}
+
+/* 6. [NOUVEAU] Jours Désactivés / Non cliquables (Futur, etc.) */
+.flatpickr-day.flatpickr-disabled,
+.flatpickr-day.flatpickr-disabled:hover,
+.flatpickr-day.prevMonthDay,
+.flatpickr-day.nextMonthDay,
+.flatpickr-day.notAllowed,
+.flatpickr-day.notAllowed.prevMonthDay,
+.flatpickr-day.notAllowed.nextMonthDay {
+    color: #444 !important; /* Beaucoup plus sombre (gris foncé) */
+    background: transparent !important;
+    border-color: transparent !important;
+    cursor: default !important;
+}
+
+/* --- STYLE PLUGIN MOIS (Pour le mode 31 jours) --- */
+.flatpickr-monthSelect-theme-dark {
+    background: #1e1e1e !important;
+}
+.flatpickr-monthSelect-month {
+    color: #ccc !important;
+    background: #1e1e1e !important; 
+    border: 1px solid transparent;
+}
+.flatpickr-monthSelect-month:hover {
+    background: #333 !important;
+    color: #fff !important;
+}
+/* Le mois sélectionné */
+.flatpickr-monthSelect-month.selected {
+    background: #ffce00 !important;
+    border-color: #ffce00 !important;
+    color: #000 !important;
+    font-weight: bold;
+}
+
+/* Le mois désactivé (Futur) */
+.flatpickr-monthSelect-month.disabled {
+    color: #444 !important;
+}
+
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+    .desktop-only { display: none !important; }
+    .nav-burger { display: block; }
+}
+
+/* =========================================
+   === HEADER DASHBOARD (Profil & Actions) ===
+   ========================================= */
+
+/* Le conteneur principal */
+.header-bar {
+    display: flex;
+    justify-content: space-between; /* Infos à gauche, Actions à droite */
+    align-items: center;            /* Alignement vertical centré */
+    padding: 15px 20px;
+    background-color: rgba(0, 0, 0, 0.4); /* Fond sombre semi-transparent */
+    border-radius: 12px;            /* Coins arrondis */
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure subtile */
+    margin-bottom: 25px;
+    backdrop-filter: blur(5px);     /* Effet de flou arrière-plan (glassmorphism) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Le groupe de gauche (Icône + Textes) */
+#header-left-group {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espace entre l'image et le nom */
+}
+
+/* L'image de l'icône de profil */
+#player-icon {
+    width: 56px;       /* Taille fixe */
+    height: 56px;
+    border-radius: 10px; /* Coins un peu plus arrondis */
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    object-fit: cover;
+    background-color: #222; /* Couleur de fond pendant le chargement */
+    transition: transform 0.2s ease;
+}
+
+#player-icon:hover {
+    transform: scale(1.05); /* Petit effet de zoom au survol */
+    border-color: #ffce00;  /* Bordure jaune au survol */
+}
+
+/* Le Nom du joueur */
+#player-name {
+    margin: 0;
+    font-size: 1.6rem;
+    font-weight: 800;
+    line-height: 1.2;
+    letter-spacing: 0.5px;
+}
+
+/* Le Tag (#XXXXX) */
+#player-tag {
+    color: #aaa;
+    font-size: 0.95rem;
+    font-family: 'Courier New', monospace; /* Police style "code" */
+    font-weight: bold;
+    margin-top: 2px;
+    opacity: 0.8;
+}
+
+/* Le groupe de droite (Boutons Claim/Reserved) */
+#header-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* --- RESPONSIVE (Mobile) --- */
+@media (max-width: 600px) {
+    .header-bar {
+        flex-direction: column; /* Empile les éléments verticalement */
+        text-align: center;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    #header-left-group {
+        flex-direction: column; /* Image au-dessus du texte */
+        gap: 10px;
+    }
+
+    #player-icon {
+        width: 64px; /* Un peu plus gros sur mobile */
+        height: 64px;
+    }
+    
+    #header-actions {
+        width: 100%;
+        justify-content: center; /* Centre le bouton */
+    }
+}
