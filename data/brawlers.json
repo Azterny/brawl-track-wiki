@@ -42,7 +42,7 @@
     ],
     "counters": ["Mortis", "Edgar", "El Primo"],
     "weak_against": ["Piper", "Brock", "Belle"],
-    "image": "images/brawlers/shelly.png"
+    "image": "images/brawlers/16000000.png"
   },
   "COLT": {
     "id": 16000001,
@@ -87,7 +87,7 @@
     ],
     "counters": ["8-Bit", "Bull", "Frank"],
     "weak_against": ["Mico", "Mortis", "Leon"],
-    "image": "images/brawlers/colt.png"
+    "image": "images/brawlers/16000001.png"
   },
   "EL_PRIMO": {
     "id": 16000003,
@@ -132,7 +132,7 @@
     ],
     "counters": ["Frank", "Bibi", "Mortis"],
     "weak_against": ["Shelly", "Colette", "Gale"],
-    "image": "images/brawlers/el_primo.png"
+    "image": "images/brawlers/16000003.png"
   },
   "MORTIS": {
     "id": 16000004,
@@ -177,7 +177,7 @@
     ],
     "counters": ["Dynamike", "Piper", "Grom"],
     "weak_against": ["Shelly", "Bull", "Jacky"],
-    "image": "images/brawlers/mortis.png"
+    "image": "images/brawlers/16000004.png"
   },
   "SPIKE": {
     "id": 16000005,
@@ -222,6 +222,6 @@
     ],
     "counters": ["Frank", "Bull", "8-Bit"],
     "weak_against": ["Piper", "Belle", "Tick"],
-    "image": "images/brawlers/spike.png"
+    "image": "images/brawlers/16000005.png"
   }
 }
