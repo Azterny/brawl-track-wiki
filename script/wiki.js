@@ -1,134 +1,154 @@
-// wiki.js - Le cerveau de BrawlOpédia
+// script/wiki.js
 
-// État global de l'application
 const appState = {
-    view: 'home', // 'home', 'brawler', 'mode', 'mechanics'
+    view: 'home', 
     data: {
         brawlers: {},
-        modes: {}
+        modes: {},
+        mechanics: {}
     }
 };
 
 // =========================================
-// 1. INITIALISATION & ROUTEUR
+// 1. INITIALISATION
 // =========================================
 document.addEventListener('DOMContentLoaded', () => {
     init();
 });
 
 async function init() {
-    // 1. Charger les données (Simulé pour l'instant)
-    // await loadData(); 
+    // On charge les fichiers JSON vides pour l'instant (évite les erreurs 404)
+    await loadAllData(); 
     
-    // 2. Détecter la page via l'URL
+    // Détection de la page via URL
     const params = new URLSearchParams(window.location.search);
     const page = params.get('page');
     const id = params.get('id');
 
-    // 3. Router
+    // Routeur
     if (!page) {
         renderHome();
+    } else if (page === 'brawlers_list') {
+        renderBrawlersList(); // Nouvelle fonction
     } else if (page === 'brawler' && id) {
         renderBrawlerDetail(id);
     } else if (page === 'modes') {
         renderModesList();
+    } else if (page === 'mechanics') {
+        renderMechanics();
     } else {
-        renderHome(); // Fallback
+        renderHome();
     }
 }
 
 // =========================================
-// 2. RENDU DES PAGES
+// 2. CHARGEMENT DES DONNÉES
+// =========================================
+async function loadAllData() {
+    try {
+        // Promise.all pour charger en parallèle
+        const [brawlers, modes, mechanics] = await Promise.all([
+            fetch('data/brawlers.json').then(res => res.json()),
+            fetch('data/modes.json').then(res => res.json()),
+            fetch('data/mechanics.json').then(res => res.json())
+        ]);
+
+        appState.data.brawlers = brawlers;
+        appState.data.modes = modes;
+        appState.data.mechanics = mechanics;
+
+        console.log("Données chargées (Vides pour l'instant):", appState.data);
+
+    } catch (error) {
+        console.error("Erreur chargement données. Vérifiez que les fichiers .json existent dans /data", error);
+        document.getElementById('app').innerHTML = `<h3 style="color:red; text-align:center">Erreur: Impossible de charger les données JSON.</h3>`;
+    }
+}
+
+// =========================================
+// 3. VUES (RENDERING)
 // =========================================
 
-/**
- * Affiche la page d'accueil (Home)
- */
 function renderHome() {
     const app = document.getElementById('app');
     
     app.innerHTML = `
         <div class="hero-section">
             <h1>BrawlOpédia</h1>
-            <p style="color:#ccc; font-size:1.1em;">La base de connaissances ultime pour Brawl Stars.</p>
-            
+            <p style="color:#ccc; font-size:1.1em;">La base de connaissances ultime.</p>
             <div class="search-wrapper">
-                <input type="text" id="global-search" placeholder="Rechercher un Brawler, un Mode...">
+                <input type="text" id="global-search" placeholder="Rechercher...">
                 <span class="material-icons search-icon">search</span>
             </div>
         </div>
 
-        <div class="featured-section">
-            <div class="featured-item">
-                <h3 style="margin-top:0;">🔥 Brawler du Moment</h3>
-                <div style="display:flex; align-items:center; gap:15px;">
-                    <div style="width:50px; height:50px; background:#333; border-radius:8px;"></div>
-                    <div>
-                        <strong style="color:white; font-size:1.2em;">Mélodie</strong>
-                        <div style="color:#aaa; font-size:0.9em;">Assassin Mythique</div>
-                    </div>
-                </div>
-            </div>
-            <div class="featured-item">
-                <h3 style="margin-top:0;">🗺️ Map Actuelle</h3>
-                <div style="display:flex; align-items:center; gap:15px;">
-                    <div style="width:50px; height:50px; background:#333; border-radius:8px;"></div>
-                    <div>
-                        <strong style="color:white; font-size:1.2em;">Razzia de Gemmes</strong>
-                        <div style="color:#aaa; font-size:0.9em;">Map: Mine Rocailleuse</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="nav-grid">
-            <div class="nav-card" onclick="alert('Bientôt : Liste des Brawlers')">
+            <div class="nav-card" onclick="window.location.href='?page=brawlers_list'">
                 <span class="material-icons">face</span>
                 <h2>Brawlers</h2>
-                <p>Stats, Counters, Builds et Skins de tous les persos.</p>
+                <p>Stats, Counters & Builds</p>
             </div>
 
-            <div class="nav-card" onclick="alert('Bientôt : Modes de jeu')">
+            <div class="nav-card" onclick="window.location.href='?page=modes'">
                 <span class="material-icons">sports_esports</span>
                 <h2>Modes de Jeu</h2>
-                <p>Règles, Rotations et meilleures compos.</p>
+                <p>Règles & Rotations</p>
             </div>
 
-            <div class="nav-card" onclick="alert('Bientôt : Mécaniques')">
+            <div class="nav-card" onclick="window.location.href='?page=mechanics'">
                 <span class="material-icons">build</span>
                 <h2>Mécaniques</h2>
-                <p>Gears, Stats d'état et fonctionnement du jeu.</p>
+                <p>Gears & Star Powers</p>
             </div>
         </div>
     `;
-    
-    // Ajout d'un écouteur sur la recherche (Mock)
-    document.getElementById('global-search').addEventListener('keyup', (e) => {
-        if(e.key === 'Enter') {
-            alert('Recherche lancée pour : ' + e.target.value);
-        }
-    });
 }
 
-/**
- * Placeholder pour le détail Brawler
- */
-function renderBrawlerDetail(id) {
+// --- VUES TEMPORAIRES (En attendant le remplissage des JSON) ---
+
+function renderBrawlersList() {
     const app = document.getElementById('app');
-    app.innerHTML = `<h1>Détail du Brawler : ${id}</h1><a href="index.html" style="color:#ffce00">< Retour</a>`;
+    // Vérification si JSON vide
+    const isEmpty = Object.keys(appState.data.brawlers).length === 0;
+    
+    let content = `
+        <a href="index.html" style="color:#ffce00; display:inline-block; margin-bottom:20px;">&larr; Retour Accueil</a>
+        <h1>Liste des Brawlers</h1>
+    `;
+
+    if (isEmpty) {
+        content += `<div style="background:#252525; padding:20px; border-radius:10px; text-align:center;">
+                        <span class="material-icons" style="font-size:3em; color:#444">inbox</span>
+                        <p>Aucun Brawler trouvé dans <code>data/brawlers.json</code>.</p>
+                    </div>`;
+    } else {
+        // Ici on générera la grille plus tard
+        content += `<p>Des données ont été trouvées ! (À implémenter)</p>`;
+    }
+
+    app.innerHTML = content;
+}
+
+function renderBrawlerDetail(id) {
+    document.getElementById('app').innerHTML = `
+        <a href="?page=brawlers_list" style="color:#ffce00">&larr; Retour Liste</a>
+        <h1>Détails : ${id}</h1>
+        <p>En attente de données...</p>
+    `;
 }
 
 function renderModesList() {
-    const app = document.getElementById('app');
-    app.innerHTML = `<h1>Liste des Modes</h1><a href="index.html" style="color:#ffce00">< Retour</a>`;
+    document.getElementById('app').innerHTML = `
+        <a href="index.html" style="color:#ffce00">&larr; Retour Accueil</a>
+        <h1>Modes de Jeu</h1>
+        <p>Le fichier <code>modes.json</code> est vide.</p>
+    `;
 }
 
-// Fonction de chargement des données (À implémenter plus tard)
-async function loadData() {
-    try {
-        const response = await fetch('data/brawlers.json');
-        appState.data.brawlers = await response.json();
-    } catch (error) {
-        console.error("Erreur chargement données:", error);
-    }
+function renderMechanics() {
+    document.getElementById('app').innerHTML = `
+        <a href="index.html" style="color:#ffce00">&larr; Retour Accueil</a>
+        <h1>Mécaniques & Gears</h1>
+        <p>Le fichier <code>mechanics.json</code> est vide.</p>
+    `;
 }
