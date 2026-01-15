@@ -2,46 +2,26 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brawl-Track.wiki - Accueil</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@400;700&family=Audiowide&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>BrawlTrack.wiki - Accueil</title>
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="nav-content">
             <a href="index.html" class="nav-logo">BRAWL-TRACK<span style="color:white; font-size:0.8em;">.WIKI</span></a>
-            <div class="nav-links desktop-only">
-                <a href="https://brawl-track.com" class="nav-link">Dashboard</a>
-            </div>
         </div>
     </nav>
 
     <div class="wiki-container">
-        <div class="hero-section">
-            <h1>BrawlOpédia</h1>
-            <p style="color:#ccc;">L'encyclopédie des Brawlers.</p>
-            <div class="search-wrapper">
-                <input type="text" id="global-search" placeholder="Rechercher un brawler...">
-                <span class="material-icons search-icon">search</span>
-            </div>
-        </div>
-
-        <div class="section-title">
-            <h2><span class="material-icons" style="vertical-align: middle;">group</span> Tous les Brawlers</h2>
+        <div id="page-header" class="hero-section">
+            <h1 id="main-title">Encyclopédie</h1>
+            <p id="sub-title">Sélectionnez une catégorie</p>
         </div>
         
-        <div id="brawlers-grid" class="brawlers-grid">
-            <div class="loader">Chargement des données...</div>
-        </div>
+        <div id="content-grid" class="nav-grid"></div>
     </div>
 
-    <footer>
-        <p>&copy; 2026 Brawl-Track.com - Fan Content Policy.</p>
-    </footer>
-
-    <script src="script/home.js"></script>
+    <script src="script/index.js"></script>
 </body>
 </html>
