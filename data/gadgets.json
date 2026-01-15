@@ -1,0 +1,18 @@
+{
+  "AVANCE_RAPIDE": {
+    "id": 23000000,
+    "name": "Avance Rapide",
+    "description": "Shelly se rue vers l'avant sur une courte distance.",
+    "cooldown": "5 sec",
+    "brawler_linked": "Shelly",
+    "image": "images/gadgets/23000000.png"
+  },
+  "COMBO_SPINNER": {
+    "id": 23000004,
+    "name": "Combo Spinner",
+    "description": "Mortis tourne sur lui-même, infligeant 1300 dégâts.",
+    "cooldown": "5 sec",
+    "brawler_linked": "Mortis",
+    "image": "images/gadgets/23000004.png"
+  }
+}
