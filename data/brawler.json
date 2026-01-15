@@ -1,1 +1,227 @@
-{}
+{
+  "SHELLY": {
+    "id": 16000000,
+    "name": "Shelly",
+    "rarity": "Starting",
+    "class": "Dégâts",
+    "speed": "Normale (720)",
+    "description": "Shelly est armée d'un fusil à pompe. Ses tirs infligent de lourds dégâts à courte portée. Son Super détruit les murs et repousse les ennemis !",
+    "stats": {
+      "hp_lvl1": 3700,
+      "hp_lvl11": 7400,
+      "damage_lvl1": 300,
+      "damage_lvl11": 600
+    },
+    "attack": {
+      "name": "Chevrotine",
+      "desc": "Tire une gerbe de plombs à moyenne portée. Plus l'ennemi est proche, plus il subit de dégâts."
+    },
+    "super": {
+      "name": "Super Chevrotine",
+      "desc": "Une attaque dévastatrice qui détruit les obstacles et repousse les ennemis."
+    },
+    "gadgets": [
+      {
+        "name": "Avance Rapide",
+        "desc": "Shelly se rue vers l'avant sur une courte distance."
+      },
+      {
+        "name": "Pigeons d'Argile",
+        "desc": "Pendant 5 secondes, la portée et la précision de son tir principal sont augmentées."
+      }
+    ],
+    "star_powers": [
+      {
+        "name": "Étourdissement",
+        "desc": "Les ennemis touchés par le Super de Shelly sont ralentis pendant 4,5 secondes."
+      },
+      {
+        "name": "Pansement",
+        "desc": "Shelly récupère 2000 PV instantanément quand sa santé passe sous les 40%."
+      }
+    ],
+    "counters": ["Mortis", "Edgar", "El Primo"],
+    "weak_against": ["Piper", "Brock", "Belle"],
+    "image": "images/brawlers/shelly.png"
+  },
+  "COLT": {
+    "id": 16000001,
+    "name": "Colt",
+    "rarity": "Rare",
+    "class": "Dégâts",
+    "speed": "Normale (720)",
+    "description": "Colt tire une rafale de balles précises avec ses deux revolvers. Son Super détruit les murs et a une très longue portée.",
+    "stats": {
+      "hp_lvl1": 2800,
+      "hp_lvl11": 5600,
+      "damage_lvl1": 360,
+      "damage_lvl11": 720
+    },
+    "attack": {
+      "name": "Six-Coups",
+      "desc": "Tire une rafale de 6 balles à longue portée."
+    },
+    "super": {
+      "name": "Tempête de Balles",
+      "desc": "Tire une longue rafale de 12 balles qui traverse les murs et les ennemis."
+    },
+    "gadgets": [
+      {
+        "name": "Rechargement Express",
+        "desc": "Colt recharge instantanément 2 munitions."
+      },
+      {
+        "name": "Balle d'Argent",
+        "desc": "La prochaine attaque est une balle unique qui traverse les murs et inflige autant de dégâts que 2 balles normales."
+      }
+    ],
+    "star_powers": [
+      {
+        "name": "Bottes de Cuir",
+        "desc": "La vitesse de déplacement de Colt augmente de 13%."
+      },
+      {
+        "name": "Magnum",
+        "desc": "La portée et la vitesse des balles de Colt augmentent de 11%."
+      }
+    ],
+    "counters": ["8-Bit", "Bull", "Frank"],
+    "weak_against": ["Mico", "Mortis", "Leon"],
+    "image": "images/brawlers/colt.png"
+  },
+  "EL_PRIMO": {
+    "id": 16000003,
+    "name": "El Primo",
+    "rarity": "Rare",
+    "class": "Tank",
+    "speed": "Rapide (770)",
+    "description": "El Primo frappe ses ennemis avec une série de coups de poing. Son Super est un saut spectaculaire qui écrase tout à l'atterrissage !",
+    "stats": {
+      "hp_lvl1": 6000,
+      "hp_lvl11": 12000,
+      "damage_lvl1": 360,
+      "damage_lvl11": 720
+    },
+    "attack": {
+      "name": "Poing de la Fureur",
+      "desc": "El Primo enchaîne 4 coups de poing rapides à très courte portée."
+    },
+    "super": {
+      "name": "Coude Intergalactique",
+      "desc": "El Primo s'envole et retombe, infligeant des dégâts et repoussant les ennemis."
+    },
+    "gadgets": [
+      {
+        "name": "Supplex",
+        "desc": "Attrape l'ennemi le plus proche et le jette par-dessus son épaule."
+      },
+      {
+        "name": "Ceinture d'Astéroïdes",
+        "desc": "Invoque un petit météore qui inflige 2000 dégâts et détruit les murs."
+      }
+    ],
+    "star_powers": [
+      {
+        "name": "El Fuego",
+        "desc": "Les ennemis touchés par le Super brûlent et subissent 1200 dégâts sur 4 secondes."
+      },
+      {
+        "name": "Météore",
+        "desc": "Après son Super, El Primo court 25% plus vite pendant 4 secondes."
+      }
+    ],
+    "counters": ["Frank", "Bibi", "Mortis"],
+    "weak_against": ["Shelly", "Colette", "Gale"],
+    "image": "images/brawlers/el_primo.png"
+  },
+  "MORTIS": {
+    "id": 16000004,
+    "name": "Mortis",
+    "rarity": "Mythique",
+    "class": "Assassin",
+    "speed": "Très Rapide (820)",
+    "description": "Mortis se jette en avant à chaque coup de pelle. Son Super invoque des chauves-souris qui drainent la vie des ennemis !",
+    "stats": {
+      "hp_lvl1": 3800,
+      "hp_lvl11": 7600,
+      "damage_lvl1": 900,
+      "damage_lvl11": 1800
+    },
+    "attack": {
+      "name": "Coup de Pelle",
+      "desc": "Mortis s'élance en avant. S'il frappe un ennemi, il lui inflige des dégâts."
+    },
+    "super": {
+      "name": "Drain de Vie",
+      "desc": "Invoque une nuée de chauves-souris qui volent droit devant, infligeant des dégâts et soignant Mortis."
+    },
+    "gadgets": [
+      {
+        "name": "Combo Spinner",
+        "desc": "Mortis tourne sur lui-même, infligeant 1300 dégâts aux ennemis proches."
+      },
+      {
+        "name": "Pelle de Survie",
+        "desc": "Mortis recharge ses attaques deux fois plus vite pendant 4 secondes."
+      }
+    ],
+    "star_powers": [
+      {
+        "name": "Moisson Inquiétante",
+        "desc": "Mortis récupère 1000 PV chaque fois qu'il élimine un Brawler."
+      },
+      {
+        "name": "Serpent Sournois",
+        "desc": "Mortis gagne une barre jaune. Quand elle est pleine, sa portée d'attaque augmente de 75%."
+      }
+    ],
+    "counters": ["Dynamike", "Piper", "Grom"],
+    "weak_against": ["Shelly", "Bull", "Jacky"],
+    "image": "images/brawlers/mortis.png"
+  },
+  "SPIKE": {
+    "id": 16000005,
+    "name": "Spike",
+    "rarity": "Légendaire",
+    "class": "Dégâts",
+    "speed": "Normale (720)",
+    "description": "Spike lance des grenades cactus qui explosent en projetant des épines. Son Super crée une zone de ralentissement piquante.",
+    "stats": {
+      "hp_lvl1": 2400,
+      "hp_lvl11": 4800,
+      "damage_lvl1": 560,
+      "damage_lvl11": 1120
+    },
+    "attack": {
+      "name": "Grenade Cactus",
+      "desc": "Une petite grenade qui explose à l'impact ou à portée max, envoyant 6 épines."
+    },
+    "super": {
+      "name": "Champ d'Épines",
+      "desc": "Crée une zone au sol qui ralentit les ennemis et leur inflige des dégâts sur la durée."
+    },
+    "gadgets": [
+      {
+        "name": "Coussin Piqueur",
+        "desc": "Spike tire 3 vagues d'épines dans toutes les directions, infligeant 520 dégâts par coup."
+      },
+      {
+        "name": "Plante Vitale",
+        "desc": "Pose un cactus avec 3500 PV pour se protéger des tirs ennemis."
+      }
+    ],
+    "star_powers": [
+      {
+        "name": "Fertilisant",
+        "desc": "Spike récupère 800 PV par seconde s'il reste dans la zone de son Super."
+      },
+      {
+        "name": "Épines Courbes",
+        "desc": "Les épines de son attaque principale tourbillonnent, ce qui les rend plus faciles à toucher."
+      }
+    ],
+    "counters": ["Frank", "Bull", "8-Bit"],
+    "weak_against": ["Piper", "Belle", "Tick"],
+    "image": "images/brawlers/spike.png"
+  }
+}
