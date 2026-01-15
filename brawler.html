@@ -2,25 +2,68 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brawl-Track.wiki - Brawler</title>
-    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@400;700&family=Audiowide&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>Détails Brawler</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
     <nav class="navbar">
         <div class="nav-content">
-            <a href="index.html" class="nav-logo">BRAWL-TRACK<span style="color:white; font-size:0.8em;">.WIKI</span></a>
-            <div class="nav-links">
-                <a href="index.html" class="nav-link" style="color:#ffce00">&larr; Retour Liste</a>
-            </div>
+            <a href="index.html?category=brawlers" class="nav-link">&larr; Retour Liste</a>
+            <div class="nav-logo">FICHE TECHNIQUE</div>
         </div>
     </nav>
 
-    <div id="brawler-detail-container" class="wiki-container">
-        <div class="loader">Récupération des infos...</div>
+    <div class="wiki-container detail-view">
+        <div class="brawler-header">
+            <img id="b-image" src="" alt="Brawler">
+            <div>
+                <h1 id="b-name">...</h1>
+                <div class="badges">
+                    <span id="b-rarity" class="badge"></span>
+                    <span id="b-class" class="badge-dark"></span>
+                </div>
+                <p>Vitesse : <strong id="b-speed" style="color:#ffce00"></strong></p>
+                <p id="b-desc"></p>
+            </div>
+        </div>
+
+        <div class="stats-grid-container">
+            <div class="stat-box">
+                <h3>PV (Niv 1)</h3>
+                <div id="b-hp" class="stat-value">...</div>
+            </div>
+            <div class="stat-box">
+                <h3>Attaque</h3>
+                <div id="b-attack" class="stat-value-text">...</div>
+            </div>
+            <div class="stat-box">
+                <h3>Super</h3>
+                <div id="b-super" class="stat-value-text">...</div>
+            </div>
+            <div class="stat-box purple">
+                <h3>Hypercharge</h3>
+                <div id="b-hypercharge" class="stat-value-text">...</div>
+            </div>
+        </div>
+
+        <div class="abilities-section">
+            <div class="ability-group">
+                <h3>Gadgets</h3>
+                <div id="list-gadgets" class="chip-container"></div>
+            </div>
+            <div class="ability-group">
+                <h3>Pouvoirs Stars</h3>
+                <div id="list-starpowers" class="chip-container"></div>
+            </div>
+            <div class="ability-group">
+                <h3>Équipements</h3>
+                <div id="list-gears" class="chip-container"></div>
+            </div>
+            <div class="ability-group">
+                <h3>Spécificités (Traits)</h3>
+                <div id="list-traits" class="chip-container"></div>
+            </div>
+        </div>
     </div>
 
     <script src="script/brawler.js"></script>
