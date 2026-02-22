@@ -1,18 +1,14 @@
 {
-  "AVANCE_RAPIDE": {
-    "id": 23000000,
-    "name": "Avance Rapide",
-    "description": "Shelly se rue vers l'avant sur une courte distance.",
-    "cooldown": "5 sec",
-    "brawler_linked": "Shelly",
-    "image": "images/gadgets/23000000.png"
-  },
-  "COMBO_SPINNER": {
-    "id": 23000004,
-    "name": "Combo Spinner",
-    "description": "Mortis tourne sur lui-même, infligeant 1300 dégâts.",
-    "cooldown": "5 sec",
-    "brawler_linked": "Mortis",
-    "image": "images/gadgets/23000004.png"
+  "NITA": {
+    "bear_paws": {
+      "name": "Griffes d'Ours",
+      "description": "L'ours de Nita frappe le sol, étourdissant les ennemis à proximité pendant 1 seconde.",
+      "icon": "images/ui/gadget_bear_paws.png"
+    },
+    "faux_fur": {
+      "name": "Fausse Fourrure",
+      "description": "L'ours de Nita reçoit un bouclier qui réduit les dégâts subis de 35% pendant 3 secondes.",
+      "icon": "images/ui/gadget_faux_fur.png"
+    }
   }
 }
