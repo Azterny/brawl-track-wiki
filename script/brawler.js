@@ -47,9 +47,14 @@ async function initBrawlerPage() {
     const brawlerHypercharges = hyperchargesData[brawlerId];
     const brawlerSkins = skinsData[brawlerId];
 
-    // 4. Construction de l'en-tête HTML
+// 4. Construction de l'en-tête HTML
     let html = `
+        <div class="wiki-btn-back" style="text-align: left; width: 100%;">
+            <button class="btn-back" onclick="window.location.href='index.html?page=brawlers'">⬅ Retour à la liste</button>
+        </div>
+
         <div class="brawler-top-section">
+            <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}" class="brawler-detail-icon">
             <div class="brawler-info-left">
                 <h1>${brawler.name}</h1>
                 <div class="brawler-badges">
@@ -62,7 +67,7 @@ async function initBrawlerPage() {
             </div>
         </div>
     `;
-
+    
     // Fonction locale pour générer les cartes (Gadgets, SP, HC)
     const generateItemsHtml = (brawlerItems) => {
         if (!brawlerItems || Object.keys(brawlerItems).length === 0) {
