@@ -2,26 +2,28 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>BrawlTrack.wiki - Accueil</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BrawlOpédia - Le Wiki Brawl-Track</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wiki.css"> </head>
 <body>
+
     <nav class="navbar">
         <div class="nav-content">
-            <a href="index.html" class="nav-logo">BRAWL-TRACK<span style="color:white; font-size:0.8em;">.WIKI</span></a>
+            <a href="?page=home" class="nav-logo">BRAWLOPÉDIA</a>
+            <div class="nav-links">
+                <a href="?page=brawlers" class="nav-link">Brawlers</a>
+                <a href="?page=modes" class="nav-link">Modes</a>
+                <a href="https://brawl-track.com" class="nav-btn-cta">Retour au Site</a>
+            </div>
         </div>
     </nav>
 
-    <div class="wiki-container">
-        <div id="page-header" class="hero-section">
-            <h1 id="main-title">Encyclopédie</h1>
-            <p id="sub-title">Sélectionnez une catégorie</p>
-        </div>
-        
-        <div id="content-grid" class="nav-grid"></div>
-    </div>
+    <main id="app-content" class="container wide">
+        <div style="text-align: center; padding: 50px;">Chargement du Wiki...</div>
+    </main>
 
-    <script src="script/index.js"></script>
+    <script src="wiki.js"></script>
 </body>
 </html>
