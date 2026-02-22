@@ -4,6 +4,7 @@
     "name": "Nita",
     "class": "Dégâts",
     "rarity": "Rare",
-    "description": "Nita frappe ses ennemis avec une onde de choc fulgurante. Son Super invoque un ours massif nommé Bruce qui se bat à ses côtés !"
+    "description": "Nita frappe ses ennemis avec une onde de choc fulgurante. Son Super invoque un ours massif nommé Bruce qui se bat à ses côtés !",
+    "image": "images/brawlers/16000011.png"
   }
 }
