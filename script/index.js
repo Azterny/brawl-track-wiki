@@ -3,13 +3,8 @@
 // ==========================================
 
 const appContent = document.getElementById('app-content');
+const db = { brawlers: null };
 
-// Cache local pour éviter de re-télécharger le JSON
-const db = {
-    brawlers: null
-};
-
-// Fonction utilitaire pour charger les JSON
 async function fetchJSON(file) {
     try {
         const response = await fetch(`data/${file}`);
@@ -20,12 +15,8 @@ async function fetchJSON(file) {
     }
 }
 
-// Initialisation de l'application
 async function initApp() {
-    // On charge la base de brawlers en premier
     db.brawlers = await fetchJSON('brawlers.json');
-    
-    // Routage basique
     const params = new URLSearchParams(window.location.search);
     const page = params.get('page') || 'home';
 
@@ -36,32 +27,46 @@ async function initApp() {
     }
 }
 
-// ==========================================
-// VUES (RENDU HTML)
-// ==========================================
-
 function renderHome() {
     appContent.innerHTML = `
         <h1>Bienvenue sur BrawlOpédia</h1>
-        <p>Sélectionnez une catégorie ci-dessus pour commencer.</p>
-        <div class="landing-wrapper">
-            <div class="landing-column" style="cursor:pointer;" onclick="window.location.href='?page=brawlers'">
-                <h2>Tous les Brawlers</h2>
-                <p>Découvrez les stats, gadgets et pouvoirs de tous les personnages.</p>
+        <p>Sélectionnez une catégorie ci-dessous pour commencer.</p>
+        
+        <div class="category-grid">
+            <div class="category-card" onclick="window.location.href='?page=brawlers'">
+                <h2 style="color: #00d2ff;">🥊 Brawlers</h2>
+                <p>Découvrez les stats, gadgets et pouvoirs de tous les personnages du jeu.</p>
+            </div>
+            
+            <div class="category-card" style="opacity: 0.5; cursor: not-allowed;" title="Bientôt disponible">
+                <h2 style="color: #ffce00;">🗺️ Modes & Maps</h2>
+                <p>Informations sur les rotations et règles des événements.</p>
             </div>
         </div>
     `;
 }
 
 function renderBrawlersList() {
-    let html = `<h1>Liste des Brawlers</h1><div class="stats-grid">`;
+    let html = `
+        <div class="wiki-btn-back" style="text-align: left; width: 100%;">
+            <button class="btn-back" onclick="window.location.href='index.html'">⬅ Retour aux Catégories</button>
+        </div>
+        <h1>Sélectionnez un Brawler</h1>
+        
+        <div class="brawlers-grid">
+    `;
     
-    // Parcourt les brawlers du JSON pour créer la grille
     for (const [id, brawler] of Object.entries(db.brawlers)) {
         html += `
-            <div class="stat-card" style="cursor:pointer; text-align:center;" onclick="window.location.href='brawler.html?id=${id}'">
-                <h3 style="margin:0;">${brawler.name}</h3>
-                <span class="badge badge-premium" style="margin-top:5px;">${brawler.rarity}</span>
+            <div class="brawler-list-card" onclick="window.location.href='brawler.html?id=${id}'">
+                <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}">
+                <div class="brawler-list-info">
+                    <h3>${brawler.name}</h3>
+                    <div class="badges-row">
+                        <span class="badge badge-basic">${brawler.class}</span>
+                        <span class="badge badge-premium">${brawler.rarity}</span>
+                    </div>
+                </div>
             </div>
         `;
     }
@@ -70,5 +75,4 @@ function renderBrawlersList() {
     appContent.innerHTML = html;
 }
 
-// Lancement au chargement de la page
 window.addEventListener('DOMContentLoaded', initApp);
