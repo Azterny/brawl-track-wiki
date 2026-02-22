@@ -1,0 +1,9 @@
+{
+  "NITA": {
+    "hyperbearing": {
+      "name": "Hyperbearing",
+      "description": "Bruce (l'ours) gagne un bonus de vitesse de déplacement et de résistance aux dégâts. Nita charge son super plus rapidement.",
+      "icon": "images/ui/hc_hyperbearing.png"
+    }
+  }
+}
