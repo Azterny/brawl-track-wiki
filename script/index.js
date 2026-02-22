@@ -83,4 +83,18 @@ function renderBrawlersList() {
                 <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}" onerror="this.src='https://via.placeholder.com/64x64?text=?'">
                 <div class="brawler-list-info">
                     <h3>${brawler.name}</h3>
-                    <div
+                    <div class="badges-row">
+                        <span class="badge badge-basic">${brawler.class}</span>
+                        <span class="badge ${rarityClass}">${brawler.rarity}</span>
+                    </div>
+                </div>
+            </div>
+        `;
+    }
+    
+    html += `</div>`;
+    appContent.innerHTML = html;
+}
+
+// Lancement au chargement de la page
+window.addEventListener('DOMContentLoaded', initApp);
