@@ -9,10 +9,12 @@
 /* =========================================
    WIKI : CARTES DE NAVIGATION (Accueil & Liste)
    ========================================= */
+
 /* Grille des catégories (Page d'accueil) */
 .category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les cartes */
     gap: 20px;
     margin-top: 30px;
 }
@@ -20,10 +22,12 @@
 .category-card {
     background: #252525;
     padding: 30px;
+    width: 300px; /* Largeur fixe pour ne pas s'étirer */
     border-radius: 15px;
     border: 2px solid #333;
     cursor: pointer;
     transition: all 0.2s ease;
+    box-sizing: border-box;
 }
 
 .category-card:hover {
@@ -37,8 +41,9 @@
 
 /* Grille de sélection des Brawlers */
 .brawlers-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centre les cartes */
     gap: 15px;
     margin-top: 20px;
     text-align: left;
@@ -49,11 +54,13 @@
     align-items: center;
     background: #252525;
     padding: 15px;
+    width: 280px; /* Largeur fixe pour ne pas s'étirer */
     border-radius: 12px;
     border: 1px solid #333;
     cursor: pointer;
     transition: all 0.2s ease;
     gap: 15px;
+    box-sizing: border-box;
 }
 
 .brawler-list-card:hover {
@@ -76,6 +83,16 @@
 
 /* Bouton Retour Général */
 .wiki-btn-back { margin-bottom: 20px; display: inline-block; }
+
+/* =========================================
+   WIKI : COULEURS DE RARETÉ (BRAWL STARS)
+   ========================================= */
+.badge-starting { background: #54c8f9; color: #000; border: 1px solid #1ba5e0; } /* Brawler de départ (Bleu clair) */
+.badge-rare { background: #28a745; color: #fff; border: 1px solid #1e7e34; } /* Rare (Vert) */
+.badge-super-rare { background: #007bff; color: #fff; border: 1px solid #0056b3; } /* Super Rare (Bleu foncé) */
+.badge-epic { background: #8a2be2; color: #fff; border: 1px solid #5c149e; } /* Épique (Violet) */
+.badge-mythic { background: #dc3545; color: #fff; border: 1px solid #bd2130; } /* Mythique (Rouge) */
+.badge-legendary { background: #ffce00; color: #000; border: 1px solid #d39e00; } /* Légendaire (Jaune) */
 
 /* =========================================
    WIKI : LAYOUT BRAWLER DETAIL
@@ -107,15 +124,12 @@
 .brawler-badges { display: flex; gap: 10px; }
 .brawler-desc-right { flex: 2; min-width: 300px; background: #252525; padding: 15px; border-radius: 8px; border-left: 4px solid #ffce00; font-size: 1.05rem; line-height: 1.5; color: #ddd; text-align: left; }
 
-/* (Garde le reste de ton CSS pour les listes horizontales ici...) */
+/* =========================================
+   WIKI : LISTES HORIZONTALES (Gadgets, SP, Skins)
+   ========================================= */
 .wiki-section-title { text-align: left; margin-top: 30px; margin-bottom: 10px; font-size: 1.5rem; color: #ffce00; border-bottom: 2px solid #333; padding-bottom: 5px; }
 .horizontal-scroll-container { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scrollbar-width: thin; scrollbar-color: #ffce00 #252525; }
 .horizontal-scroll-container::-webkit-scrollbar { height: 8px; }
 .horizontal-scroll-container::-webkit-scrollbar-track { background: #252525; border-radius: 4px; }
 .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #ffce00; border-radius: 4px; }
-.item-card { background: #252525; border: 1px solid #444; border-radius: 10px; min-width: 250px; max-width: 250px; padding: 15px; text-align: left; flex-shrink: 0; transition: transform 0.2s, border-color 0.2s; }
-.item-card:hover { transform: translateY(-5px); border-color: #ffce00; }
-.item-card h4 { margin: 0 0 10px 0; color: #fff; font-family: 'Lilita One', cursive; letter-spacing: 1px; }
-.item-card p { font-size: 0.9rem; color: #aaa; margin: 0; line-height: 1.4; }
-.skin-card { text-align: center; min-width: 150px; }
-.skin-card img { width: 100%; height: 150px; object-fit: contain; background: #1a1a1a; border-radius: 8px; margin-bottom: 10px; border: 1px solid #333; }
+.item-card { background: #252525; border: 1px solid #444; border-radius: 10px;
