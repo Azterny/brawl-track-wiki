@@ -1,36 +1,9 @@
 {
-  "SHELLY": {
-    "id": 16000000,
-    "name": "Shelly",
-    "rarity": "Starting",
+  "NITA": {
+    "id": "NITA",
+    "name": "Nita",
     "class": "Dégâts",
-    "speed": "Normale (720)",
-    "description": "Shelly est armée d'un fusil à pompe...",
-    "hp_lvl1": 3700,
-    "attack_name": "Chevrotine",
-    "super_name": "Super Chevrotine",
-    "gadgets": ["Avance Rapide", "Pigeons d'Argile"],
-    "star_powers": ["Étourdissement", "Pansement"],
-    "gears": ["Vitesse", "Régénération"],
-    "hypercharge": "Double Canon",
-    "traits": [],
-    "image": "images/brawlers/16000000.png"
-  },
-  "MORTIS": {
-    "id": 16000004,
-    "name": "Mortis",
-    "rarity": "Mythique",
-    "class": "Assassin",
-    "speed": "Très Rapide (820)",
-    "description": "Mortis se jette en avant...",
-    "hp_lvl1": 3800,
-    "attack_name": "Coup de Pelle",
-    "super_name": "Drain de Vie",
-    "gadgets": ["Combo Spinner", "Pelle de Survie"],
-    "star_powers": ["Moisson Inquiétante", "Serpent Sournois"],
-    "gears": ["Dégâts", "Bouclier"],
-    "hypercharge": "Sangsue",
-    "traits": ["Charge son Super automatiquement"],
-    "image": "images/brawlers/16000004.png"
+    "rarity": "Rare",
+    "description": "Nita frappe ses ennemis avec une onde de choc fulgurante. Son Super invoque un ours massif nommé Bruce qui se bat à ses côtés !"
   }
 }
