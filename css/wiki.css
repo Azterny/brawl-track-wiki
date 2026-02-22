@@ -87,12 +87,12 @@
 /* =========================================
    WIKI : COULEURS DE RARETÉ (BRAWL STARS)
    ========================================= */
-.badge-starting { background: #54c8f9; color: #000; border: 1px solid #1ba5e0; } /* Brawler de départ (Bleu clair) */
-.badge-rare { background: #28a745; color: #fff; border: 1px solid #1e7e34; } /* Rare (Vert) */
-.badge-super-rare { background: #007bff; color: #fff; border: 1px solid #0056b3; } /* Super Rare (Bleu foncé) */
-.badge-epic { background: #8a2be2; color: #fff; border: 1px solid #5c149e; } /* Épique (Violet) */
-.badge-mythic { background: #dc3545; color: #fff; border: 1px solid #bd2130; } /* Mythique (Rouge) */
-.badge-legendary { background: #ffce00; color: #000; border: 1px solid #d39e00; } /* Légendaire (Jaune) */
+.badge-starting { background: #54c8f9; color: #000; border: 1px solid #1ba5e0; } 
+.badge-rare { background: #28a745; color: #fff; border: 1px solid #1e7e34; } 
+.badge-super-rare { background: #007bff; color: #fff; border: 1px solid #0056b3; } 
+.badge-epic { background: #8a2be2; color: #fff; border: 1px solid #5c149e; } 
+.badge-mythic { background: #dc3545; color: #fff; border: 1px solid #bd2130; } 
+.badge-legendary { background: #ffce00; color: #000; border: 1px solid #d39e00; } 
 
 /* =========================================
    WIKI : LAYOUT BRAWLER DETAIL
@@ -109,7 +109,6 @@
     align-items: center;
 }
 
-/* NOUVEAU : Icône principale du brawler */
 .brawler-detail-icon {
     width: 100px;
     height: 100px;
@@ -132,4 +131,21 @@
 .horizontal-scroll-container::-webkit-scrollbar { height: 8px; }
 .horizontal-scroll-container::-webkit-scrollbar-track { background: #252525; border-radius: 4px; }
 .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #ffce00; border-radius: 4px; }
-.item-card { background: #252525; border: 1px solid #444; border-radius: 10px;
+
+.item-card { 
+    background: #252525; 
+    border: 1px solid #444; 
+    border-radius: 10px; 
+    min-width: 250px; 
+    max-width: 250px; 
+    padding: 15px; 
+    text-align: left; 
+    flex-shrink: 0; 
+    transition: transform 0.2s, border-color 0.2s; 
+}
+.item-card:hover { transform: translateY(-5px); border-color: #ffce00; }
+.item-card h4 { margin: 0 0 10px 0; color: #fff; font-family: 'Lilita One', cursive; letter-spacing: 1px; }
+.item-card p { font-size: 0.9rem; color: #aaa; margin: 0; line-height: 1.4; }
+
+.skin-card { text-align: center; min-width: 150px; }
+.skin-card img { width: 100%; height: 150px; object-fit: contain; background: #1a1a1a; border-radius: 8px; margin-bottom: 10px; border: 1px solid #333; }
