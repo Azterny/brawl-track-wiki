@@ -1,0 +1,7 @@
+{
+  "NITA": {
+    "nita_base": { "name": "Nita (Par défaut)", "image": "images/skins/nita_base.png" },
+    "panda_nita": { "name": "Panda Nita", "image": "images/skins/panda_nita.png" },
+    "shiba_nita": { "name": "Shiba Nita", "image": "images/skins/shiba_nita.png" }
+  }
+}
