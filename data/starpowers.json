@@ -1,0 +1,14 @@
+{
+  "NITA": {
+    "bear_with_me": {
+      "name": "Ours avec moi",
+      "description": "Nita récupère 800 PV quand son ours frappe un ennemi. L'ours récupère 800 PV quand Nita frappe un ennemi.",
+      "icon": "images/ui/sp_bear_with_me.png"
+    },
+    "hyper_bear": {
+      "name": "Hyper Ours",
+      "description": "L'ours de Nita attaque plus vite. Le délai entre ses coups est réduit de 60%.",
+      "icon": "images/ui/sp_hyper_bear.png"
+    }
+  }
+}
