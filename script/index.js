@@ -5,6 +5,7 @@
 const appContent = document.getElementById('app-content');
 const db = { brawlers: null };
 
+// Fonction utilitaire pour charger les JSON
 async function fetchJSON(file) {
     try {
         const response = await fetch(`data/${file}`);
@@ -15,6 +16,19 @@ async function fetchJSON(file) {
     }
 }
 
+// Fonction utilitaire pour choisir la bonne couleur selon la rareté
+function getRarityClass(rarity) {
+    const r = rarity.toLowerCase();
+    if (r.includes('départ') || r.includes('starting')) return 'badge-starting';
+    if (r.includes('super rare') || r.includes('super-rare')) return 'badge-super-rare';
+    if (r.includes('rare')) return 'badge-rare';
+    if (r.includes('épique') || r.includes('epic')) return 'badge-epic';
+    if (r.includes('mythique') || r.includes('mythic')) return 'badge-mythic';
+    if (r.includes('légendaire') || r.includes('legendary')) return 'badge-legendary';
+    return 'badge-premium'; // Couleur par défaut si non reconnu
+}
+
+// Initialisation de l'application
 async function initApp() {
     db.brawlers = await fetchJSON('brawlers.json');
     const params = new URLSearchParams(window.location.search);
@@ -26,6 +40,10 @@ async function initApp() {
         renderHome();
     }
 }
+
+// ==========================================
+// VUES (RENDU HTML)
+// ==========================================
 
 function renderHome() {
     appContent.innerHTML = `
@@ -56,23 +74,13 @@ function renderBrawlersList() {
         <div class="brawlers-grid">
     `;
     
+    // Parcourt les brawlers du JSON pour créer la grille
     for (const [id, brawler] of Object.entries(db.brawlers)) {
+        const rarityClass = getRarityClass(brawler.rarity); // Récupère la bonne couleur
+        
         html += `
             <div class="brawler-list-card" onclick="window.location.href='brawler.html?id=${id}'">
-                <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}">
+                <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}" onerror="this.src='https://via.placeholder.com/64x64?text=?'">
                 <div class="brawler-list-info">
                     <h3>${brawler.name}</h3>
-                    <div class="badges-row">
-                        <span class="badge badge-basic">${brawler.class}</span>
-                        <span class="badge badge-premium">${brawler.rarity}</span>
-                    </div>
-                </div>
-            </div>
-        `;
-    }
-    
-    html += `</div>`;
-    appContent.innerHTML = html;
-}
-
-window.addEventListener('DOMContentLoaded', initApp);
+                    <div
