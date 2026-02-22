@@ -4,6 +4,18 @@
 
 const brawlerContent = document.getElementById('brawler-content');
 
+// Fonction utilitaire pour choisir la bonne couleur selon la rareté
+function getRarityClass(rarity) {
+    const r = rarity.toLowerCase();
+    if (r.includes('départ') || r.includes('starting')) return 'badge-starting';
+    if (r.includes('super rare') || r.includes('super-rare')) return 'badge-super-rare';
+    if (r.includes('rare')) return 'badge-rare';
+    if (r.includes('épique') || r.includes('epic')) return 'badge-epic';
+    if (r.includes('mythique') || r.includes('mythic')) return 'badge-mythic';
+    if (r.includes('légendaire') || r.includes('legendary')) return 'badge-legendary';
+    return 'badge-premium';
+}
+
 // Fonction utilitaire pour charger les JSON depuis le dossier 'data/'
 async function fetchJSON(file) {
     try {
@@ -46,20 +58,22 @@ async function initBrawlerPage() {
     const brawlerStarpowers = starpowersData[brawlerId];
     const brawlerHypercharges = hyperchargesData[brawlerId];
     const brawlerSkins = skinsData[brawlerId];
+    
+    const rarityClass = getRarityClass(brawler.rarity); // On récupère la couleur de rareté
 
-// 4. Construction de l'en-tête HTML
+    // 4. Construction de l'en-tête HTML
     let html = `
         <div class="wiki-btn-back" style="text-align: left; width: 100%;">
             <button class="btn-back" onclick="window.location.href='index.html?page=brawlers'">⬅ Retour à la liste</button>
         </div>
 
         <div class="brawler-top-section">
-            <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}" class="brawler-detail-icon">
+            <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}" class="brawler-detail-icon" onerror="this.src='https://via.placeholder.com/100x100?text=?'">
             <div class="brawler-info-left">
                 <h1>${brawler.name}</h1>
                 <div class="brawler-badges">
                     <span class="badge badge-basic">${brawler.class}</span>
-                    <span class="badge badge-premium">${brawler.rarity}</span>
+                    <span class="badge ${rarityClass}">${brawler.rarity}</span>
                 </div>
             </div>
             <div class="brawler-desc-right">
@@ -67,7 +81,7 @@ async function initBrawlerPage() {
             </div>
         </div>
     `;
-    
+
     // Fonction locale pour générer les cartes (Gadgets, SP, HC)
     const generateItemsHtml = (brawlerItems) => {
         if (!brawlerItems || Object.keys(brawlerItems).length === 0) {
