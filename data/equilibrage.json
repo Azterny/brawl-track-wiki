@@ -1,0 +1,172 @@
+{
+  "SHELLY": {
+    "1": {
+      "type": "buff",
+      "date": "2024-03",
+      "description": "PV augmentés de 2800 → 3400."
+    },
+    "2": {
+      "type": "buff",
+      "date": "2024-09",
+      "description": "Dégâts de l'attaque principale augmentés de 1120 → 1260."
+    }
+  },
+  "COLT": {
+    "1": {
+      "type": "nerf",
+      "date": "2023-11",
+      "description": "Munitions réduites de 7 → 6."
+    },
+    "2": {
+      "type": "buff",
+      "date": "2024-06",
+      "description": "Portée de l'attaque augmentée de 7.33 → 7.67 tuiles."
+    }
+  },
+  "BULL": {
+    "1": {
+      "type": "buff",
+      "date": "2023-08",
+      "description": "PV augmentés de 4800 → 5000."
+    },
+    "2": {
+      "type": "rework",
+      "date": "2024-01",
+      "description": "Le Super \"Charge de Taureau\" détruit désormais tous les murs qu'il traverse, y compris les obstacles de scène."
+    }
+  },
+  "MORTIS": {
+    "1": {
+      "type": "nerf",
+      "date": "2023-06",
+      "description": "Vitesse réduite de 820 → 800."
+    },
+    "2": {
+      "type": "buff",
+      "date": "2024-03",
+      "description": "Soin par coup des chauves-souris augmenté de 700 → 800."
+    }
+  },
+  "CROW": {
+    "1": {
+      "type": "nerf",
+      "date": "2023-09",
+      "description": "Dégâts de l'empoisonnement réduits de 160 → 120 par seconde."
+    },
+    "2": {
+      "type": "buff",
+      "date": "2024-05",
+      "description": "PV augmentés de 2200 → 2400."
+    }
+  },
+  "SPIKE": {
+    "1": {
+      "type": "nerf",
+      "date": "2023-07",
+      "description": "Rayon d'explosion des épines de cactus réduit."
+    },
+    "2": {
+      "type": "buff",
+      "date": "2024-04",
+      "description": "Vitesse de déplacement du Super augmentée."
+    }
+  },
+  "LEON": {
+    "1": {
+      "type": "nerf",
+      "date": "2023-05",
+      "description": "Durée d'invisibilité du Super réduite de 6 → 5 secondes."
+    },
+    "2": {
+      "type": "nerf",
+      "date": "2024-01",
+      "description": "Les lames sont désormais visibles de plus loin lorsqu'il est invisible."
+    },
+    "3": {
+      "type": "buff",
+      "date": "2024-08",
+      "description": "Dégâts augmentés de 400 → 440 par lame."
+    }
+  },
+  "SANDY": {
+    "1": {
+      "type": "rework",
+      "date": "2024-02",
+      "description": "Le Super génère désormais une zone de soin léger pour les alliés à l'intérieur du nuage de sable."
+    }
+  },
+  "MAX": {
+    "1": {
+      "type": "nerf",
+      "date": "2023-10",
+      "description": "Durée du boost de vitesse du Super réduite de 5 → 4 secondes."
+    }
+  },
+  "EDGAR": {
+    "1": {
+      "type": "nerf",
+      "date": "2023-08",
+      "description": "Soin par coup réduit de 200 → 160."
+    },
+    "2": {
+      "type": "nerf",
+      "date": "2024-03",
+      "description": "PV réduits de 4400 → 4200."
+    }
+  },
+  "BELLE": {
+    "1": {
+      "type": "buff",
+      "date": "2023-12",
+      "description": "Dégâts du rebond électrique augmentés."
+    },
+    "2": {
+      "type": "other",
+      "date": "2024-07",
+      "description": "Correction d'un bug où le Super pouvait marquer plusieurs cibles simultanément."
+    }
+  },
+  "BUZZ": {
+    "1": {
+      "type": "nerf",
+      "date": "2023-11",
+      "description": "Rayon d'étourdissement du Super réduit."
+    },
+    "2": {
+      "type": "buff",
+      "date": "2024-06",
+      "description": "PV augmentés de 4000 → 4200."
+    }
+  },
+  "MEG": {
+    "1": {
+      "type": "rework",
+      "date": "2024-01",
+      "description": "Refonte complète : Meg peut désormais choisir de rester en forme mini après la destruction du mécha en maintenant un nouveau statut de combat."
+    }
+  },
+  "FANG": {
+    "1": {
+      "type": "nerf",
+      "date": "2023-09",
+      "description": "Portée du coup de pied réduite légèrement."
+    },
+    "2": {
+      "type": "buff",
+      "date": "2024-04",
+      "description": "Le Super peut désormais rebondir une fois de plus sur les ennemis éliminés."
+    }
+  },
+  "SAM": {
+    "1": {
+      "type": "buff",
+      "date": "2023-10",
+      "description": "Dégâts des gantelets augmentés de 960 → 1040."
+    },
+    "2": {
+      "type": "other",
+      "date": "2024-02",
+      "description": "Correction d'un bug où les gantelets traversaient certains murs fins."
+    }
+  }
+}
