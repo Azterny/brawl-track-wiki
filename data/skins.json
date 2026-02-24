@@ -1,7 +1,84 @@
 {
-  "NITA": {
-    "nita_base": { "name": "Nita (Par défaut)", "image": "images/skins/nita_base.png" },
-    "panda_nita": { "name": "Panda Nita", "image": "images/skins/panda_nita.png" },
-    "shiba_nita": { "name": "Shiba Nita", "image": "images/skins/shiba_nita.png" }
+  "BULL": {
+    "Viking_Bull": {
+      "name": "Bull Viking",
+      "date de sortie": "2018-12",
+      "image": "images/skins/Bull/Viking_Bull"
+    },
+    "Touchdown_Bull": {
+      "name": "Bull Touchdown",
+      "date de sortie": "2019-02",
+      "image": "images/skins/Bull/Touchdown_Bull"
+    },
+    "Linebacker_Bull": {
+      "name": "Bull Linebacker",
+      "date de sortie": "2019-06",
+      "image": "images/skins/Bull/Linebacker_Bull"
+    },
+    "Barbarian_King_Bull": {
+      "name": "Bull Roi des Barbares",
+      "date de sortie": "2020-05",
+      "image": "images/skins/Bull/Barbarian_King_Bull"
+    },
+    "True_Silver_Bull": {
+      "name": "Bull d'Argent",
+      "date de sortie": "2020-10",
+      "image": "images/skins/Bull/True_Silver_Bull"
+    },
+    "True_Gold_Bull": {
+      "name": "Bull d'Or",
+      "date de sortie": "2020-10",
+      "image": "images/skins/Bull/True_Gold_Bull"
+    },
+    "Space_Ox_Bull": {
+      "name": "Bull Bœuf Spatial",
+      "date de sortie": "2021-02",
+      "image": "images/skins/Bull/Space_Ox_Bull"
+    },
+    "B-800": {
+      "name": "B-800",
+      "date de sortie": "2021-11",
+      "image": "images/skins/Bull/B-800"
+    },
+    "Lion_Bull": {
+      "name": "Bull Lion",
+      "date de sortie": "2022-03",
+      "image": "images/skins/Bull/Lion_Bull"
+    },
+    "Bull_Mang": {
+      "name": "Bull Mang",
+      "date de sortie": "2022-07",
+      "image": "images/skins/Bull/Bull_Mang"
+    },
+    "Alleycat_Bull": {
+      "name": "Bull de Gouttière",
+      "date de sortie": "2023-03",
+      "image": "images/skins/Bull/Alleycat_Bull"
+    },
+    "Norse_Raider_Bull": {
+      "name": "Bull Pillard Nordique",
+      "date de sortie": "2024-06",
+      "image": "images/skins/Bull/Norse_Raider_Bull"
+    },
+    "Minotaur_Bull": {
+      "name": "Bull Minotaure",
+      "date de sortie": "2024-07",
+      "image": "images/skins/Bull/Minotaur_Bull"
+    },
+    "Kansai_Dragon_Bull": {
+      "name": "Bull Dragon du Kansai",
+      "date de sortie": "2025-06",
+      "image": "images/skins/Bull/Kansai_Dragon_Bull"
+    },
+    "HellBull": {
+      "name": "HellBull",
+      "date de sortie": "2025-08",
+      "image": "images/skins/Bull/HellBull"
+    },
+    "Hopper_Bull": {
+      "name": "Bull Hopper",
+      "date de sortie": "2025-11",
+      "image": "images/skins/Bull/Hopper_Bull"
+    }
   }
 }
