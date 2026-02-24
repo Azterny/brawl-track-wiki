@@ -158,7 +158,7 @@
     "rarity": "Super Rare",
     "description": "L'attaque de Penny tire des pièces qui traversent les ennemis. Son Super déploie un canon qui bombarde les ennemis même à couvert.",
     "image": "images/brawlers/16000019.png"
-  }
+  },
   "FRANK": {
     "id": "FRANK",
     "name": "Frank",
@@ -318,7 +318,7 @@
     "rarity": "Légendaire",
     "description": "Ambre crache un flot de flammes continu. Son Super projette une flasque de liquide inflammable qu'elle peut embraser.",
     "image": "images/brawlers/16000040.png"
-  }
+  },
   "LOU": {
     "id": "LOU",
     "name": "Lou",
