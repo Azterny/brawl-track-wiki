@@ -78,7 +78,7 @@
   "PENNY": {
     "pocket_detonator": { "name": "Détonateur", "description": "Penny fait exploser son canon, détruisant les murs et infligeant des dégâts.", "icon": "https://brawlify.com/images/gadgets/23000272.png" },
     "captain_compass": { "name": "Boussole", "description": "Le canon de Penny tire une volée de boulets sur sa propre position.", "icon": "https://brawlify.com/images/gadgets/23000307.png" }
-  }
+  },
   "FRANK": {
     "active_noise_canceling": { "name": "Annulation du bruit", "description": "Frank devient immunisé contre les étourdissements, ralentissements et repoussements pendant un court instant.", "icon": "https://brawlify.com/images/gadgets/23000273.png" },
     "irresistible_attraction": { "name": "Attraction irrésistible", "description": "La prochaine attaque de Frank attire tous les ennemis vers lui.", "icon": "https://brawlify.com/images/gadgets/23000308.png" }
@@ -158,7 +158,7 @@
   "AMBER": {
     "fire_starters": { "name": "Allume-feu", "description": "Ambre court en laissant une traînée de liquide inflammable derrière elle.", "icon": "https://brawlify.com/images/gadgets/23000304.png" },
     "dancing_flames": { "name": "Flammes dansantes", "description": "Ambre invoque 3 flammes qui tournent autour d'elle et infligent des dégâts.", "icon": "https://brawlify.com/images/gadgets/23000327.png" }
-  }
+  },
   "LOU": {
     "ice_block": { "name": "Bloc de glace", "description": "Lou s'enveloppe de glace et devient invulnérable pendant 1 seconde.", "icon": "https://brawlify.com/images/gadgets/23000328.png" },
     "cryo_syrup": { "name": "Sirop givré", "description": "Tous les ennemis pris dans la zone du Super de Lou voient leur jauge de gel remplie de 50%.", "icon": "https://brawlify.com/images/gadgets/23000350.png" }
