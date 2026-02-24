@@ -63,7 +63,7 @@ async function initBrawlerPage() {
 
     // 4. Construction de l'en-tête HTML
     let html = `
-        <div class="wiki-btn-back" style="text-align: left; width: 100%;">
+        <div class="wiki-btn-back">
             <button class="btn-back" onclick="window.location.href='index.html?page=brawlers'">⬅ Retour à la liste</button>
         </div>
 
@@ -82,8 +82,8 @@ async function initBrawlerPage() {
         </div>
     `;
 
-    // Fonction locale pour générer les cartes (Gadgets, SP, HC)
-    const generateItemsHtml = (brawlerItems) => {
+    // Fonction locale pour générer les cartes avec ICÔNES et COULEURS
+    const generateItemsHtml = (brawlerItems, typeClass) => {
         if (!brawlerItems || Object.keys(brawlerItems).length === 0) {
             return `<p style="color: #aaa; font-style: italic;">Aucun objet disponible.</p>`;
         }
@@ -91,8 +91,11 @@ async function initBrawlerPage() {
         let itemsHtml = `<div class="horizontal-scroll-container">`;
         for (const [itemId, itemData] of Object.entries(brawlerItems)) {
             itemsHtml += `
-                <div class="item-card">
-                    <h4>${itemData.name}</h4>
+                <div class="item-card ${typeClass}-card">
+                    <div class="item-card-header">
+                        <img src="${itemData.icon || 'images/ui/placeholder.png'}" alt="${itemData.name}" class="item-icon" onerror="this.src='https://via.placeholder.com/45x45?text=?'">
+                        <h4>${itemData.name}</h4>
+                    </div>
                     <p>${itemData.description}</p>
                 </div>
             `;
@@ -101,19 +104,26 @@ async function initBrawlerPage() {
         return itemsHtml;
     };
 
-    // Injection : GADGETS
+    // Injection : GADGETS (Vert)
+    html += `<div class="section-gadget">`;
     html += `<h2 class="wiki-section-title">GADGETS</h2>`;
-    html += generateItemsHtml(brawlerGadgets);
+    html += generateItemsHtml(brawlerGadgets, 'gadget');
+    html += `</div>`;
 
-    // Injection : POUVOIRS STARS
+    // Injection : POUVOIRS STARS (Orange)
+    html += `<div class="section-starpower">`;
     html += `<h2 class="wiki-section-title">POUVOIRS STARS</h2>`;
-    html += generateItemsHtml(brawlerStarpowers);
+    html += generateItemsHtml(brawlerStarpowers, 'starpower');
+    html += `</div>`;
 
-    // Injection : HYPERCHARGE
+    // Injection : HYPERCHARGE (Rose)
+    html += `<div class="section-hypercharge">`;
     html += `<h2 class="wiki-section-title">HYPERCHARGE</h2>`;
-    html += generateItemsHtml(brawlerHypercharges);
+    html += generateItemsHtml(brawlerHypercharges, 'hypercharge');
+    html += `</div>`;
 
-    // Injection : SKINS
+    // Injection : SKINS (Couleur Classique)
+    html += `<div class="section-skins">`;
     html += `<h2 class="wiki-section-title">SKINS</h2>`;
     if (brawlerSkins && Object.keys(brawlerSkins).length > 0) {
         html += `<div class="horizontal-scroll-container">`;
@@ -121,7 +131,7 @@ async function initBrawlerPage() {
             html += `
                 <div class="item-card skin-card">
                     <img src="${skinData.image}" alt="${skinData.name}" onerror="this.src='https://via.placeholder.com/150x150?text=Image+Manquante'">
-                    <h4 style="margin-top: 10px;">${skinData.name}</h4>
+                    <h4>${skinData.name}</h4>
                 </div>
             `;
         }
@@ -129,6 +139,7 @@ async function initBrawlerPage() {
     } else {
         html += `<p style="color: #aaa; font-style: italic;">Aucun skin disponible.</p>`;
     }
+    html += `</div>`;
 
     // 5. Affichage final
     brawlerContent.innerHTML = html;
