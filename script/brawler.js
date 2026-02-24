@@ -53,14 +53,37 @@ function generateSectionHtml(items, sectionClass, sectionTitle, cardClass) {
     return '<div class="' + sectionClass + '"><h2 class="wiki-section-title">' + sectionTitle + '</h2>' + cardsHtml + '</div>';
 }
 
+function formatDateSkin(dateStr) {
+    if (!dateStr) return '';
+    const months = ['Jan.','Fév.','Mar.','Avr.','Mai','Juin','Juil.','Août','Sep.','Oct.','Nov.','Déc.'];
+    const [year, month] = dateStr.split('-');
+    return months[parseInt(month) - 1] + ' ' + year;
+}
+
 function generateSkinsHtml(skins) {
     if (!skins || Object.keys(skins).length === 0) return '';
+    const count = Object.keys(skins).length;
     let cardsHtml = '<div class="horizontal-scroll-container">';
     for (const [, skinData] of Object.entries(skins)) {
-        cardsHtml += '<div class="item-card skin-card"><img src="' + skinData.image + '" alt="' + skinData.name + '" onerror="this.style.display=\'none\'"><h4>' + skinData.name + '</h4></div>';
+        const dateStr = skinData['date de sortie'] ? formatDateSkin(skinData['date de sortie']) : '';
+        const dateBadge = dateStr
+            ? '<div class="skin-date-badge">&#128197; ' + dateStr + '</div>'
+            : '';
+        cardsHtml += '<div class="item-card skin-card">'
+            + '<div class="skin-img-wrapper">'
+            + '<img src="' + skinData.image + '" alt="' + skinData.name + '" onerror="this.parentElement.classList.add(\'skin-img-error\')">'
+            + '</div>'
+            + '<div class="skin-info">'
+            + '<span class="skin-name">' + skinData.name + '</span>'
+            + dateBadge
+            + '</div>'
+            + '</div>';
     }
     cardsHtml += '</div>';
-    return '<div class="section-skins"><h2 class="wiki-section-title">SKINS</h2>' + cardsHtml + '</div>';
+    return '<div class="section-skins">'
+        + '<h2 class="wiki-section-title">SKINS <span class="section-count">(' + count + ')</span></h2>'
+        + cardsHtml
+        + '</div>';
 }
 
 // ==========================================
@@ -158,10 +181,11 @@ function generateEquilibrageHtml(balanceData) {
     if (!balanceData || Object.keys(balanceData).length === 0) return '';
 
     const ICONS = {
-        buff:   '<span class="eq-icon eq-buff" title="Buff">&#x2B06;</span>',
-        nerf:   '<span class="eq-icon eq-nerf" title="Nerf">&#x2B07;</span>',
+        buff:   '<span class="eq-icon eq-buff"   title="Buff">&#x2B06;</span>',
+        nerf:   '<span class="eq-icon eq-nerf"   title="Nerf">&#x2B07;</span>',
         rework: '<span class="eq-icon eq-rework" title="Rework">&#x1F504;</span>',
-        other:  '<span class="eq-icon eq-other" title="Autre">&#x25CF;</span>'
+        patch:  '<span class="eq-icon eq-patch"  title="Patch">&#x25CF;</span>',
+        other:  '<span class="eq-icon eq-other"  title="Autre">&#x25CF;</span>'
     };
 
     function formatDate(dateStr) {
@@ -171,32 +195,66 @@ function generateEquilibrageHtml(balanceData) {
         return months[parseInt(month) - 1] + ' ' + year;
     }
 
-    // Trier du plus récent au plus ancien
+    const LIMIT = 10;
     const entries = Object.values(balanceData).sort(function(a, b) {
         return (b.date || '').localeCompare(a.date || '');
     });
+    const total = entries.length;
 
-    const rowsHtml = entries.map(function(entry) {
+    function buildRow(entry) {
         const icon = ICONS[entry.type] || ICONS.other;
-        return '<tr class="eq-row eq-type-' + entry.type + '">'
+        return '<tr class="eq-row eq-type-' + (entry.type || 'other') + '">'
             + '<td class="eq-td eq-td-icon">' + icon + '</td>'
             + '<td class="eq-td eq-td-date">' + formatDate(entry.date) + '</td>'
             + '<td class="eq-td eq-td-desc">' + entry.description + '</td>'
             + '</tr>';
-    }).join('');
+    }
+
+    const visibleRows  = entries.slice(0, LIMIT).map(buildRow).join('');
+    const hiddenRows   = total > LIMIT ? entries.slice(LIMIT).map(buildRow).join('') : '';
+    const showMoreBtn  = total > LIMIT
+        ? '<button class="eq-show-more-btn" id="eq-toggle-btn" onclick="toggleEquilibrage()">'
+          + '&#x25BC; Afficher plus (' + (total - LIMIT) + ')</button>'
+        : '';
+
+    const hiddenBlock = hiddenRows
+        ? '<tbody id="eq-hidden-rows" class="eq-hidden">' + hiddenRows + '</tbody>'
+        : '';
 
     return '<div class="section-equilibrage">'
-        + '<h2 class="wiki-section-title">ÉQUILIBRAGE</h2>'
+        + '<h2 class="wiki-section-title">ÉQUILIBRAGE <span class="section-count">(' + total + ')</span></h2>'
         + '<div class="eq-table-wrapper">'
         + '<table class="eq-table">'
         + '<thead><tr>'
-        + '<th class="eq-th">Type</th>'
-        + '<th class="eq-th">Date</th>'
+        + '<th class="eq-th" style="width:52px">Type</th>'
+        + '<th class="eq-th" style="width:90px">Date</th>'
         + '<th class="eq-th">Description</th>'
         + '</tr></thead>'
-        + '<tbody>' + rowsHtml + '</tbody>'
+        + '<tbody id="eq-visible-rows">' + visibleRows + '</tbody>'
+        + hiddenBlock
         + '</table>'
-        + '</div></div>';
+        + '</div>'
+        + showMoreBtn
+        + '</div>';
+}
+
+// ==========================================
+// TOGGLE ÉQUILIBRAGE (global, appelé via onclick)
+// ==========================================
+function toggleEquilibrage() {
+    const hidden = document.getElementById('eq-hidden-rows');
+    const btn    = document.getElementById('eq-toggle-btn');
+    if (!hidden || !btn) return;
+    const isHidden = hidden.classList.contains('eq-hidden');
+    hidden.classList.toggle('eq-hidden', !isHidden);
+    if (isHidden) {
+        btn.innerHTML = '&#x25B2; Afficher moins';
+        btn.classList.add('eq-show-more-btn--open');
+    } else {
+        const count = hidden.querySelectorAll('tr').length;
+        btn.innerHTML = '&#x25BC; Afficher plus (' + count + ')';
+        btn.classList.remove('eq-show-more-btn--open');
+    }
 }
 
 // ==========================================
