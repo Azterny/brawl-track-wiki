@@ -1,424 +1,174 @@
 {
-"BULL": {
+  "BULL": {
     "1": {
       "type": "buff",
       "date": "2017-12",
-      "description": "PV augmentés de 4800 → 5000."
+      "description": "PV augmentés de 4800 → 5000. Dégâts de l'attaque principale augmentés de 400 → 440 par projectile. Le Pouvoir Star « Berserker » s'active à 50% de PV (au lieu de 30%)."
     },
     "2": {
       "type": "buff",
       "date": "2017-12",
-      "description": "Dégâts de l'attaque principale augmentés de 400 → 440 par plomb."
+      "description": "Vitesse de déplacement augmentée de 650 → 700. PV augmentés de 5000 → 5400."
     },
     "3": {
-      "type": "buff",
-      "date": "2017-12",
-      "description": "Le Pouvoir Star Berserker s'active désormais à 50% de PV (au lieu de 30%)."
+      "type": "nerf",
+      "date": "2018-01",
+      "description": "PV diminués de 5400 → 5200. Le Pouvoir Star « Berserker » s'active à 40% de PV (au lieu de 50%)."
     },
     "4": {
-      "type": "buff",
-      "date": "2017-12",
-      "description": "Vitesse de déplacement augmentée de 650 → 700."
+      "type": "nerf",
+      "date": "2018-01",
+      "description": "PV diminués de 5200 → 5000. Nombre de coups pour charger le Super augmenté de 8 → 10."
     },
     "5": {
-      "type": "buff",
-      "date": "2017-12",
-      "description": "PV augmentés de 5000 → 5400."
+      "type": "rework",
+      "date": "2018-03",
+      "description": "Dégâts de l'attaque principale diminués de 440 → 400. Nombre de coups pour charger le Super diminué de 10 → 11. Vitesse de déplacement augmentée de 700 → 770. Vitesse des projectiles augmentée de 9%."
     },
     "6": {
-      "type": "nerf",
-      "date": "2018-01",
-      "description": "PV réduits de 5400 → 5200."
+      "type": "other",
+      "date": "2018-12",
+      "description": "PV augmentés de 5000 → 5200. Remodelage de l'apparence de base."
     },
     "7": {
-      "type": "nerf",
-      "date": "2018-01",
-      "description": "Le Pouvoir Star Berserker s'active désormais à 40% de PV (au lieu de 50%)."
+      "type": "other",
+      "date": "2019-07",
+      "description": "Ajout du Pouvoir Star « Robuste »."
     },
     "8": {
-      "type": "nerf",
-      "date": "2018-01",
-      "description": "PV réduits de 5200 → 5000."
+      "type": "other",
+      "date": "2019-08",
+      "description": "Refonte des animations."
     },
     "9": {
       "type": "nerf",
-      "date": "2018-01",
-      "description": "Coups nécessaires pour charger le Super augmentés de 8 → 10."
+      "date": "2019-11",
+      "description": "PV diminués de 5200 → 4900."
     },
     "10": {
-      "type": "nerf",
-      "date": "2018-03",
-      "description": "Dégâts de l'attaque principale réduits de 440 → 400 par plomb."
+      "type": "other",
+      "date": "2020-03",
+      "description": "Ajout du Gadget « Tonic-Grog »."
     },
     "11": {
-      "type": "nerf",
-      "date": "2018-03",
-      "description": "Coups nécessaires pour charger le Super augmentés de 10 → 11."
+      "type": "other",
+      "date": "2020-07",
+      "description": "Le design du dos de la veste a été modifié."
     },
     "12": {
       "type": "buff",
-      "date": "2018-03",
-      "description": "Vitesse de déplacement augmentée de 700 → 770."
+      "date": "2020-09",
+      "description": "PV augmentés de 4900 → 5000. Nombre de coups pour charger le Super diminué de 11 → 10. Vitesse de recharge du Super augmentée de 20%."
     },
     "13": {
-      "type": "buff",
-      "date": "2018-03",
-      "description": "Vitesse des projectiles augmentée de 9%."
+      "type": "other",
+      "date": "2020-10",
+      "description": "Ajout du Gadget « Piétinement »."
     },
     "14": {
       "type": "buff",
-      "date": "2018-12",
-      "description": "PV augmentés de 5000 → 5200."
+      "date": "2020-12",
+      "description": "Le Pouvoir Star « Berserker » s'active à 60% de PV (au lieu de 40%)."
     },
     "15": {
-      "type": "neutral",
-      "date": "2018-12",
-      "description": "Bull et Bull Viking ont été remodelés. Le prix de Bull Viking passe à 80 Gemmes (au lieu de 30)."
+      "type": "other",
+      "date": "2021-01",
+      "description": "Ajout d'animations faciales."
     },
     "16": {
-      "type": "neutral",
-      "date": "2019-02",
-      "description": "Ajout du skin Bull Touchdown."
+      "type": "buff",
+      "date": "2021-06",
+      "description": "Ajout d'un trait passif : le Super se charge désormais en recevant des dégâts."
     },
     "17": {
-      "type": "neutral",
-      "date": "2019-06",
-      "description": "Ajout du skin Bull Linebacker."
+      "type": "nerf",
+      "date": "2021-06",
+      "description": "Taux de recharge du Super via le trait diminué de 30% → 20%."
     },
     "18": {
-      "type": "neutral",
-      "date": "2019-07",
-      "description": "Ajout du Pouvoir Star Dur à cuire."
+      "type": "rework",
+      "date": "2021-08",
+      "description": "Le taux de recharge du Super via le trait est désormais basé sur les PV max."
     },
     "19": {
-      "type": "neutral",
-      "date": "2019-08",
-      "description": "Les animations de Bull ont été retravaillées."
+      "type": "other",
+      "date": "2021-10",
+      "description": "Classe changée de Poids Lourd → Tank."
     },
     "20": {
-      "type": "nerf",
-      "date": "2019-11",
-      "description": "PV réduits de 5200 → 4900."
+      "type": "buff",
+      "date": "2022-12",
+      "description": "Dégâts du Super augmentés de 800 → 960. Vitesse de recharge du Super augmentée de 20%. Rareté changée en Rare."
     },
     "21": {
-      "type": "neutral",
-      "date": "2020-03",
-      "description": "Ajout du Gadget Injecteur T-Bone."
+      "type": "other",
+      "date": "2023-02",
+      "description": "Refonte légère des effets visuels de l'attaque principale."
     },
     "22": {
-      "type": "neutral",
-      "date": "2020-05",
-      "description": "Ajout du skin Roi des Barbares pour les 10 ans de Supercell."
+      "type": "buff",
+      "date": "2023-08",
+      "description": "Dégâts de l'attaque principale augmentés de 400 → 440. Vitesse de recharge du Super augmentée de 10%."
     },
     "23": {
-      "type": "neutral",
-      "date": "2020-07",
-      "description": "Le design du dos de la veste de Bull a été modifié."
+      "type": "other",
+      "date": "2023-09",
+      "description": "Légère refonte du modèle. Ajout de l'Hypercharge « Mâchoires d'Acier »."
     },
     "24": {
-      "type": "buff",
-      "date": "2020-09",
-      "description": "PV augmentés de 4900 → 5000."
+      "type": "patch",
+      "date": "2023-09",
+      "description": "Correction d'un problème où Bull bénéficiait d'une réduction de dégâts hors Hypercharge."
     },
     "25": {
       "type": "buff",
-      "date": "2020-09",
-      "description": "Coups nécessaires pour charger le Super réduits de 11 → 10."
+      "date": "2023-10",
+      "description": "Soin du Gadget « Tonic-Grog » augmenté de 1500 → 1600 (progresse désormais avec les niveaux). Description changée."
     },
     "26": {
-      "type": "buff",
-      "date": "2020-09",
-      "description": "Taux de recharge du Super augmenté de 20%."
+      "type": "nerf",
+      "date": "2024-02",
+      "description": "Hypercharge : multiplicateur diminué de 40% → 35%, boost dégâts de 10% → 5%, bouclier de 30% → 25%. La durée n'est plus extensible."
     },
     "27": {
-      "type": "neutral",
-      "date": "2020-10",
-      "description": "Ajout des skins Bull Massif (Argent et Or)."
+      "type": "patch",
+      "date": "2024-04",
+      "description": "Correction d'un bug supprimant l'effet de recul du Super sous Hypercharge."
     },
     "28": {
-      "type": "neutral",
-      "date": "2020-10",
-      "description": "Ajout du Gadget Écraseur."
+      "type": "rework",
+      "date": "2025-02",
+      "description": "Les Gadgets n'ont plus 3 charges mais fonctionnent avec un temps de recharge (cooldown)."
     },
     "29": {
       "type": "buff",
-      "date": "2020-12",
-      "description": "Le Pouvoir Star Berserker s'active désormais à 60% de PV (au lieu de 40%)."
+      "date": "2025-06",
+      "description": "Le Super peut être visé à différentes distances, ralentit les ennemis sur 3 tuiles à l'arrivée (2,5s). Vitesse du Super de 1800 → 2000. Dégâts du Super de 960 → 1000. Recharge du Super légèrement augmentée."
     },
     "30": {
-      "type": "neutral",
-      "date": "2021-01",
-      "description": "Ajout d'animations faciales pour plusieurs skins de Bull."
+      "type": "rework",
+      "date": "2025-06",
+      "description": "Le Gadget « Piétinement » ne stoppe plus la charge mais permet au prochain Super d'étourdir les ennemis (1s)."
     },
     "31": {
-      "type": "neutral",
-      "date": "2021-02",
-      "description": "Ajout du skin Bull Bœuf de l'Espace."
+      "type": "patch",
+      "date": "2025-07",
+      "description": "Correction d'un bug où Bull perdait son Super s'il mourait avec le gadget activé."
     },
     "32": {
-      "type": "buff",
-      "date": "2021-06",
-      "description": "Ajout d'un Trait : Bull charge désormais son Super en subissant des dégâts."
+      "type": "nerf",
+      "date": "2025-09",
+      "description": "Dégâts par gain de niveau diminués de 4% → 3%."
     },
     "33": {
       "type": "nerf",
-      "date": "2021-06",
-      "description": "Le taux de charge du Super via le Trait est réduit à 20% (au lieu de 30%)."
+      "date": "2025-10",
+      "description": "Hypercharge : boost vitesse diminué de 25% → 20%, bouclier diminué de 25% → 5%."
     },
     "34": {
-      "type": "rework",
-      "date": "2021-08",
-      "description": "La charge du Super via le Trait est désormais basée sur les PV max de Bull."
-    },
-    "35": {
-      "type": "neutral",
-      "date": "2021-10",
-      "description": "La classe de Bull passe à Tank (au lieu de Poids lourd)."
-    },
-    "36": {
-      "type": "neutral",
-      "date": "2021-11",
-      "description": "Ajout du skin B-800."
-    },
-    "37": {
-      "type": "neutral",
-      "date": "2022-03",
-      "description": "Ajout du skin Bull Lion."
-    },
-    "38": {
-      "type": "neutral",
-      "date": "2022-04",
-      "description": "Les effets visuels de l'attaque principale et du Super de Bull Viking ont été retravaillés."
-    },
-    "39": {
-      "type": "neutral",
-      "date": "2022-07",
-      "description": "Ajout du skin Bull Mang."
-    },
-    "40": {
-      "type": "buff",
-      "date": "2022-12",
-      "description": "Dégâts du Super augmentés de 800 → 960."
-    },
-    "41": {
-      "type": "buff",
-      "date": "2022-12",
-      "description": "Taux de recharge du Super augmenté de 20%."
-    },
-    "42": {
-      "type": "rework",
-      "date": "2022-12",
-      "description": "La rareté de Bull passe à Rare (au lieu de Progression par Trophées)."
-    },
-    "43": {
-      "type": "neutral",
-      "date": "2023-02",
-      "description": "Légère retouche des effets visuels de l'attaque principale de plusieurs skins."
-    },
-    "44": {
-      "type": "neutral",
-      "date": "2023-03",
-      "description": "Ajout du skin Bull de Gouttière."
-    },
-    "45": {
-      "type": "neutral",
-      "date": "2023-04",
-      "description": "Le prix de Bull Linebacker passe à 29 Gemmes (au lieu de 2500 Points Star)."
-    },
-    "46": {
-      "type": "buff",
-      "date": "2023-08",
-      "description": "Dégâts de l'attaque principale augmentés de 400 → 440 par plomb."
-    },
-    "47": {
-      "type": "buff",
-      "date": "2023-08",
-      "description": "Taux de charge du Super augmenté de 10%."
-    },
-    "48": {
-      "type": "buff",
-      "date": "2023-09",
-      "description": "Les PV et dégâts de base augmentent désormais de 10% par niveau (au lieu de 5%)."
-    },
-    "49": {
-      "type": "neutral",
-      "date": "2023-09",
-      "description": "Léger remodelage de Bull."
-    },
-    "50": {
-      "type": "neutral",
-      "date": "2023-09",
-      "description": "Ajout de l'Hypercharge Mâchoires d'acier."
-    },
-    "51": {
-      "type": "fix",
-      "date": "2023-09",
-      "description": "Correction d'un bug octroyant à Bull une réduction de dégâts en dehors de son Hypercharge."
-    },
-    "52": {
-      "type": "buff",
-      "date": "2023-10",
-      "description": "Les soins du Gadget Injecteur T-Bone augmentent de 1500 → 1600 et s'adaptent désormais au niveau de pouvoir."
-    },
-    "53": {
-      "type": "neutral",
-      "date": "2023-10",
-      "description": "Le prix de Bull Lion passe à 149 Gemmes (au lieu de 2500 Pièces de Club)."
-    },
-    "54": {
-      "type": "neutral",
-      "date": "2023-10",
-      "description": "La description du brawler a été modifiée."
-    },
-    "55": {
-      "type": "nerf",
-      "date": "2024-02",
-      "description": "Le multiplicateur de l'Hypercharge est réduit à 35% (au lieu de 40%)."
-    },
-    "56": {
-      "type": "nerf",
-      "date": "2024-02",
-      "description": "Le boost de dégâts de l'Hypercharge est réduit à 5% (au lieu de 10%)."
-    },
-    "57": {
-      "type": "nerf",
-      "date": "2024-02",
-      "description": "Le boost de bouclier de l'Hypercharge est réduit à 25% (au lieu de 30%)."
-    },
-    "58": {
-      "type": "nerf",
-      "date": "2024-02",
-      "description": "La durée de l'Hypercharge ne peut plus être prolongée."
-    },
-    "59": {
-      "type": "neutral",
-      "date": "2024-02",
-      "description": "Léger remodelage des skins Argent et Or."
-    },
-    "60": {
-      "type": "neutral",
-      "date": "2024-04",
-      "description": "Bull de Gouttière a été légèrement remodelé."
-    },
-    "61": {
-      "type": "fix",
-      "date": "2024-04",
-      "description": "Correction d'un bug supprimant l'effet de recul du Super pendant l'Hypercharge."
-    },
-    "62": {
-      "type": "neutral",
-      "date": "2024-06",
-      "description": "Bull Viking a été remodelé."
-    },
-    "63": {
-      "type": "neutral",
-      "date": "2024-06",
-      "description": "Ajout du skin Bull Pilleur Nordique."
-    },
-    "64": {
-      "type": "neutral",
-      "date": "2024-07",
-      "description": "Ajout du skin Bull Minotaure."
-    },
-    "65": {
-      "type": "rework",
-      "date": "2025-02",
-      "description": "Les Gadgets n'ont plus 3 charges et fonctionnent désormais avec un temps de recharge (cooldown)."
-    },
-    "66": {
-      "type": "neutral",
-      "date": "2025-02",
-      "description": "Léger remodelage de tous les skins Or massif."
-    },
-    "67": {
-      "type": "neutral",
-      "date": "2025-05",
-      "description": "Ajout temporaire du Pouvoir Wasabi."
-    },
-    "68": {
-      "type": "neutral",
-      "date": "2025-05",
-      "description": "Retrait du Pouvoir Wasabi."
-    },
-    "69": {
-      "type": "neutral",
-      "date": "2025-06",
-      "description": "Ajout du skin Bull Dragon du Kansai."
-    },
-    "70": {
-      "type": "rework",
-      "date": "2025-06",
-      "description": "Le Super peut désormais être visé à différentes distances."
-    },
-    "71": {
-      "type": "buff",
-      "date": "2025-06",
-      "description": "Le Super ralentit désormais les ennemis dans un rayon de 3 cases à la fin de sa portée pendant 2,5 secondes."
-    },
-    "72": {
-      "type": "buff",
-      "date": "2025-06",
-      "description": "Vitesse de déplacement du Super augmentée de 1800 → 2000."
-    },
-    "73": {
-      "type": "buff",
-      "date": "2025-06",
-      "description": "Dégâts du Super augmentés de 960 → 1000."
-    },
-    "74": {
-      "type": "buff",
-      "date": "2025-06",
-      "description": "Le taux de recharge du Super a été légèrement augmenté."
-    },
-    "75": {
-      "type": "rework",
-      "date": "2025-06",
-      "description": "Le Gadget Écraseur a été retravaillé : il permet au prochain Super d'étourdir les ennemis touchés pendant 1 seconde."
-    },
-    "76": {
-      "type": "fix",
-      "date": "2025-07",
-      "description": "Correction d'un bug où Bull perdait son Super s'il était éliminé avec le Gadget Écraseur activé."
-    },
-    "77": {
-      "type": "neutral",
-      "date": "2025-08",
-      "description": "Ajout du skin HellBull."
-    },
-    "78": {
-      "type": "nerf",
-      "date": "2025-09",
-      "description": "L'augmentation des dégâts par niveau est réduite à 3% (au lieu de 4%) dans l'Arène Brawl."
-    },
-    "79": {
-      "type": "neutral",
-      "date": "2025-09",
-      "description": "Les effets visuels du Super de tous les skins ont été retravaillés."
-    },
-    "80": {
-      "type": "nerf",
-      "date": "2025-10",
-      "description": "Le boost de vitesse de l'Hypercharge est réduit à 20% (au lieu de 25%)."
-    },
-    "81": {
-      "type": "nerf",
-      "date": "2025-10",
-      "description": "Le boost de bouclier de l'Hypercharge est réduit à 5% (au lieu de 25%)."
-    },
-    "82": {
-      "type": "neutral",
-      "date": "2025-11",
-      "description": "Ajout du skin Bull Hopper."
-    },
-    "83": {
       "type": "buff",
       "date": "2025-12",
-      "description": "PV augmentés de 5000 → 5300."
-    },
-    "84": {
-      "type": "buff",
-      "date": "2025-12",
-      "description": "Les soins du Gadget Injecteur T-Bone sont augmentés de 1600 → 1696."
+      "description": "PV augmentés de 5000 → 5300. Soin du Gadget « Tonic-Grog » augmenté de 1600 → 1696."
     }
   }
 }
