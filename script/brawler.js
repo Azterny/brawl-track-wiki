@@ -24,53 +24,103 @@ async function fetchJSON(file) {
         return await response.json();
     } catch (error) {
         console.error(`Erreur de chargement de ${file}:`, error);
-        return {}; // Retourne un objet vide en cas d'erreur
+        return {};
     }
+}
+
+// Génère le HTML d'une section d'équipements.
+// Retourne '' si vide → la section ne s'affiche pas du tout.
+function generateSectionHtml(items, sectionClass, sectionTitle, cardClass) {
+    if (!items || Object.keys(items).length === 0) return '';
+
+    let cardsHtml = `<div class="horizontal-scroll-container">`;
+    for (const [itemId, itemData] of Object.entries(items)) {
+        const iconHtml = itemData.icon
+            ? `<img src="${itemData.icon}" alt="" class="item-icon-inline" onerror="this.style.display='none'">`
+            : '';
+        cardsHtml += `
+            <div class="item-card ${cardClass}-card">
+                <h4>${iconHtml}${itemData.name}</h4>
+                <p>${itemData.description}</p>
+            </div>
+        `;
+    }
+    cardsHtml += `</div>`;
+
+    return `
+        <div class="${sectionClass}">
+            <h2 class="wiki-section-title">${sectionTitle}</h2>
+            ${cardsHtml}
+        </div>
+    `;
+}
+
+// Génère le HTML de la section Skins (masquée si vide)
+function generateSkinsHtml(skins) {
+    if (!skins || Object.keys(skins).length === 0) return '';
+
+    let cardsHtml = `<div class="horizontal-scroll-container">`;
+    for (const [skinId, skinData] of Object.entries(skins)) {
+        cardsHtml += `
+            <div class="item-card skin-card">
+                <img src="${skinData.image}" alt="${skinData.name}" onerror="this.style.display='none'">
+                <h4>${skinData.name}</h4>
+            </div>
+        `;
+    }
+    cardsHtml += `</div>`;
+
+    return `
+        <div class="section-skins">
+            <h2 class="wiki-section-title">SKINS</h2>
+            ${cardsHtml}
+        </div>
+    `;
 }
 
 // Initialisation de la page
 async function initBrawlerPage() {
-    // 1. On récupère l'ID du brawler depuis l'URL (ex: brawler.html?id=NITA)
     const params = new URLSearchParams(window.location.search);
-    const brawlerId = params.get('id') || 'NITA'; // On force 'NITA' par défaut pour tester
+    const brawlerId = params.get('id');
 
     if (!brawlerId) {
-        brawlerContent.innerHTML = `<h1>Erreur: Aucun brawler sélectionné</h1>`;
+        brawlerContent.innerHTML = `<h2 style="color:#dc3545;">Erreur : Aucun brawler sélectionné.</h2>`;
         return;
     }
 
-    // 2. Chargement des données de base
-    const brawlersData = await fetchJSON('brawlers.json');
+    // Chargement parallèle de toutes les données (plus rapide)
+    const [brawlersData, gadgetsData, starpowersData, hyperchargesData, skinsData] = await Promise.all([
+        fetchJSON('brawlers.json'),
+        fetchJSON('gadgets.json'),
+        fetchJSON('starpowers.json'),
+        fetchJSON('hypercharges.json'),
+        fetchJSON('skins.json')
+    ]);
+
     const brawler = brawlersData[brawlerId];
-
     if (!brawler) {
-        brawlerContent.innerHTML = `<h1>Brawler "${brawlerId}" introuvable</h1>`;
+        brawlerContent.innerHTML = `<h2 style="color:#dc3545;">Brawler "${brawlerId}" introuvable.</h2>`;
         return;
     }
 
-    // 3. Chargement des équipements
-    const gadgetsData = await fetchJSON('gadgets.json');
-    const starpowersData = await fetchJSON('starpowers.json');
-    const hyperchargesData = await fetchJSON('hypercharges.json');
-    const skinsData = await fetchJSON('skins.json');
+    // Mise à jour dynamique du titre de l'onglet
+    document.title = `${brawler.name} - BrawlOpédia`;
 
-    // On isole les équipements appartenant UNIQUEMENT à ce brawler
-    const brawlerGadgets = gadgetsData[brawlerId];
-    const brawlerStarpowers = starpowersData[brawlerId];
-    const brawlerHypercharges = hyperchargesData[brawlerId];
-    const brawlerSkins = skinsData[brawlerId];
-    
-    const rarityClass = getRarityClass(brawler.rarity); // On récupère la couleur de rareté
-    const borderClass = rarityClass.replace('badge-', 'border-'); // Pour la bordure colorée de l'icône du brawler
+    const rarityClass = getRarityClass(brawler.rarity);
+    const borderClass = rarityClass.replace('badge-', 'border-');
 
-    // 4. Construction de l'en-tête HTML
+    // En-tête du brawler
     let html = `
         <div class="wiki-btn-back">
             <button class="btn-back" onclick="window.location.href='index.html?page=brawlers'">⬅ Retour à la liste</button>
         </div>
-
         <div class="brawler-top-section">
-            <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}" class="brawler-detail-icon ${borderClass}" onerror="this.src='https://via.placeholder.com/100x100?text=?'; this.classList.remove('${borderClass}')">
+            <img
+                src="${brawler.image || 'images/ui/placeholder.png'}"
+                alt="${brawler.name}"
+                class="brawler-detail-icon ${borderClass}"
+                onerror="this.src='images/ui/placeholder.png'; this.classList.remove('${borderClass}')"
+            >
             <div class="brawler-info-left">
                 <h1>${brawler.name}</h1>
                 <div class="brawler-badges">
@@ -84,72 +134,13 @@ async function initBrawlerPage() {
         </div>
     `;
 
-    // Fonction locale pour générer les cartes des équipements avec icône DANS LE TITRE
-    const generateItemsHtml = (brawlerItems, typeClass) => {
-        if (!brawlerItems || Object.keys(brawlerItems).length === 0) {
-            return `<p style="color: #aaa; font-style: italic;">Aucun objet disponible.</p>`;
-        }
-        
-        let itemsHtml = `<div class="horizontal-scroll-container">`;
-        for (const [itemId, itemData] of Object.entries(brawlerItems)) {
-            
-            // Logique de l'icône inline : elle n'est pas insérée si elle manque
-            let iconHtml = '';
-            if (itemData.icon) {
-                iconHtml = `<img src="${itemData.icon}" alt="" class="item-icon-inline" onerror="this.style.display='none'">`;
-            }
+    // Sections équipements — affichées uniquement si des données existent
+    html += generateSectionHtml(gadgetsData[brawlerId],       'section-gadget',      'GADGETS',        'gadget');
+    html += generateSectionHtml(starpowersData[brawlerId],    'section-starpower',   'POUVOIRS STARS', 'starpower');
+    html += generateSectionHtml(hyperchargesData[brawlerId],  'section-hypercharge', 'HYPERCHARGE',    'hypercharge');
+    html += generateSkinsHtml(skinsData[brawlerId]);
 
-            itemsHtml += `
-                <div class="item-card ${typeClass}-card">
-                    <h4>${iconHtml}${itemData.name}</h4>
-                    <p>${itemData.description}</p>
-                </div>
-            `;
-        }
-        itemsHtml += `</div>`;
-        return itemsHtml;
-    };
-
-    // Injection : GADGETS
-    html += `<div class="section-gadget">`;
-    html += `<h2 class="wiki-section-title">GADGETS</h2>`;
-    html += generateItemsHtml(brawlerGadgets, 'gadget');
-    html += `</div>`;
-
-    // Injection : POUVOIRS STARS
-    html += `<div class="section-starpower">`;
-    html += `<h2 class="wiki-section-title">POUVOIRS STARS</h2>`;
-    html += generateItemsHtml(brawlerStarpowers, 'starpower');
-    html += `</div>`;
-
-    // Injection : HYPERCHARGE
-    html += `<div class="section-hypercharge">`;
-    html += `<h2 class="wiki-section-title">HYPERCHARGE</h2>`;
-    html += generateItemsHtml(brawlerHypercharges, 'hypercharge');
-    html += `</div>`;
-
-    // Injection : SKINS
-    html += `<div class="section-skins">`;
-    html += `<h2 class="wiki-section-title">SKINS</h2>`;
-    if (brawlerSkins && Object.keys(brawlerSkins).length > 0) {
-        html += `<div class="horizontal-scroll-container">`;
-        for (const [skinId, skinData] of Object.entries(brawlerSkins)) {
-            html += `
-                <div class="item-card skin-card">
-                    <img src="${skinData.image}" alt="${skinData.name}" onerror="this.src='https://via.placeholder.com/150x150?text=Image+Manquante'">
-                    <h4>${skinData.name}</h4>
-                </div>
-            `;
-        }
-        html += `</div>`;
-    } else {
-        html += `<p style="color: #aaa; font-style: italic;">Aucun skin disponible.</p>`;
-    }
-    html += `</div>`;
-
-    // 5. Affichage final
     brawlerContent.innerHTML = html;
 }
 
-// Déclenche la fonction quand la page est chargée
 window.addEventListener('DOMContentLoaded', initBrawlerPage);
