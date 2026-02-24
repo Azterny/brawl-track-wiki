@@ -76,4 +76,95 @@
       "icon": "https://brawlify.com/images/hypercharges/Darryl.png"
     }
   }
+"FRANK": {
+    "seismic_smash": {
+      "name": "Écrasement Sismique",
+      "description": "L'onde de choc du Super de Frank effectue un cercle complet tout autour de lui, touchant les ennemis dans toutes les directions.",
+      "icon": "https://brawlify.com/images/hypercharges/Frank.png"
+    }
+  },
+  "GENE": {
+    "hyperhands": {
+      "name": "Mains Multiples",
+      "description": "Le Super de Geni projette désormais trois mains magiques au lieu d'une pour attraper plusieurs ennemis.",
+      "icon": "https://brawlify.com/images/hypercharges/Gene.png"
+    }
+  },
+  "TICK": {
+    "head_rush": {
+      "name": "Tête Chercheuse",
+      "description": "La tête du Super de Tick court beaucoup plus vite vers sa cible et devient plus difficile à détruire.",
+      "icon": "https://brawlify.com/images/hypercharges/Tick.png"
+    }
+  },
+  "LEON": {
+    "limbo": {
+      "name": "Limbes",
+      "description": "Léon reste totalement invisible même s'il attaque ses ennemis pendant la durée de son Hypercharge.",
+      "icon": "https://brawlify.com/images/hypercharges/Leon.png"
+    }
+  },
+  "ROSA": {
+    "grasping_roots": {
+      "name": "Racines Grimpantes",
+      "description": "Le bouclier du Super de Rosa crée un effet de ralentissement massif de zone pour tous les ennemis autour d'elle.",
+      "icon": "https://brawlify.com/images/hypercharges/Rosa.png"
+    }
+  },
+  "BIBI": {
+    "out_of_bounds": {
+      "name": "Balle Magique",
+      "description": "La bulle rebondissante du Super de Bibi se divise en deux à chaque fois qu'elle frappe un ennemi.",
+      "icon": "https://brawlify.com/images/hypercharges/Bibi.png"
+    }
+  },
+  "SANDY": {
+    "sandstorm_sprint": {
+      "name": "Tempête Silencieuse",
+      "description": "La tempête de sable du Super rend Émeri et ses alliés 20% plus rapides et bloque les soins ennemis.",
+      "icon": "https://brawlify.com/images/hypercharges/Sandy.png"
+    }
+  },
+  "EMZ": {
+    "haze": {
+      "name": "Brume Toxique",
+      "description": "Le nuage toxique du Super d'Eliz@beth repousse les ennemis vers l'extérieur de la zone en plus de les blesser.",
+      "icon": "https://brawlify.com/images/hypercharges/Emz.png"
+    }
+  },
+  "MAX": {
+    "unlimited_energy": {
+      "name": "Énergie Illimitée",
+      "description": "Le Super de Max offre à toute l'équipe une recharge accélérée et une vitesse de déplacement encore supérieure.",
+      "icon": "https://brawlify.com/images/hypercharges/Max.png"
+    }
+  },
+  "JACKY": {
+    "seismic_event": {
+      "name": "Séisme",
+      "description": "Le Super de Jacky inflige des dégâts tout en attirant les ennemis, et elle est protégée par un bouclier renforcé.",
+      "icon": "https://brawlify.com/images/hypercharges/Jacky.png"
+    }
+  },
+  "GALE": {
+    "blizzard": {
+      "name": "Blizzard",
+      "description": "La bourrasque de neige de Gaël a une zone d'effet beaucoup plus large et repousse les ennemis plus loin.",
+      "icon": "https://brawlify.com/images/hypercharges/Gale.png"
+    }
+  },
+  "SPROUT": {
+    "thorn_wall": {
+      "name": "Mur de Ronces",
+      "description": "Le mur du Super de Sprout blesse de 500 PV tous les ennemis qui s'en approchent de trop près.",
+      "icon": "https://brawlify.com/images/hypercharges/Sprout.png"
+    }
+  },
+  "COLETTE": {
+    "teen_spirit": {
+      "name": "Esprit d'Ado",
+      "description": "L'ombre de Colette fait l'aller-retour avec elle lors du Super, infligeant des dégâts supplémentaires massifs.",
+      "icon": "https://brawlify.com/images/hypercharges/Colette.png"
+    }
+  }
 }
