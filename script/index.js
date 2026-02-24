@@ -196,7 +196,7 @@ function updateBrawlersGrid() {
     const container = document.getElementById('brawlers-grid-container');
     
     // Convertir l'objet JSON en tableau pour le tri et filtrage
-    let list = Object.entries(db.brawlers).map(([id, data]) => ({ id, ...data }));
+    let list = Object.entries(db.brawlers).map(([id, data], index) => ({ id, _order: index, ...data }));
 
     // --- FILTRAGE ---
     list = list.filter(b => {
@@ -223,7 +223,7 @@ function updateBrawlersGrid() {
             if (res === 0) res = getRarityValue(a.rarity) - getRarityValue(b.rarity); // Si même classe, tri par rareté
             if (res === 0) res = a.id.localeCompare(b.id);
         } else {
-            res = a.id.localeCompare(b.id); // Tri par défaut (ID)
+            res = a._order - b._order; // Tri par défaut (ordre d'ajout dans le jeu)
         }
         return brawlersState.sortAsc ? res : -res;
     });
@@ -241,7 +241,7 @@ function updateBrawlersGrid() {
         
         html += `
             <div class="brawler-list-card" onclick="window.location.href='brawler.html?id=${brawler.id}'">
-                <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}" class="${borderClass}" onerror="this.src='https://via.placeholder.com/64x64?text=?'; this.classList.remove('${borderClass}')">
+                <img src="${brawler.image || 'images/ui/placeholder.svg'}" alt="${brawler.name}" class="${borderClass}" onerror="this.src='images/ui/placeholder.svg'; this.classList.remove('${borderClass}')">
                 <div class="brawler-list-info">
                     <h3>${brawler.name}</h3>
                     <div class="badges-row">
