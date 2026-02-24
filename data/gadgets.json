@@ -1,134 +1,82 @@
 {
   "SHELLY": {
-    "fast_forward": {
-      "name": "Avance rapide",
-      "description": "Shelly se précipite en avant, parcourant une courte distance.",
-      "icon": "https://brawlify.com/images/gadgets/23000254.png"
-    },
-    "clay_pigeons": {
-      "name": "Tir d'argile",
-      "description": "Lors de la prochaine attaque de Shelly, la portée et la vitesse de ses balles sont augmentées.",
-      "icon": "https://brawlify.com/images/gadgets/23000288.png"
-    }
+    "fast_forward": { "name": "Avance rapide", "description": "Shelly se précipite en avant, parcourant une courte distance.", "icon": "https://brawlify.com/images/gadgets/23000254.png" },
+    "clay_pigeons": { "name": "Tir d'argile", "description": "Lors de la prochaine attaque, la portée et la vitesse des balles sont augmentées.", "icon": "https://brawlify.com/images/gadgets/23000288.png" }
   },
   "COLT": {
-    "speedloader": {
-      "name": "Recharge rapide",
-      "description": "Colt recharge instantanément ses pistolets avec 2 munitions.",
-      "icon": "https://brawlify.com/images/gadgets/23000258.png"
-    },
-    "silver_bullet": {
-      "name": "Balle d'argent",
-      "description": "La prochaine attaque de Colt est un tir unique qui transperce les murs et inflige d'énormes dégâts.",
-      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
-    }
+    "speedloader": { "name": "Recharge rapide", "description": "Colt recharge instantanément ses pistolets avec 2 munitions.", "icon": "https://brawlify.com/images/gadgets/23000258.png" },
+    "silver_bullet": { "name": "Balle d'argent", "description": "La prochaine attaque est un tir unique qui transperce les murs.", "icon": "https://brawlify.com/images/gadgets/23000295.png" }
   },
   "BULL": {
-    "t_bone": {
-      "name": "Mise en bouche",
-      "description": "Bull récupère instantanément 1500 points de vie.",
-      "icon": "https://brawlify.com/images/gadgets/23000262.png"
-    },
-    "stomper": {
-      "name": "Casse-briques",
-      "description": "Bull peut interrompre sa charge du Super, ce qui ralentit les ennemis à proximité.",
-      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
-    }
+    "t_bone": { "name": "Mise en bouche", "description": "Bull récupère instantanément 1500 points de vie.", "icon": "https://brawlify.com/images/gadgets/23000262.png" },
+    "stomper": { "name": "Casse-briques", "description": "Bull peut interrompre sa charge du Super, ralentissant les ennemis à proximité.", "icon": "https://brawlify.com/images/gadgets/23000296.png" }
   },
   "BROCK": {
-    "rocket_laces": {
-      "name": "Laces tes chaussures",
-      "description": "Brock fait exploser le sol, ce qui le propulse en l'air et repousse les ennemis proches.",
-      "icon": "https://brawlify.com/images/gadgets/23000257.png"
-    },
-    "rocket_fuel": {
-      "name": "Méga-roquette",
-      "description": "La prochaine attaque de Brock est une méga-roquette qui détruit les murs.",
-      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
-    }
+    "rocket_laces": { "name": "Laces tes chaussures", "description": "Brock fait exploser le sol, ce qui le propulse en l'air.", "icon": "https://brawlify.com/images/gadgets/23000257.png" },
+    "rocket_fuel": { "name": "Méga-roquette", "description": "La prochaine attaque est une méga-roquette qui détruit les murs.", "icon": "https://brawlify.com/images/gadgets/23000297.png" }
   },
   "RICO": {
-    "multiball": {
-      "name": "Lance-balles",
-      "description": "Rico tire des vagues de balles rebondissantes dans toutes les directions.",
-      "icon": "https://brawlify.com/images/gadgets/23000264.png"
-    },
-    "bouncy_castle": {
-      "name": "Château gonflable",
-      "description": "La prochaine attaque de Rico le soigne pour chaque rebond d'une balle.",
-      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
-    }
+    "multiball": { "name": "Lance-balles", "description": "Rico tire des vagues de balles rebondissantes dans toutes les directions.", "icon": "https://brawlify.com/images/gadgets/23000264.png" },
+    "bouncy_castle": { "name": "Château gonflable", "description": "La prochaine attaque de Rico le soigne pour chaque rebond d'une balle.", "icon": "https://brawlify.com/images/gadgets/23000298.png" }
   },
   "SPIKE": {
-    "pincushion": {
-      "name": "Coussin piqueur",
-      "description": "Spike tire 3 vagues d'épines dans toutes les directions, infligeant des dégâts à chaque touche.",
-      "icon": "https://brawlify.com/images/gadgets/23000259.png"
-    },
-    "life_plant": {
-      "name": "Plante verte",
-      "description": "Spike fait pousser un grand cactus qui le soigne et protège des tirs.",
-      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
-    }
+    "pincushion": { "name": "Coussin piqueur", "description": "Spike tire 3 vagues d'épines dans toutes les directions.", "icon": "https://brawlify.com/images/gadgets/23000259.png" },
+    "life_plant": { "name": "Plante verte", "description": "Spike fait pousser un grand cactus qui le soigne et protège des tirs.", "icon": "https://brawlify.com/images/gadgets/23000305.png" }
   },
   "BARLEY": {
-    "sticky_syrup": {
-      "name": "Sirop collant",
-      "description": "Barley laisse tomber une flaque de sirop qui ralentit tous les ennemis qui marchent dedans.",
-      "icon": "https://brawlify.com/images/gadgets/23000269.png"
-    },
-    "herbal_tonic": {
-      "name": "Remède à base de plantes",
-      "description": "Barley lance une potion qui soigne tous les alliés à l'intérieur de la zone.",
-      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
-    }
+    "sticky_syrup": { "name": "Sirop collant", "description": "Barley laisse tomber une flaque de sirop qui ralentit les ennemis.", "icon": "https://brawlify.com/images/gadgets/23000269.png" },
+    "herbal_tonic": { "name": "Remède à base de plantes", "description": "Barley lance une potion qui soigne tous les alliés dans la zone.", "icon": "https://brawlify.com/images/gadgets/23000299.png" }
   },
   "JESSIE": {
-    "spark_plug": {
-      "name": "Bougie d'allumage",
-      "description": "La tourelle de Jessie crée une onde de choc qui ralentit tous les ennemis dans sa zone d'effet.",
-      "icon": "https://brawlify.com/images/gadgets/23000271.png"
-    },
-    "recoil_spring": {
-      "name": "Ressort",
-      "description": "La cadence de tir de la tourelle de Jessie est doublée pendant 5 secondes.",
-      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
-    }
+    "spark_plug": { "name": "Bougie d'allumage", "description": "La tourelle de Jessie crée une onde de choc qui ralentit les ennemis.", "icon": "https://brawlify.com/images/gadgets/23000271.png" },
+    "recoil_spring": { "name": "Ressort", "description": "La cadence de tir de la tourelle de Jessie est doublée pendant 5 secondes.", "icon": "https://brawlify.com/images/gadgets/23000290.png" }
   },
   "NITA": {
-    "bear_paws": {
-      "name": "Griffes d'Ours",
-      "description": "L'ours de Nita frappe le sol, étourdissant les ennemis à proximité pendant 1 seconde.",
-      "icon": "https://brawlify.com/images/gadgets/23000255.png"
-    },
-    "faux_fur": {
-      "name": "Fausse Fourrure",
-      "description": "L'ours de Nita reçoit un bouclier qui réduit les dégâts subis de 35% pendant 3 secondes.",
-      "icon": "https://brawlify.com/images/gadgets/23000289.png"
-    }
+    "bear_paws": { "name": "Griffes d'Ours", "description": "L'ours de Nita frappe le sol, étourdissant les ennemis.", "icon": "https://brawlify.com/images/gadgets/23000255.png" },
+    "faux_fur": { "name": "Fausse Fourrure", "description": "L'ours de Nita reçoit un bouclier réduisant les dégâts subis de 35%.", "icon": "https://brawlify.com/images/gadgets/23000289.png" }
   },
   "DYNAMIKE": {
-    "fidget_spinner": {
-      "name": "Toupie nerveuse",
-      "description": "Dynamike tourne sur lui-même en jetant des bâtons de dynamite autour de lui, ce qui le fait accélérer.",
-      "icon": "https://brawlify.com/images/gadgets/23000261.png"
-    },
-    "satchel_charge": {
-      "name": "Poudre de perlimpinpin",
-      "description": "La prochaine attaque principale de Dynamike étourdit les ennemis pendant 1,5 seconde.",
-      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
-    }
+    "fidget_spinner": { "name": "Toupie nerveuse", "description": "Dynamike tourne sur lui-même en jetant des bâtons de dynamite.", "icon": "https://brawlify.com/images/gadgets/23000261.png" },
+    "satchel_charge": { "name": "Poudre de perlimpinpin", "description": "La prochaine attaque étourdit les ennemis pendant 1,5 seconde.", "icon": "https://brawlify.com/images/gadgets/23000292.png" }
   },
   "EL_PRIMO": {
-    "suplex": {
-      "name": "Supplément de force",
-      "description": "El Primo attrape l'ennemi le plus proche et le jette par-dessus ses épaules comme une crêpe !",
-      "icon": "https://brawlify.com/images/gadgets/23000266.png"
-    },
-    "asteroid_belt": {
-      "name": "Ceinture d'astéroïdes",
-      "description": "El Primo invoque un petit météore qui s'abat sur l'ennemi le plus proche.",
-      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
-    }
+    "suplex": { "name": "Supplément de force", "description": "El Primo attrape l'ennemi et le jette par-dessus ses épaules.", "icon": "https://brawlify.com/images/gadgets/23000266.png" },
+    "asteroid_belt": { "name": "Ceinture d'astéroïdes", "description": "Invoque un petit météore qui s'abat sur l'ennemi le plus proche.", "icon": "https://brawlify.com/images/gadgets/23000293.png" }
+  },
+  "MORTIS": {
+    "combo_spinner": { "name": "Toupie", "description": "Mortis fait tournoyer sa pelle et inflige 1300 points de dégâts autour de lui.", "icon": "https://brawlify.com/images/gadgets/23000270.png" },
+    "survival_shovel": { "name": "Pelle de survie", "description": "Mortis recharge ses attaques plus rapidement pendant 4 secondes.", "icon": "https://brawlify.com/images/gadgets/23000294.png" }
+  },
+  "CROW": {
+    "defense_booster": { "name": "Bouclier", "description": "Crow reçoit un bouclier qui réduit les dégâts subis de 40% pendant 3 secondes.", "icon": "https://brawlify.com/images/gadgets/23000256.png" },
+    "slowing_toxin": { "name": "Toxine ralentissante", "description": "Tous les ennemis empoisonnés par Crow sont ralentis pendant 3 secondes.", "icon": "https://brawlify.com/images/gadgets/23000291.png" }
+  },
+  "POCO": {
+    "tuning_fork": { "name": "Diapason", "description": "Poco et ses alliés proches récupèrent 400 PV par seconde pendant 5 secondes.", "icon": "https://brawlify.com/images/gadgets/23000268.png" },
+    "protective_tunes": { "name": "Mélodie protectrice", "description": "Retire les effets négatifs (poison, brûlure, ralentissement) et immunise pendant 2 secondes.", "icon": "https://brawlify.com/images/gadgets/23000300.png" }
+  },
+  "BO": {
+    "super_totem": { "name": "Totem", "description": "Bo déploie un totem qui recharge le Super de ses alliés et de lui-même.", "icon": "https://brawlify.com/images/gadgets/23000265.png" },
+    "tripwire": { "name": "Cordon de déclenchement", "description": "Bo déclenche instantanément l'explosion de toutes ses mines posées.", "icon": "https://brawlify.com/images/gadgets/23000301.png" }
+  },
+  "PIPER": {
+    "auto_aimer": { "name": "Visée auto", "description": "Piper tire un tir de pistolet rapide sur l'ennemi le plus proche, le ralentissant.", "icon": "https://brawlify.com/images/gadgets/23000263.png" },
+    "homemade_recipe": { "name": "Fait maison", "description": "La prochaine attaque de Piper est téléguidée vers les ennemis.", "icon": "https://brawlify.com/images/gadgets/23000302.png" }
+  },
+  "PAM": {
+    "pulse_modulator": { "name": "Modulateur", "description": "La tourelle de Pam émet une vague qui soigne les alliés de 1200 PV.", "icon": "https://brawlify.com/images/gadgets/23000274.png" },
+    "scrapsucker": { "name": "Aspirateur", "description": "La prochaine attaque de Pam retire des munitions aux ennemis touchés.", "icon": "https://brawlify.com/images/gadgets/23000303.png" }
+  },
+  "TARA": {
+    "psychic_enhancer": { "name": "Vision psychique", "description": "Tara et son équipe peuvent voir tous les ennemis dans les buissons pendant 4 secondes.", "icon": "https://brawlify.com/images/gadgets/23000267.png" },
+    "support_from_beyond": { "name": "Renforts", "description": "Tara invoque 3 ombres qui attaquent les ennemis et disparaissent après 6 secondes.", "icon": "https://brawlify.com/images/gadgets/23000304.png" }
+  },
+  "DARRYL": {
+    "recoiling_rotator": { "name": "Rotation", "description": "Darryl tourne sur lui-même et tire une volée de balles dans toutes les directions.", "icon": "https://brawlify.com/images/gadgets/23000260.png" },
+    "tar_barrel": { "name": "Tonneau de goudron", "description": "Darryl crée une zone de goudron autour de lui qui ralentit les ennemis.", "icon": "https://brawlify.com/images/gadgets/23000306.png" }
+  },
+  "PENNY": {
+    "pocket_detonator": { "name": "Détonateur", "description": "Penny fait exploser son canon, détruisant les murs et infligeant des dégâts.", "icon": "https://brawlify.com/images/gadgets/23000272.png" },
+    "captain_compass": { "name": "Boussole", "description": "Le canon de Penny tire une volée de boulets sur sa propre position.", "icon": "https://brawlify.com/images/gadgets/23000307.png" }
   }
 }
