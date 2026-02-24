@@ -18,6 +18,7 @@ async function fetchJSON(file) {
 
 // Fonction utilitaire pour choisir la bonne couleur selon la rareté
 function getRarityClass(rarity) {
+    if (!rarity) return 'badge-premium'; // Sécurité si la rareté n'est pas remplie
     const r = rarity.toLowerCase();
     if (r.includes('départ') || r.includes('starting')) return 'badge-starting';
     if (r.includes('super rare') || r.includes('super-rare')) return 'badge-super-rare';
@@ -66,7 +67,7 @@ function renderHome() {
 
 function renderBrawlersList() {
     let html = `
-        <div class="wiki-btn-back" style="text-align: left; width: 100%;">
+        <div class="wiki-btn-back">
             <button class="btn-back" onclick="window.location.href='index.html'">⬅ Retour aux Catégories</button>
         </div>
         <h1>Sélectionnez un Brawler</h1>
@@ -76,11 +77,12 @@ function renderBrawlersList() {
     
     // Parcourt les brawlers du JSON pour créer la grille
     for (const [id, brawler] of Object.entries(db.brawlers)) {
-        const rarityClass = getRarityClass(brawler.rarity); // Récupère la bonne couleur
+        const rarityClass = getRarityClass(brawler.rarity); // Récupère la couleur pour le badge
+        const borderClass = rarityClass.replace('badge-', 'border-'); // Génère la bordure colorée pour l'image
         
         html += `
             <div class="brawler-list-card" onclick="window.location.href='brawler.html?id=${id}'">
-                <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}" onerror="this.src='https://via.placeholder.com/64x64?text=?'">
+                <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}" class="${borderClass}" onerror="this.src='https://via.placeholder.com/64x64?text=?'; this.classList.remove('${borderClass}')">
                 <div class="brawler-list-info">
                     <h3>${brawler.name}</h3>
                     <div class="badges-row">
