@@ -79,4 +79,84 @@
     "last_blast": { "name": "Dernier souffle", "description": "Quand le canon est détruit, il tire 4 boulets sur les ennemis proches.", "icon": "https://brawlify.com/images/star-powers/23000114.png" },
     "balls_of_fire": { "name": "Boulets de feu", "description": "Les boulets du canon de Penny enflamment le sol pendant 3 secondes.", "icon": "https://brawlify.com/images/star-powers/23000115.png" }
   }
+"FRANK": {
+    "power_grab": { "name": "Vol de puissance", "description": "Frank vole la puissance d'un ennemi vaincu, augmentant ses dégâts de 50% pendant 12s.", "icon": "https://brawlify.com/images/star-powers/23000116.png" },
+    "sponge": { "name": "Éponge", "description": "Frank gagne 1100 points de vie maximum supplémentaires.", "icon": "https://brawlify.com/images/star-powers/23000117.png" }
+  },
+  "GENE": {
+    "magic_puffs": { "name": "Bouffées magiques", "description": "Geni soigne les alliés autour de lui de 400 PV par seconde.", "icon": "https://brawlify.com/images/star-powers/23000118.png" },
+    "spirit_slap": { "name": "Coup d'esprit", "description": "Quand son Super est chargé, les attaques de Geni infligent 300 dégâts supplémentaires.", "icon": "https://brawlify.com/images/star-powers/23000119.png" }
+  },
+  "TICK": {
+    "well_oiled": { "name": "Bien huilé", "description": "Tick commence à récupérer de la vie beaucoup plus vite que les autres après avoir pris des dégâts.", "icon": "https://brawlify.com/images/star-powers/23000120.png" },
+    "automa_tick": { "name": "Recharge auto", "description": "Le temps de recharge de Tick est réduit de 9%.", "icon": "https://brawlify.com/images/star-powers/23000121.png" }
+  },
+  "LEON": {
+    "smoke_trails": { "name": "Fumée de ninja", "description": "La vitesse de déplacement de Léon augmente de 30% quand il est invisible.", "icon": "https://brawlify.com/images/star-powers/23000122.png" },
+    "invisiheal": { "name": "Invisigérison", "description": "Léon récupère 1000 PV par seconde pendant la durée de son Super.", "icon": "https://brawlify.com/images/star-powers/23000123.png" }
+  },
+  "ROSA": {
+    "plant_life": { "name": "Vie de plante", "description": "Rosa récupère 200 PV par seconde lorsqu'elle se cache dans un buisson.", "icon": "https://brawlify.com/images/star-powers/23000124.png" },
+    "thorny_gloves": { "name": "Gants épineux", "description": "Les attaques de Rosa infligent 220 dégâts supplémentaires quand son Super est actif.", "icon": "https://brawlify.com/images/star-powers/23000125.png" }
+  },
+  "CARL": {
+    "power_throw": { "name": "Lancer puissant", "description": "La pioche de Carl voyage et revient 13% plus rapidement.", "icon": "https://brawlify.com/images/star-powers/23000126.png" },
+    "protective_pirouette": { "name": "Pirouette protectrice", "description": "Carl réduit les dégâts subis de 30% pendant qu'il utilise son Super.", "icon": "https://brawlify.com/images/star-powers/23000127.png" }
+  },
+  "BIBI": {
+    "home_run": { "name": "Home Run", "description": "Bibi se déplace 12% plus vite lorsque sa jauge de Home Run est chargée.", "icon": "https://brawlify.com/images/star-powers/23000128.png" },
+    "batting_stance": { "name": "Position de frappe", "description": "Bibi gagne un bouclier réduisant les dégâts de 20% quand sa jauge est chargée.", "icon": "https://brawlify.com/images/star-powers/23000129.png" }
+  },
+  "8_BIT": {
+    "boosted_booster": { "name": "Booster amplifié", "description": "La portée de l'amplificateur de dégâts de A.R.K.A.D est augmentée de 50%.", "icon": "https://brawlify.com/images/star-powers/23000130.png" },
+    "plugged_in": { "name": "Connecté", "description": "A.R.K.A.D gagne un énorme bonus de vitesse lorsqu'il se trouve près de son amplificateur.", "icon": "https://brawlify.com/images/star-powers/23000131.png" }
+  },
+  "SANDY": {
+    "rude_sands": { "name": "Sable rude", "description": "La tempête de sable inflige 100 points de dégâts par seconde aux ennemis.", "icon": "https://brawlify.com/images/star-powers/23000132.png" },
+    "healing_winds": { "name": "Vents guérisseurs", "description": "La tempête de sable soigne les alliés de 250 PV par seconde.", "icon": "https://brawlify.com/images/star-powers/23000133.png" }
+  },
+  "BEA": {
+    "insta_beeload": { "name": "Recharge instantanée", "description": "Si Béa rate son tir surchargé, son prochain tir sera instantanément surchargé lui aussi (1 fois).", "icon": "https://brawlify.com/images/star-powers/23000134.png" },
+    "honey_comb": { "name": "Rayon de miel", "description": "Béa gagne un bouclier réduisant les dégâts de 20% tant que son tir surchargé est prêt.", "icon": "https://brawlify.com/images/star-powers/23000135.png" }
+  },
+  "EMZ": {
+    "bad_karma": { "name": "Mauvais karma", "description": "Les ennemis qui restent dans le nuage toxique subissent 20% de dégâts supplémentaires à chaque tic.", "icon": "https://brawlify.com/images/star-powers/23000136.png" },
+    "hype": { "name": "Hype", "description": "Eliz@beth récupère 400 PV par seconde pour chaque ennemi pris dans son Super.", "icon": "https://brawlify.com/images/star-powers/23000137.png" }
+  },
+  "MR_P": {
+    "handle_with_care": { "name": "Attention fragile", "description": "Les valises de Monsieur M. rebondissent et explosent même si elles ne touchent pas d'obstacle.", "icon": "https://brawlify.com/images/star-powers/23000138.png" },
+    "revolving_door": { "name": "Porte tournante", "description": "Le délai de réapparition des pingouins-porteurs est réduit de 3 secondes.", "icon": "https://brawlify.com/images/star-powers/23000139.png" }
+  },
+  "MAX": {
+    "super_charged": { "name": "Super chargé", "description": "Max charge automatiquement son Super tout en se déplaçant.", "icon": "https://brawlify.com/images/star-powers/23000140.png" },
+    "run_n_gun": { "name": "Délit de fuite", "description": "Max recharge son arme beaucoup plus rapidement lorsqu'elle se déplace.", "icon": "https://brawlify.com/images/star-powers/23000141.png" }
+  },
+  "JACKY": {
+    "counter_crush": { "name": "Contre d'écrasement", "description": "Jacky renvoie 30% des dégâts qu'elle subit à ses ennemis proches.", "icon": "https://brawlify.com/images/star-powers/23000142.png" },
+    "hardy_hard_hat": { "name": "Casque robuste", "description": "Jacky réduit passivement tous les dégâts qu'elle subit de 15%.", "icon": "https://brawlify.com/images/star-powers/23000143.png" }
+  },
+  "GALE": {
+    "blustery_blow": { "name": "Coup de vent", "description": "Le Super de Gaël étourdit les ennemis s'ils sont poussés contre un mur.", "icon": "https://brawlify.com/images/star-powers/23000144.png" },
+    "freezing_snow": { "name": "Neige glaçante", "description": "L'attaque de Gaël ralentit la cible pendant une fraction de seconde.", "icon": "https://brawlify.com/images/star-powers/23000145.png" }
+  },
+  "NANI": {
+    "autofocus": { "name": "Autofocus", "description": "Peep (le Super) inflige jusqu'à 2500 dégâts supplémentaires en fonction de la distance parcourue.", "icon": "https://brawlify.com/images/star-powers/23000146.png" },
+    "tempered_steel": { "name": "Acier trempé", "description": "Nani bénéficie d'un bouclier réduisant les dégâts de 80% pendant qu'elle pilote Peep.", "icon": "https://brawlify.com/images/star-powers/23000147.png" }
+  },
+  "SPROUT": {
+    "overgrowth": { "name": "Surcroissance", "description": "Toutes les 5 secondes, la prochaine bombe de graines de Sprout a un rayon d'explosion augmenté.", "icon": "https://brawlify.com/images/star-powers/23000148.png" },
+    "photosynthesis": { "name": "Photosynthèse", "description": "Sprout gagne un bouclier réduisant les dégâts de 30% lorsqu'il est dans un buisson.", "icon": "https://brawlify.com/images/star-powers/23000149.png" }
+  },
+  "SURGE": {
+    "to_the_max": { "name": "Au max !", "description": "L'attaque de Surge se divise lorsqu'elle atteint sa portée maximale ou touche un mur.", "icon": "https://brawlify.com/images/star-powers/23000150.png" },
+    "serve_ice_cold": { "name": "Servi bien glacé", "description": "Surge conserve sa 1ère amélioration de niveau (Niveau 2) pendant toute la durée du match après sa mort.", "icon": "https://brawlify.com/images/star-powers/23000151.png" }
+  },
+  "COLETTE": {
+    "push_it": { "name": "Poussez !", "description": "Les brawlers ennemis touchés par la charge de Colette sont emportés jusqu'à la portée maximale.", "icon": "https://brawlify.com/images/star-powers/23000152.png" },
+    "mass_tax": { "name": "Taxe de masse", "description": "Le Super de Colette lui donne un bouclier de 20%, augmenté de 10% pour chaque ennemi touché.", "icon": "https://brawlify.com/images/star-powers/23000153.png" }
+  },
+  "AMBER": {
+    "wild_flames": { "name": "Flammes sauvages", "description": "Ambre peut avoir deux flaques d'huile actives et charge son Super près de celles-ci.", "icon": "https://brawlify.com/images/star-powers/23000154.png" },
+    "scorchin_siphon": { "name": "Siphon brûlant", "description": "La vitesse de rechargement d'Ambre est augmentée de 50% lorsqu'elle se tient près de son liquide inflammable.", "icon": "https://brawlify.com/images/star-powers/23000155.png" }
+  }
 }
