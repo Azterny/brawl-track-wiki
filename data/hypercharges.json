@@ -76,7 +76,7 @@
       "icon": "https://brawlify.com/images/hypercharges/Darryl.png"
     }
   }
-"FRANK": {
+  "FRANK": {
     "seismic_smash": {
       "name": "Écrasement Sismique",
       "description": "L'onde de choc du Super de Frank effectue un cercle complet tout autour de lui, touchant les ennemis dans toutes les directions.",
@@ -165,6 +165,41 @@
       "name": "Esprit d'Ado",
       "description": "L'ombre de Colette fait l'aller-retour avec elle lors du Super, infligeant des dégâts supplémentaires massifs.",
       "icon": "https://brawlify.com/images/hypercharges/Colette.png"
+    }
+  }
+  "LOU": {
+    "slushie_storm": {
+      "name": "Tempête de Neige",
+      "description": "Le Super de Lou gèle les ennemis instantanément à 100% s'ils restent dans la zone.",
+      "icon": "https://brawlify.com/images/hypercharges/Lou.png"
+    }
+  },
+  "EDGAR": {
+    "outburst": {
+      "name": "Déchaînement",
+      "description": "Après avoir utilisé son Super, Edgar voit sa vitesse de rechargement et ses dégâts décuplés.",
+      "icon": "https://brawlify.com/images/hypercharges/Edgar.png"
+    }
+  },
+  "BELLE": {
+    "magnetic": {
+      "name": "Aimant",
+      "description": "Le Super de Belle cherche automatiquement la cible la plus proche pour la marquer sans viser.",
+      "icon": "https://brawlify.com/images/hypercharges/Belle.png"
+    }
+  },
+  "BUZZ": {
+    "buzzing": {
+      "name": "Bourdonnement",
+      "description": "La bouée de Buzz (son Super) a une portée infinie et il peut s'y accrocher à travers n'importe quelle distance !",
+      "icon": "https://brawlify.com/images/hypercharges/Buzz.png"
+    }
+  },
+  "FANG": {
+    "dragon_kick": {
+      "name": "Coup de Dragon",
+      "description": "Le Super de Fang traverse même les murs et laisse du Pop-Corn explosif sur son passage.",
+      "icon": "https://brawlify.com/images/hypercharges/Fang.png"
     }
   }
 }
