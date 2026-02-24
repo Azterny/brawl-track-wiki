@@ -79,7 +79,7 @@
     "last_blast": { "name": "Dernier souffle", "description": "Quand le canon est détruit, il tire 4 boulets sur les ennemis proches.", "icon": "https://brawlify.com/images/star-powers/23000114.png" },
     "balls_of_fire": { "name": "Boulets de feu", "description": "Les boulets du canon de Penny enflamment le sol pendant 3 secondes.", "icon": "https://brawlify.com/images/star-powers/23000115.png" }
   }
-"FRANK": {
+  "FRANK": {
     "power_grab": { "name": "Vol de puissance", "description": "Frank vole la puissance d'un ennemi vaincu, augmentant ses dégâts de 50% pendant 12s.", "icon": "https://brawlify.com/images/star-powers/23000116.png" },
     "sponge": { "name": "Éponge", "description": "Frank gagne 1100 points de vie maximum supplémentaires.", "icon": "https://brawlify.com/images/star-powers/23000117.png" }
   },
@@ -158,5 +158,85 @@
   "AMBER": {
     "wild_flames": { "name": "Flammes sauvages", "description": "Ambre peut avoir deux flaques d'huile actives et charge son Super près de celles-ci.", "icon": "https://brawlify.com/images/star-powers/23000154.png" },
     "scorchin_siphon": { "name": "Siphon brûlant", "description": "La vitesse de rechargement d'Ambre est augmentée de 50% lorsqu'elle se tient près de son liquide inflammable.", "icon": "https://brawlify.com/images/star-powers/23000155.png" }
+  }
+  "LOU": {
+    "supercool": { "name": "Cœur de glace", "description": "Les attaques de Lou réduisent les dégâts de l'ennemi en fonction de leur jauge de gel (jusqu'à -35%).", "icon": "https://brawlify.com/images/star-powers/23000156.png" },
+    "hypothermia": { "name": "Hypothermie", "description": "Les ennemis dans la patinoire perdent 33% de leur vitesse de rechargement.", "icon": "https://brawlify.com/images/star-powers/23000166.png" }
+  },
+  "BYRON": {
+    "malaise": { "name": "Malaise", "description": "Le Super de Byron réduit l'efficacité de toutes les sources de soins ennemies de 75% pendant 9 secondes.", "icon": "https://brawlify.com/images/star-powers/23000157.png" },
+    "injection": { "name": "Injection", "description": "Toutes les 3,5 secondes, la prochaine attaque de Byron transperce les cibles.", "icon": "https://brawlify.com/images/star-powers/23000174.png" }
+  },
+  "EDGAR": {
+    "hard_landing": { "name": "Atterrissage brutal", "description": "Le Super d'Edgar inflige 1000 points de dégâts aux ennemis à l'impact.", "icon": "https://brawlify.com/images/star-powers/23000158.png" },
+    "fisticuffs": { "name": "Bagarre", "description": "Edgar récupère 25% de points de vie en plus lorsqu'il blesse un ennemi.", "icon": "https://brawlify.com/images/star-powers/23000180.png" }
+  },
+  "RUFFS": {
+    "air_superiority": { "name": "Supériorité aérienne", "description": "Le Super de Médor détruit les murs et inflige 1000 dégâts de plus.", "icon": "https://brawlify.com/images/star-powers/23000159.png" },
+    "field_promotion": { "name": "Promotion sur le terrain", "description": "Médor augmente la santé maximale de ses alliés proches de 30 PV par seconde.", "icon": "https://brawlify.com/images/star-powers/23000182.png" }
+  },
+  "STU": {
+    "zero_drag": { "name": "Traînée de gaz", "description": "La distance de la ruée du Super de Stu est augmentée de 71%.", "icon": "https://brawlify.com/images/star-powers/23000160.png" },
+    "gaso_heal": { "name": "Gaso-soin", "description": "Stu récupère 400 points de vie chaque fois qu'il utilise son Super.", "icon": "https://brawlify.com/images/star-powers/23000186.png" }
+  },
+  "BELLE": {
+    "positive_feedback": { "name": "Retour positif", "description": "Belle obtient un bouclier qui réduit les dégâts de 20% lorsqu'une attaque électro-rebondissante touche un ennemi.", "icon": "https://brawlify.com/images/star-powers/23000161.png" },
+    "grounded": { "name": "Punition", "description": "L'ennemi marqué par le Super de Belle ne peut pas recharger son arme pendant 3 secondes.", "icon": "https://brawlify.com/images/star-powers/23000190.png" }
+  },
+  "SQUEAK": {
+    "chain_reaction": { "name": "Réaction en chaîne", "description": "Les dégâts de l'attaque de Squeak sont augmentés de 10% pour chaque ennemi touché.", "icon": "https://brawlify.com/images/star-powers/23000162.png" },
+    "super_sticky": { "name": "Super collant", "description": "L'explosion de la bombe du Super de Squeak ralentit les ennemis pendant 4 secondes.", "icon": "https://brawlify.com/images/star-powers/23000196.png" }
+  },
+  "GROM": {
+    "foot_patrol": { "name": "Patrouille", "description": "Lorsque son Super est complètement chargé, la vitesse de déplacement de Grom augmente de 15%.", "icon": "https://brawlify.com/images/star-powers/23000163.png" },
+    "x_factor": { "name": "Facteur X", "description": "L'attaque de Grom inflige jusqu'à 30% de dégâts en plus selon la distance parcourue.", "icon": "https://brawlify.com/images/star-powers/23000201.png" }
+  },
+  "BUZZ": {
+    "tougher_torpedo": { "name": "Torpille solide", "description": "La durée d'étourdissement minimale du Super de Buzz est augmentée de 0,5 seconde.", "icon": "https://brawlify.com/images/star-powers/23000164.png" },
+    "eyes_sharp": { "name": "Œil de lynx", "description": "La zone de charge automatique du Super de Buzz est augmentée de 33%.", "icon": "https://brawlify.com/images/star-powers/23000207.png" }
+  },
+  "GRIFF": {
+    "keep_the_change": { "name": "Monnaie rendue", "description": "La vitesse de l'attaque principale de Griff est augmentée de 35%.", "icon": "https://brawlify.com/images/star-powers/23000165.png" },
+    "business_resilience": { "name": "Résilience", "description": "Griff récupère 15% de sa santé manquante toutes les 2 secondes.", "icon": "https://brawlify.com/images/star-powers/23000213.png" }
+  },
+  "ASH": {
+    "first_bash": { "name": "Premier coup", "description": "Lorsque Ash attaque avec toutes ses munitions chargées, il remplit sa jauge de rage plus rapidement de 200%.", "icon": "https://brawlify.com/images/star-powers/23000167.png" },
+    "mad_as_heck": { "name": "Colère aveugle", "description": "La vitesse de rechargement d'Ash augmente proportionnellement à son niveau de rage (jusqu'à 30%).", "icon": "https://brawlify.com/images/star-powers/23000220.png" }
+  },
+  "MEG": {
+    "force_field": { "name": "Champ de force", "description": "Après la destruction de son mécha, Meg gagne un bouclier réduisant les dégâts de 35% pendant 30 secondes.", "icon": "https://brawlify.com/images/star-powers/23000168.png" },
+    "heavy_metal": { "name": "Auto-destruction", "description": "À l'expiration, le mécha explose en infligeant 1000 points de dégâts et en repoussant les ennemis.", "icon": "https://brawlify.com/images/star-powers/23000227.png" }
+  },
+  "LOLA": {
+    "improvise": { "name": "Improvisez", "description": "La dernière munition de Lola inflige 30% de dégâts supplémentaires.", "icon": "https://brawlify.com/images/star-powers/23000169.png" },
+    "sealed_with_a_kiss": { "name": "Baiser mortel", "description": "Les tirs du clone de Lola soignent les alliés traversés de 100 PV.", "icon": "https://brawlify.com/images/star-powers/23000234.png" }
+  },
+  "FANG": {
+    "fresh_kicks": { "name": "Coup de pied", "description": "Si Fang élimine un ennemi avec son Super, ce dernier est instantanément rechargé.", "icon": "https://brawlify.com/images/star-powers/23000170.png" },
+    "divine_soles": { "name": "Semelles divines", "description": "Fang gagne un bouclier réduisant les dégâts de 500 toutes les 3 secondes.", "icon": "https://brawlify.com/images/star-powers/23000241.png" }
+  },
+  "EVE": {
+    "unnatural_order": { "name": "Ordre non naturel", "description": "Ève inverse l'ordre des œufs qu'elle pond, tirant le plus gros en premier.", "icon": "https://brawlify.com/images/star-powers/23000172.png" },
+    "surprise": { "name": "Surprise !", "description": "Si le plus gros œuf d'Ève touche un brawler ennemi, un bébé alien naît.", "icon": "https://brawlify.com/images/star-powers/23000253.png" }
+  },
+  "JANET": {
+    "stage_view": { "name": "Coulisse", "description": "Pendant son Super, Janet dévoile les ennemis cachés dans les buissons situés sous elle.", "icon": "https://brawlify.com/images/star-powers/23000173.png" },
+    "vocal_warmup": { "name": "Échauffement vocal", "description": "La vitesse de concentration de l'attaque de Janet est accélérée de 30%.", "icon": "https://brawlify.com/images/star-powers/23000260.png" }
+  },
+  "BONNIE": {
+    "black_powder": { "name": "Poudre noire", "description": "La portée du saut du canon de Bonnie augmente de 36%.", "icon": "https://brawlify.com/images/star-powers/23000175.png" },
+    "wisdom_tooth": { "name": "Dent de sagesse", "description": "L'attaque de Bonnie hors-canon se divise en 4 petits éclats à l'impact.", "icon": "https://brawlify.com/images/star-powers/23000267.png" }
+  },
+  "OTIS": {
+    "ink_stick": { "name": "Pochoir", "description": "Otis tire une quatrième goutte d'encre à chaque attaque.", "icon": "https://brawlify.com/images/star-powers/23000176.png" },
+    "silent_seas": { "name": "Mer silencieuse", "description": "Le Super d'Otis dure 33% plus longtemps sur la cible.", "icon": "https://brawlify.com/images/star-powers/23000274.png" }
+  },
+  "SAM": {
+    "hearty_recovery": { "name": "Récupération", "description": "Sam récupère 20% de sa santé lorsqu'il ramasse ses gantelets.", "icon": "https://brawlify.com/images/star-powers/23000177.png" },
+    "remote_recharge": { "name": "Recharge à distance", "description": "Sam charge passivement son Super quand ses gantelets sont loin de lui.", "icon": "https://brawlify.com/images/star-powers/23000281.png" }
+  },
+  "GUS": {
+    "health_bonanza": { "name": "Santé de fer", "description": "L'effet de soin des esprits lâchés par Gus est doublé.", "icon": "https://brawlify.com/images/star-powers/23000178.png" },
+    "spirit_animal": { "name": "Animal spirituel", "description": "Le bouclier du Super de Gus augmente également les dégâts de l'allié (ou de Gus) de 25% pendant 5 secondes.", "icon": "https://brawlify.com/images/star-powers/23000288.png" }
   }
 }
