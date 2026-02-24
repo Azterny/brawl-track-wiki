@@ -6,6 +6,7 @@ const brawlerContent = document.getElementById('brawler-content');
 
 // Fonction utilitaire pour choisir la bonne couleur selon la rareté
 function getRarityClass(rarity) {
+    if (!rarity) return 'badge-premium';
     const r = rarity.toLowerCase();
     if (r.includes('départ') || r.includes('starting')) return 'badge-starting';
     if (r.includes('super rare') || r.includes('super-rare')) return 'badge-super-rare';
@@ -60,6 +61,7 @@ async function initBrawlerPage() {
     const brawlerSkins = skinsData[brawlerId];
     
     const rarityClass = getRarityClass(brawler.rarity); // On récupère la couleur de rareté
+    const borderClass = rarityClass.replace('badge-', 'border-'); // Pour la bordure colorée de l'icône du brawler
 
     // 4. Construction de l'en-tête HTML
     let html = `
@@ -68,7 +70,7 @@ async function initBrawlerPage() {
         </div>
 
         <div class="brawler-top-section">
-            <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}" class="brawler-detail-icon" onerror="this.src='https://via.placeholder.com/100x100?text=?'">
+            <img src="${brawler.image || 'images/ui/placeholder.png'}" alt="${brawler.name}" class="brawler-detail-icon ${borderClass}" onerror="this.src='https://via.placeholder.com/100x100?text=?'; this.classList.remove('${borderClass}')">
             <div class="brawler-info-left">
                 <h1>${brawler.name}</h1>
                 <div class="brawler-badges">
@@ -82,7 +84,7 @@ async function initBrawlerPage() {
         </div>
     `;
 
-    // Fonction locale pour générer les cartes avec ICÔNES et COULEURS
+    // Fonction locale pour générer les cartes des équipements avec icône DANS LE TITRE
     const generateItemsHtml = (brawlerItems, typeClass) => {
         if (!brawlerItems || Object.keys(brawlerItems).length === 0) {
             return `<p style="color: #aaa; font-style: italic;">Aucun objet disponible.</p>`;
@@ -90,12 +92,16 @@ async function initBrawlerPage() {
         
         let itemsHtml = `<div class="horizontal-scroll-container">`;
         for (const [itemId, itemData] of Object.entries(brawlerItems)) {
+            
+            // Logique de l'icône inline : elle n'est pas insérée si elle manque
+            let iconHtml = '';
+            if (itemData.icon) {
+                iconHtml = `<img src="${itemData.icon}" alt="" class="item-icon-inline" onerror="this.style.display='none'">`;
+            }
+
             itemsHtml += `
                 <div class="item-card ${typeClass}-card">
-                    <div class="item-card-header">
-                        <img src="${itemData.icon || 'images/ui/placeholder.png'}" alt="${itemData.name}" class="item-icon" onerror="this.src='https://via.placeholder.com/45x45?text=?'">
-                        <h4>${itemData.name}</h4>
-                    </div>
+                    <h4>${iconHtml}${itemData.name}</h4>
                     <p>${itemData.description}</p>
                 </div>
             `;
@@ -104,25 +110,25 @@ async function initBrawlerPage() {
         return itemsHtml;
     };
 
-    // Injection : GADGETS (Vert)
+    // Injection : GADGETS
     html += `<div class="section-gadget">`;
     html += `<h2 class="wiki-section-title">GADGETS</h2>`;
     html += generateItemsHtml(brawlerGadgets, 'gadget');
     html += `</div>`;
 
-    // Injection : POUVOIRS STARS (Orange)
+    // Injection : POUVOIRS STARS
     html += `<div class="section-starpower">`;
     html += `<h2 class="wiki-section-title">POUVOIRS STARS</h2>`;
     html += generateItemsHtml(brawlerStarpowers, 'starpower');
     html += `</div>`;
 
-    // Injection : HYPERCHARGE (Rose)
+    // Injection : HYPERCHARGE
     html += `<div class="section-hypercharge">`;
     html += `<h2 class="wiki-section-title">HYPERCHARGE</h2>`;
     html += generateItemsHtml(brawlerHypercharges, 'hypercharge');
     html += `</div>`;
 
-    // Injection : SKINS (Couleur Classique)
+    // Injection : SKINS
     html += `<div class="section-skins">`;
     html += `<h2 class="wiki-section-title">SKINS</h2>`;
     if (brawlerSkins && Object.keys(brawlerSkins).length > 0) {
