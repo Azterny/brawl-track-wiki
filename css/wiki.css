@@ -2,10 +2,8 @@
    WIKI : LAYOUT GLOBAL & CORRECTIONS
    ========================================= */
 #app-content, #brawler-content {
-    margin: 40px auto !important; /* Force le centrage du cadre */
-    display: block; /* Évite les conflits Flex/Grid sur le conteneur parent */
-    
-    /* Le fameux cadre global ajouté ! */
+    margin: 40px auto !important;
+    display: block;
     background-color: #1a1a1a; 
     border: 1px solid #333;
     border-radius: 20px;
@@ -23,23 +21,14 @@
     }
 }
 
-/* Bouton Retour Général */
-.wiki-btn-back { margin-bottom: 20px; display: flex; justify-content: flex-start; }
-.btn-back {
-    background: #333; color: #fff; border: none; padding: 10px 20px;
-    border-radius: 8px; cursor: pointer; font-weight: bold; transition: 0.2s;
-}
-.btn-back:hover { background: #ffce00; color: #000; }
-
 /* =========================================
    WIKI : CARTES DE NAVIGATION (Accueil & Liste)
    ========================================= */
 
-/* Grille des catégories (Page d'accueil) */
 .category-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centre les cartes */
+    justify-content: center;
     gap: 20px;
     margin-top: 30px;
 }
@@ -47,7 +36,7 @@
 .category-card {
     background: #252525;
     padding: 30px;
-    width: 300px; /* Largeur fixe pour ne pas s'étirer */
+    width: 300px;
     border-radius: 15px;
     border: 2px solid #333;
     cursor: pointer;
@@ -62,13 +51,12 @@
 }
 
 .category-card h2 { margin: 0 0 10px 0; font-size: 2rem; }
-.category-card p { margin: 0; color: #aaa; }
 
-/* Grille de sélection des Brawlers */
+/* Grille de sélection des Brawlers (Style harmonisé Brawl-Track) */
 .brawlers-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centre les cartes */
+    justify-content: center;
     gap: 15px;
     margin-top: 20px;
     text-align: left;
@@ -77,67 +65,120 @@
 .brawler-list-card {
     display: flex;
     align-items: center;
-    background: #252525;
-    padding: 15px;
-    width: 280px; /* Largeur fixe pour ne pas s'étirer */
-    border-radius: 12px;
+    background: #1e1e1e;
+    padding: 12px;
+    width: 280px;
+    border-radius: 15px;
     border: 1px solid #333;
     cursor: pointer;
-    transition: all 0.2s ease;
-    gap: 15px;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    gap: 12px;
     box-sizing: border-box;
+    box-shadow: 0 4px 0 #000;
 }
 
 .brawler-list-card:hover {
-    border-color: #00d2ff;
-    transform: scale(1.02);
-    background: #2a2a2a;
+    border-color: #ffce00;
+    transform: translateY(-3px);
+    background: #252525;
+    box-shadow: 0 6px 0 #000;
 }
 
 .brawler-list-card img {
-    width: 64px;
-    height: 64px;
+    width: 60px;
+    height: 60px;
     border-radius: 10px;
     object-fit: cover;
-    border: 3px solid #111; /* Dynamisé par la rareté */
+    border: 2px solid #333;
+    background: #121212;
 }
 
-.brawler-list-info { display: flex; flex-direction: column; gap: 5px; }
-.brawler-list-info h3 { margin: 0; font-size: 1.4rem; color: white; text-shadow: none; }
-.badges-row { display: flex; gap: 5px; }
+.brawler-list-info { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 8px; 
+    min-width: 0; 
+}
 
+.brawler-list-info h3 { 
+    margin: 0; 
+    font-size: 1.4rem; 
+    color: white; 
+    text-shadow: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.badges-row { 
+    display: flex; 
+    gap: 5px; 
+    flex-wrap: wrap; 
+}
 
 /* =========================================
-   WIKI : COULEURS DE RARETÉ (BRAWL STARS)
+   WIKI : BADGES & RARETÉS
    ========================================= */
 
-/* Base pour tous les badges (Angles très arrondis) */
 .badge {
     display: inline-block;
-    padding: 4px 10px;
-    border-radius: 20px; 
-    font-size: 0.85rem;
+    padding: 3px 8px;
+    border-radius: 6px; 
+    font-size: 0.75rem;
     font-weight: bold;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
-.badge-basic { background: #333; color: #fff; border: 1px solid #555; }
+.badge-basic { background: #444; color: #ccc; border: 1px solid #666; }
 .badge-starting { background: #54c8f9; color: #000; border: 1px solid #1ba5e0; } 
 .badge-rare { background: #28a745; color: #fff; border: 1px solid #1e7e34; } 
 .badge-super-rare { background: #007bff; color: #fff; border: 1px solid #0056b3; } 
 .badge-epic { background: #8a2be2; color: #fff; border: 1px solid #5c149e; } 
 .badge-mythic { background: #dc3545; color: #fff; border: 1px solid #bd2130; } 
-.badge-legendary { background: #ffce00; color: #000; border: 1px solid #d39e00; } 
-.badge-premium { background: #ffce00; color: #000; border: 1px solid #d39e00; } 
+.badge-legendary, .badge-premium { 
+    background: linear-gradient(45deg, #ffce00, #ffa500) !important; 
+    color: #000 !important; 
+    border: 1px solid #ffd700 !important; 
+} 
 
-/* Bordures colorées pour les icônes de brawlers */
+/* Bordures colorées */
 .border-starting { border-color: #54c8f9 !important; }
 .border-rare { border-color: #28a745 !important; }
 .border-super-rare { border-color: #007bff !important; }
 .border-epic { border-color: #8a2be2 !important; }
 .border-mythic { border-color: #dc3545 !important; }
-.border-legendary { border-color: #ffce00 !important; }
-.border-premium { border-color: #ffce00 !important; }
+.border-legendary, .border-premium { border-color: #ffce00 !important; }
+
+/* =========================================
+   WIKI : BOUTONS (Style 3D Brawl-Track)
+   ========================================= */
+.wiki-btn-back { margin-bottom: 20px; display: flex; justify-content: flex-start; }
+
+.btn-back {
+    background: linear-gradient(to bottom, #ffce00, #e6b800) !important;
+    color: black !important;
+    border: none !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Lilita One', cursive;
+    text-transform: uppercase;
+    box-shadow: 0 4px 0 #b38f00 !important;
+    transition: all 0.1s ease;
+}
+
+.btn-back:hover {
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 0 #b38f00 !important;
+}
+
+.btn-back:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 0 #b38f00 !important;
+}
 
 /* =========================================
    WIKI : LAYOUT BRAWLER DETAIL
@@ -154,12 +195,11 @@
     align-items: center;
 }
 
-/* Icône principale du brawler */
 .brawler-detail-icon {
     width: 100px;
     height: 100px;
     border-radius: 15px;
-    border: 3px solid #333; /* Sera coloré via le JS */
+    border: 3px solid #333;
     object-fit: cover;
     background-color: #222;
 }
@@ -169,40 +209,21 @@
 .brawler-badges { display: flex; gap: 10px; align-items: center; }
 .brawler-desc-right { flex: 2; min-width: 300px; background: #252525; padding: 15px; border-radius: 8px; border-left: 4px solid #ffce00; font-size: 1.05rem; line-height: 1.5; color: #ddd; text-align: left; }
 
-/* =========================================
-   WIKI : LISTES HORIZONTALES (Gadgets, SP, Skins)
-   ========================================= */
+/* Sections Items (Gadgets, SP, Skins) */
 .wiki-section-title { text-align: left; margin-top: 30px; margin-bottom: 10px; font-size: 1.5rem; color: #ffce00; border-bottom: 2px solid #333; padding-bottom: 5px; }
 .horizontal-scroll-container { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scrollbar-width: thin; scrollbar-color: #ffce00 #252525; }
 .horizontal-scroll-container::-webkit-scrollbar { height: 8px; }
 .horizontal-scroll-container::-webkit-scrollbar-track { background: #252525; border-radius: 4px; }
 .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #ffce00; border-radius: 4px; }
 
-/* =========================================
-   NOUVEAUX CODES COULEURS SPÉCIFIQUES
-   ========================================= */
-
-/* GADGET (Vert Néon : #0cff0c) */
+/* Couleurs spécifiques équipements */
 .section-gadget .wiki-section-title { color: #0cff0c; border-bottom-color: #0cff0c; }
 .section-gadget .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #0cff0c; }
-.gadget-card:hover { border-color: #0cff0c; box-shadow: 0 5px 15px rgba(12, 255, 12, 0.2); }
-.gadget-card h4 { color: #0cff0c; }
-
-/* POUVOIR STAR (Jaune Éclatant : #ffd420) */
 .section-starpower .wiki-section-title { color: #ffd420; border-bottom-color: #ffd420; }
 .section-starpower .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #ffd420; }
-.starpower-card:hover { border-color: #ffd420; box-shadow: 0 5px 15px rgba(255, 212, 32, 0.2); }
-.starpower-card h4 { color: #ffd420; }
-
-/* HYPERCHARGE (Rose Violet Néon : #fa00ff) */
 .section-hypercharge .wiki-section-title { color: #fa00ff; border-bottom-color: #fa00ff; }
 .section-hypercharge .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #fa00ff; }
-.hypercharge-card:hover { border-color: #fa00ff; box-shadow: 0 5px 15px rgba(250, 0, 255, 0.2); }
-.hypercharge-card h4 { color: #fa00ff; }
 
-/* =========================================
-   ARCHITECTURE DES CARTES
-   ========================================= */
 .item-card { 
     background: #252525; 
     border: 1px solid #444; 
@@ -215,30 +236,9 @@
     transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; 
 }
 
-/* Titre avec Icône intégrée */
-.item-card h4 { 
-    display: flex; 
-    align-items: center; 
-    gap: 10px;
-    margin: 0 0 10px 0; 
-    font-family: 'Lilita One', cursive; 
-    letter-spacing: 1px; 
-    font-size: 1.3rem; 
-    line-height: 1.2;
-}
-
-/* Icône Inline (sans case noire, juste transparente) */
-.item-icon-inline {
-    width: 35px; 
-    height: 35px; 
-    object-fit: contain; 
-    flex-shrink: 0;
-}
-
+.item-card h4 { display: flex; align-items: center; gap: 10px; margin: 0 0 10px 0; font-family: 'Lilita One', cursive; font-size: 1.3rem; }
+.item-icon-inline { width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; }
 .item-card p { font-size: 0.9rem; color: #ccc; margin: 0; line-height: 1.4; }
 
-/* Skins */
 .skin-card { text-align: center; min-width: 150px; }
-.skin-card:hover { border-color: #ffce00; transform: translateY(-5px); }
-.skin-card h4 { color: #fff; margin-top: 10px; justify-content: center; }
-.skin-card img { width: 100%; height: 150px; object-fit: contain; background: #1a1a1a; border-radius: 8px; margin-bottom: 10px; border: 1px solid #333; }
+.skin-card img { width: 100%; height: 150px; object-fit: contain; background: #1a1a1a; border-radius: 8px; border: 1px solid #333; }
