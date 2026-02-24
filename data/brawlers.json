@@ -1,10 +1,346 @@
 {
+  "SHELLY": {
+    "id": "SHELLY",
+    "name": "Shelly",
+    "class": "Dégâts",
+    "rarity": "Brawler de départ",
+    "description": "L'arme de prédilection de Shelly est un fusil à pompe. Son Super détruit les abris et maintient les ennemis à distance !",
+    "image": "images/brawlers/16000000.png"
+  },
+  "COLT": {
+    "id": "COLT",
+    "name": "Colt",
+    "class": "Dégâts",
+    "rarity": "Rare",
+    "description": "Le shérif de la ville tire une rafale de balles de ses deux pistolets. Son Super détruit les abris et traverse les ennemis !",
+    "image": "images/brawlers/16000001.png"
+  },
+  "BULL": {
+    "id": "BULL",
+    "name": "Bull",
+    "class": "Tank",
+    "rarity": "Rare",
+    "description": "Bull fait d'énormes dégâts de près avec son fusil à double canon. Son Super lui permet de charger à travers les murs pour écraser les ennemis.",
+    "image": "images/brawlers/16000002.png"
+  },
+  "BROCK": {
+    "id": "BROCK",
+    "name": "Brock",
+    "class": "Tireur d'élite",
+    "rarity": "Super Rare",
+    "description": "Brock tire des roquettes explosives à très longue portée. Son Super est un barrage de roquettes qui détruit les obstacles et incinère la zone.",
+    "image": "images/brawlers/16000003.png"
+  },
+  "RICO": {
+    "id": "RICO",
+    "name": "Rico",
+    "class": "Dégâts",
+    "rarity": "Super Rare",
+    "description": "Les balles de Rico rebondissent sur les murs, ce qui lui permet d'atteindre des cibles à couvert. Son Super tire une longue rafale de balles rebondissantes perforantes.",
+    "image": "images/brawlers/16000004.png"
+  },
+  "SPIKE": {
+    "id": "SPIKE",
+    "name": "Spike",
+    "class": "Dégâts",
+    "rarity": "Légendaire",
+    "description": "Spike lance des cactus explosifs qui projettent des épines. Son Super crée une zone remplie de piquants qui ralentit et blesse les ennemis.",
+    "image": "images/brawlers/16000005.png"
+  },
+  "BARLEY": {
+    "id": "BARLEY",
+    "name": "Barley",
+    "class": "Artilleur",
+    "rarity": "Rare",
+    "description": "Barley attaque en lançant des bouteilles d'acide par-dessus les murs. Son Super lance un barrage de bouteilles qui couvre une vaste zone.",
+    "image": "images/brawlers/16000006.png"
+  },
+  "JESSIE": {
+    "id": "JESSIE",
+    "name": "Jessie",
+    "class": "Contrôleur",
+    "rarity": "Super Rare",
+    "description": "L'arme de Jessie tire des orbes d'énergie qui rebondissent d'un ennemi à l'autre. Son Super déploie une tourelle automatique adorable mais mortelle.",
+    "image": "images/brawlers/16000007.png"
+  },
   "NITA": {
     "id": "NITA",
     "name": "Nita",
     "class": "Dégâts",
     "rarity": "Rare",
     "description": "Nita frappe ses ennemis avec une onde de choc fulgurante. Son Super invoque un ours massif nommé Bruce qui se bat à ses côtés !",
+    "image": "images/brawlers/16000008.png"
+  },
+  "DYNAMIKE": {
+    "id": "DYNAMIKE",
+    "name": "Dynamike",
+    "class": "Artilleur",
+    "rarity": "Super Rare",
+    "description": "Dynamike lance deux bâtons de dynamite qui explosent après un court délai. Son Super est un énorme baril d'explosifs qui fait d'énormes dégâts.",
+    "image": "images/brawlers/16000009.png"
+  },
+  "EL_PRIMO": {
+    "id": "EL_PRIMO",
+    "name": "El Primo",
+    "class": "Tank",
+    "rarity": "Rare",
+    "description": "El Primo donne une rafale de coups de poing redoutables à courte portée. Son Super lui permet de sauter et d'écraser ses adversaires.",
+    "image": "images/brawlers/16000010.png"
+  },
+  "MORTIS": {
+    "id": "MORTIS",
+    "name": "Mortis",
+    "class": "Assassin",
+    "rarity": "Mythique",
+    "description": "Mortis se précipite vers l'avant à chaque coup de pelle. Son Super invoque une nuée de chauves-souris qui draine la vie des ennemis.",
     "image": "images/brawlers/16000011.png"
+  },
+  "CROW": {
+    "id": "CROW",
+    "name": "Crow",
+    "class": "Assassin",
+    "rarity": "Légendaire",
+    "description": "Crow lance trois dagues empoisonnées. En utilisant son Super, il s'envole et lance des dagues dans toutes les directions au décollage et à l'atterrissage.",
+    "image": "images/brawlers/16000012.png"
+  },
+  "POCO": {
+    "id": "POCO",
+    "name": "Poco",
+    "class": "Soutien",
+    "rarity": "Rare",
+    "description": "Poco émet des ondes sonores mortelles avec sa guitare. Son Super soigne ses alliés et lui-même dans une large zone.",
+    "image": "images/brawlers/16000013.png"
+  },
+  "BO": {
+    "id": "BO",
+    "name": "Bo",
+    "class": "Contrôleur",
+    "rarity": "Épique",
+    "description": "Bo tire trois flèches explosives. Son Super déploie un trio de mines cachées qui explosent quand les ennemis marchent dessus.",
+    "image": "images/brawlers/16000014.png"
+  },
+  "PIPER": {
+    "id": "PIPER",
+    "name": "Piper",
+    "class": "Tireur d'élite",
+    "rarity": "Épique",
+    "description": "Les tirs de fusil-parapluie de Piper font plus de dégâts plus ils voyagent loin. Son Super lui permet de fuir en laissant des grenades derrière elle.",
+    "image": "images/brawlers/16000015.png"
+  },
+  "PAM": {
+    "id": "PAM",
+    "name": "Pam",
+    "class": "Soutien",
+    "rarity": "Épique",
+    "description": "Pam tire une large rafale de ferraille. Son Super déploie une tourelle qui soigne d'un flux continu elle-même et ses alliés proches.",
+    "image": "images/brawlers/16000016.png"
+  },
+  "TARA": {
+    "id": "TARA",
+    "name": "Tara",
+    "class": "Dégâts",
+    "rarity": "Mythique",
+    "description": "Tara attaque en lançant trois cartes de tarot qui transpercent ses ennemis. Son Super est un trou noir qui aspire les adversaires avant d'exploser.",
+    "image": "images/brawlers/16000017.png"
+  },
+  "DARRYL": {
+    "id": "DARRYL",
+    "name": "Darryl",
+    "class": "Tank",
+    "rarity": "Super Rare",
+    "description": "Darryl tire une double rafale dévastatrice avec ses fusils. Son Super est une roulade rapide dans son tonneau qui rebondit sur les murs.",
+    "image": "images/brawlers/16000018.png"
+  },
+  "PENNY": {
+    "id": "PENNY",
+    "name": "Penny",
+    "class": "Artilleur",
+    "rarity": "Super Rare",
+    "description": "L'attaque de Penny tire des pièces qui traversent les ennemis. Son Super déploie un canon qui bombarde les ennemis même à couvert.",
+    "image": "images/brawlers/16000019.png"
+  },
+  "FRANK": {
+    "id": "FRANK",
+    "name": "Frank",
+    "class": "Tank",
+    "rarity": "Épique",
+    "description": "Frank frappe le sol avec son marteau pour créer une onde de choc. Son Super est un coup massif qui étourdit tous les ennemis touchés.",
+    "image": "images/brawlers/16000020.png"
+  },
+  "GENE": {
+    "id": "GENE",
+    "name": "Geni",
+    "class": "Soutien",
+    "rarity": "Mythique",
+    "description": "Geni utilise sa lampe magique pour tirer une boule d'énergie. Son Super est une main magique qui attrape un ennemi et le tire vers lui.",
+    "image": "images/brawlers/16000021.png"
+  },
+  "TICK": {
+    "id": "TICK",
+    "name": "Tick",
+    "class": "Artilleur",
+    "rarity": "Super Rare",
+    "description": "Tick jette des amas de mines. Son Super détache sa propre tête, qui se précipite vers l'ennemi le plus proche pour exploser !",
+    "image": "images/brawlers/16000022.png"
+  },
+  "LEON": {
+    "id": "LEON",
+    "name": "Léon",
+    "class": "Assassin",
+    "rarity": "Légendaire",
+    "description": "Léon tire une volée rapide de lames. Son Super lui donne l'invisibilité totale pendant un court instant, idéal pour les attaques surprises.",
+    "image": "images/brawlers/16000023.png"
+  },
+  "ROSA": {
+    "id": "ROSA",
+    "name": "Rosa",
+    "class": "Tank",
+    "rarity": "Rare",
+    "description": "Cette botaniste assène une rafale de coups de poing perforants. Son Super l'enveloppe d'un bouclier de plantes qui réduit considérablement les dégâts reçus.",
+    "image": "images/brawlers/16000024.png"
+  },
+  "CARL": {
+    "id": "CARL",
+    "name": "Carl",
+    "class": "Dégâts",
+    "rarity": "Super Rare",
+    "description": "Carl lance sa pioche comme un boomerang. Son Super le fait tourbillonner frénétiquement en infligeant des dégâts à tous ceux qu'il touche.",
+    "image": "images/brawlers/16000025.png"
+  },
+  "BIBI": {
+    "id": "BIBI",
+    "name": "Bibi",
+    "class": "Dégâts",
+    "rarity": "Épique",
+    "description": "Bibi frappe fort avec sa batte et possède une jauge spéciale qui repousse les ennemis quand elle est chargée. Son Super crache une bulle rebondissante.",
+    "image": "images/brawlers/16000026.png"
+  },
+  "8_BIT": {
+    "id": "8_BIT",
+    "name": "A.R.K.A.D",
+    "class": "Dégâts",
+    "rarity": "Super Rare",
+    "description": "Bien qu'il soit lent, A.R.K.A.D tire un faisceau laser très puissant. Son Super déploie un amplificateur qui augmente les dégâts de ses alliés.",
+    "image": "images/brawlers/16000027.png"
+  },
+  "SANDY": {
+    "id": "SANDY",
+    "name": "Émeri",
+    "class": "Contrôleur",
+    "rarity": "Légendaire",
+    "description": "Émeri jette du sable perçant. Son Super invoque une tempête de sable massive qui dissimule ses alliés et lui-même.",
+    "image": "images/brawlers/16000028.png"
+  },
+  "BEA": {
+    "id": "BEA",
+    "name": "Béa",
+    "class": "Tireur d'élite",
+    "rarity": "Épique",
+    "description": "Les tirs de sniper de Béa sont redoutables : si le premier touche, le suivant est surchargé. Son Super lance une colonie d'abeilles ralentissantes.",
+    "image": "images/brawlers/16000029.png"
+  },
+  "EMZ": {
+    "id": "EMZ",
+    "name": "Eliz@beth",
+    "class": "Contrôleur",
+    "rarity": "Épique",
+    "description": "Eliz@beth pulvérise de la laque toxique qui blesse sur la durée. Son Super crée une aura qui ralentit et blesse les ennemis proches.",
+    "image": "images/brawlers/16000030.png"
+  },
+  "MR_P": {
+    "id": "MR_P",
+    "name": "Monsieur M.",
+    "class": "Contrôleur",
+    "rarity": "Mythique",
+    "description": "Monsieur M. lance des valises qui rebondissent sur les obstacles. Son Super déploie une base générant des robots-porteurs explosifs à l'infini.",
+    "image": "images/brawlers/16000031.png"
+  },
+  "MAX": {
+    "id": "MAX",
+    "name": "Max",
+    "class": "Soutien",
+    "rarity": "Mythique",
+    "description": "Max court très vite et tire de nombreuses décharges rapides. Son Super booste sa vitesse de déplacement et celle de ses alliés.",
+    "image": "images/brawlers/16000032.png"
+  },
+  "JACKY": {
+    "id": "JACKY",
+    "name": "Jacky",
+    "class": "Tank",
+    "rarity": "Super Rare",
+    "description": "Jacky saute sur son marteau-piqueur pour infliger des dégâts de zone autour d'elle sans avoir besoin de viser. Son Super attire les ennemis proches.",
+    "image": "images/brawlers/16000033.png"
+  },
+  "GALE": {
+    "id": "GALE",
+    "name": "Gaël",
+    "class": "Contrôleur",
+    "rarity": "Épique",
+    "description": "Gaël tire un mur de boules de neige. Son Super souffle une rafale de vent et de neige qui repousse violemment tous les ennemis.",
+    "image": "images/brawlers/16000034.png"
+  },
+  "NANI": {
+    "id": "NANI",
+    "name": "Nani",
+    "class": "Tireur d'élite",
+    "rarity": "Épique",
+    "description": "Nani tire trois orbes lumineux qui convergent vers une cible. Son Super lui permet de piloter à distance son ami explosif, Peep !",
+    "image": "images/brawlers/16000035.png"
+  },
+  "SPROUT": {
+    "id": "SPROUT",
+    "name": "Sprout",
+    "class": "Artilleur",
+    "rarity": "Mythique",
+    "description": "Sprout lance des boules de graines rebondissantes. Son Super crée un mur de ronces impénétrable pour bloquer le passage ou protéger des alliés.",
+    "image": "images/brawlers/16000036.png"
+  },
+  "SURGE": {
+    "id": "SURGE",
+    "name": "Surge",
+    "class": "Dégâts",
+    "rarity": "Mythique",
+    "description": "L'attaque de Surge se divise au contact de l'ennemi. Son Super améliore ses statistiques de façon permanente, jusqu'à 3 niveaux d'amélioration.",
+    "image": "images/brawlers/16000037.png"
+  },
+  "COLETTE": {
+    "id": "COLETTE",
+    "name": "Colette",
+    "class": "Dégâts",
+    "rarity": "Épique",
+    "description": "Colette inflige des dégâts proportionnels à la santé actuelle de la cible. Son Super est une charge aller-retour qui frappe deux fois.",
+    "image": "images/brawlers/16000038.png"
+  },
+  "AMBER": {
+    "id": "AMBER",
+    "name": "Ambre",
+    "class": "Contrôleur",
+    "rarity": "Légendaire",
+    "description": "Ambre crache un flot de flammes continu. Son Super projette une flasque de liquide inflammable qu'elle peut embraser avec son attaque.",
+    "image": "images/brawlers/16000039.png"
+  },
+  "LOU": {
+    "id": "LOU",
+    "name": "Lou",
+    "class": "Contrôleur",
+    "rarity": "Mythique",
+    "description": "Lou jette des cornets de glace qui gèlent progressivement l'ennemi. Son Super crée une patinoire glissante très difficile à traverser.",
+    "image": "images/brawlers/16000040.png"
+  },
+  "BYRON": {
+    "id": "BYRON",
+    "name": "Byron",
+    "class": "Soutien",
+    "rarity": "Mythique",
+    "description": "Byron tire des fléchettes qui soignent ses alliés ou empoisonnent ses ennemis. Son Super est une fiole qui a le même effet sur une large zone.",
+    "image": "images/brawlers/16000041.png"
+  },
+  "EDGAR": {
+    "id": "EDGAR",
+    "name": "Edgar",
+    "class": "Assassin",
+    "rarity": "Épique",
+    "description": "Edgar donne des coups d'écharpe rapides et se soigne légèrement à chaque coup. Son Super (qui se charge tout seul) le fait bondir sur sa proie.",
+    "image": "images/brawlers/16000042.png"
   }
 }
