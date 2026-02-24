@@ -1,14 +1,134 @@
 {
+  "SHELLY": {
+    "fast_forward": {
+      "name": "Avance rapide",
+      "description": "Shelly se précipite en avant, parcourant une courte distance.",
+      "icon": "https://brawlify.com/images/gadgets/23000254.png"
+    },
+    "clay_pigeons": {
+      "name": "Tir d'argile",
+      "description": "Lors de la prochaine attaque de Shelly, la portée et la vitesse de ses balles sont augmentées.",
+      "icon": "https://brawlify.com/images/gadgets/23000288.png"
+    }
+  },
+  "COLT": {
+    "speedloader": {
+      "name": "Recharge rapide",
+      "description": "Colt recharge instantanément ses pistolets avec 2 munitions.",
+      "icon": "https://brawlify.com/images/gadgets/23000258.png"
+    },
+    "silver_bullet": {
+      "name": "Balle d'argent",
+      "description": "La prochaine attaque de Colt est un tir unique qui transperce les murs et inflige d'énormes dégâts.",
+      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
+    }
+  },
+  "BULL": {
+    "t_bone": {
+      "name": "Mise en bouche",
+      "description": "Bull récupère instantanément 1500 points de vie.",
+      "icon": "https://brawlify.com/images/gadgets/23000262.png"
+    },
+    "stomper": {
+      "name": "Casse-briques",
+      "description": "Bull peut interrompre sa charge du Super, ce qui ralentit les ennemis à proximité.",
+      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
+    }
+  },
+  "BROCK": {
+    "rocket_laces": {
+      "name": "Laces tes chaussures",
+      "description": "Brock fait exploser le sol, ce qui le propulse en l'air et repousse les ennemis proches.",
+      "icon": "https://brawlify.com/images/gadgets/23000257.png"
+    },
+    "rocket_fuel": {
+      "name": "Méga-roquette",
+      "description": "La prochaine attaque de Brock est une méga-roquette qui détruit les murs.",
+      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
+    }
+  },
+  "RICO": {
+    "multiball": {
+      "name": "Lance-balles",
+      "description": "Rico tire des vagues de balles rebondissantes dans toutes les directions.",
+      "icon": "https://brawlify.com/images/gadgets/23000264.png"
+    },
+    "bouncy_castle": {
+      "name": "Château gonflable",
+      "description": "La prochaine attaque de Rico le soigne pour chaque rebond d'une balle.",
+      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
+    }
+  },
+  "SPIKE": {
+    "pincushion": {
+      "name": "Coussin piqueur",
+      "description": "Spike tire 3 vagues d'épines dans toutes les directions, infligeant des dégâts à chaque touche.",
+      "icon": "https://brawlify.com/images/gadgets/23000259.png"
+    },
+    "life_plant": {
+      "name": "Plante verte",
+      "description": "Spike fait pousser un grand cactus qui le soigne et protège des tirs.",
+      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
+    }
+  },
+  "BARLEY": {
+    "sticky_syrup": {
+      "name": "Sirop collant",
+      "description": "Barley laisse tomber une flaque de sirop qui ralentit tous les ennemis qui marchent dedans.",
+      "icon": "https://brawlify.com/images/gadgets/23000269.png"
+    },
+    "herbal_tonic": {
+      "name": "Remède à base de plantes",
+      "description": "Barley lance une potion qui soigne tous les alliés à l'intérieur de la zone.",
+      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
+    }
+  },
+  "JESSIE": {
+    "spark_plug": {
+      "name": "Bougie d'allumage",
+      "description": "La tourelle de Jessie crée une onde de choc qui ralentit tous les ennemis dans sa zone d'effet.",
+      "icon": "https://brawlify.com/images/gadgets/23000271.png"
+    },
+    "recoil_spring": {
+      "name": "Ressort",
+      "description": "La cadence de tir de la tourelle de Jessie est doublée pendant 5 secondes.",
+      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
+    }
+  },
   "NITA": {
     "bear_paws": {
       "name": "Griffes d'Ours",
       "description": "L'ours de Nita frappe le sol, étourdissant les ennemis à proximité pendant 1 seconde.",
-      "icon": "https://brawlify.com/images/gadgets/23000249.png"
+      "icon": "https://brawlify.com/images/gadgets/23000255.png"
     },
     "faux_fur": {
       "name": "Fausse Fourrure",
       "description": "L'ours de Nita reçoit un bouclier qui réduit les dégâts subis de 35% pendant 3 secondes.",
-      "icon": "https://brawlify.com/images/gadgets/23000314.png"
+      "icon": "https://brawlify.com/images/gadgets/23000289.png"
+    }
+  },
+  "DYNAMIKE": {
+    "fidget_spinner": {
+      "name": "Toupie nerveuse",
+      "description": "Dynamike tourne sur lui-même en jetant des bâtons de dynamite autour de lui, ce qui le fait accélérer.",
+      "icon": "https://brawlify.com/images/gadgets/23000261.png"
+    },
+    "satchel_charge": {
+      "name": "Poudre de perlimpinpin",
+      "description": "La prochaine attaque principale de Dynamike étourdit les ennemis pendant 1,5 seconde.",
+      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
+    }
+  },
+  "EL_PRIMO": {
+    "suplex": {
+      "name": "Supplément de force",
+      "description": "El Primo attrape l'ennemi le plus proche et le jette par-dessus ses épaules comme une crêpe !",
+      "icon": "https://brawlify.com/images/gadgets/23000266.png"
+    },
+    "asteroid_belt": {
+      "name": "Ceinture d'astéroïdes",
+      "description": "El Primo invoque un petit météore qui s'abat sur l'ennemi le plus proche.",
+      "icon": "https://brawlify.com/images/gadgets/23000XXX.png"
     }
   }
 }
