@@ -79,4 +79,84 @@
     "pocket_detonator": { "name": "Détonateur", "description": "Penny fait exploser son canon, détruisant les murs et infligeant des dégâts.", "icon": "https://brawlify.com/images/gadgets/23000272.png" },
     "captain_compass": { "name": "Boussole", "description": "Le canon de Penny tire une volée de boulets sur sa propre position.", "icon": "https://brawlify.com/images/gadgets/23000307.png" }
   }
+"FRANK": {
+    "active_noise_canceling": { "name": "Annulation du bruit", "description": "Frank devient immunisé contre les étourdissements, ralentissements et repoussements pendant un court instant.", "icon": "https://brawlify.com/images/gadgets/23000273.png" },
+    "irresistible_attraction": { "name": "Attraction irrésistible", "description": "La prochaine attaque de Frank attire tous les ennemis vers lui.", "icon": "https://brawlify.com/images/gadgets/23000308.png" }
+  },
+  "GENE": {
+    "lamp_blowout": { "name": "Lampe magique", "description": "Geni repousse tous les ennemis proches et récupère 700 PV.", "icon": "https://brawlify.com/images/gadgets/23000278.png" },
+    "vengeful_spirits": { "name": "Esprits vengeurs", "description": "Geni tire des missiles à tête chercheuse sur tous les ennemis visibles.", "icon": "https://brawlify.com/images/gadgets/23000309.png" }
+  },
+  "TICK": {
+    "mine_mania": { "name": "Mine mania", "description": "La prochaine attaque de Tick jette 6 mines au lieu de 3.", "icon": "https://brawlify.com/images/gadgets/23000279.png" },
+    "last_hurrah": { "name": "Dernier hourra", "description": "Tick devient invulnérable pendant 1 seconde, puis explose et inflige des dégâts autour de lui.", "icon": "https://brawlify.com/images/gadgets/23000310.png" }
+  },
+  "LEON": {
+    "clone_projector": { "name": "Générateur de clones", "description": "Léon crée une illusion de lui-même pour tromper ses ennemis.", "icon": "https://brawlify.com/images/gadgets/23000280.png" },
+    "lollipop_drop": { "name": "Sucette furtive", "description": "Léon déploie une sucette qui rend lui et ses alliés invisibles dans sa zone.", "icon": "https://brawlify.com/images/gadgets/23000311.png" }
+  },
+  "ROSA": {
+    "grow_light": { "name": "Lampe de culture", "description": "Rosa fait pousser des buissons instantanément autour d'elle.", "icon": "https://brawlify.com/images/gadgets/23000281.png" },
+    "unfriendly_bushes": { "name": "Buissons hostiles", "description": "Tous les ennemis cachés dans des buissons subissent des dégâts et sont ralentis.", "icon": "https://brawlify.com/images/gadgets/23000312.png" }
+  },
+  "CARL": {
+    "heat_ejector": { "name": "Éjecteur de chaleur", "description": "Carl laisse une traînée de pierres brûlantes derrière son chariot.", "icon": "https://brawlify.com/images/gadgets/23000282.png" },
+    "flying_hook": { "name": "Crochet volant", "description": "La prochaine attaque de Carl le tire jusqu'au bout de la trajectoire de sa pioche.", "icon": "https://brawlify.com/images/gadgets/23000313.png" }
+  },
+  "BIBI": {
+    "vitamin_booster": { "name": "Booster de vitamines", "description": "Bibi se soigne de 600 PV par seconde pendant 4 secondes.", "icon": "https://brawlify.com/images/gadgets/23000283.png" },
+    "extra_sticky": { "name": "Extra collant", "description": "La prochaine bulle de Bibi ralentit les ennemis touchés pendant 2 secondes.", "icon": "https://brawlify.com/images/gadgets/23000314.png" }
+  },
+  "8_BIT": {
+    "cheat_cartridge": { "name": "Cartouche de triche", "description": "A.R.K.A.D se téléporte instantanément sur son amplificateur de dégâts.", "icon": "https://brawlify.com/images/gadgets/23000284.png" },
+    "extra_credits": { "name": "Crédits bonus", "description": "La prochaine attaque de A.R.K.A.D tire un très grand nombre de lasers.", "icon": "https://brawlify.com/images/gadgets/23000315.png" }
+  },
+  "SANDY": {
+    "sleep_stimulator": { "name": "Somnifère", "description": "Émeri s'endort pendant 2 secondes pour récupérer tous ses points de vie.", "icon": "https://brawlify.com/images/gadgets/23000285.png" },
+    "sweet_dreams": { "name": "Fais de beaux rêves", "description": "La prochaine attaque d'Émeri endort (étourdit) l'ennemi pendant 1,5 seconde.", "icon": "https://brawlify.com/images/gadgets/23000316.png" }
+  },
+  "BEA": {
+    "honey_molasses": { "name": "Mélasse", "description": "Béa déploie une ruche qui ralentit tous les ennemis dans un large rayon.", "icon": "https://brawlify.com/images/gadgets/23000286.png" },
+    "rattled_hive": { "name": "Ruche agitée", "description": "Béa libère 4 abeilles en colère qui traversent les murs en spirale.", "icon": "https://brawlify.com/images/gadgets/23000317.png" }
+  },
+  "EMZ": {
+    "friendzoner": { "name": "Friendzone", "description": "Eliz@beth repousse violemment tous les ennemis autour d'elle et leur inflige 500 dégâts.", "icon": "https://brawlify.com/images/gadgets/23000287.png" },
+    "acid_lace": { "name": "Laque acide", "description": "La prochaine attaque d'Eliz@beth traverse les murs.", "icon": "https://brawlify.com/images/gadgets/23000318.png" }
+  },
+  "MR_P": {
+    "service_bell": { "name": "Clochette de service", "description": "Monsieur M. améliore son pingouin-porteur actuel, augmentant ses dégâts et sa santé.", "icon": "https://brawlify.com/images/gadgets/23000295.png" },
+    "porter_reinforcements": { "name": "Renforts", "description": "La prochaine attaque de Monsieur M. fait apparaître un pingouin-porteur là où elle atterrit.", "icon": "https://brawlify.com/images/gadgets/23000319.png" }
+  },
+  "MAX": {
+    "phase_shifter": { "name": "Déphaseur", "description": "Max se précipite en avant, esquivant tous les dégâts pendant son mouvement.", "icon": "https://brawlify.com/images/gadgets/23000296.png" },
+    "sneaky_sneakers": { "name": "Baskets furtives", "description": "Max pose un point de sauvegarde. Après 3 secondes, elle y est téléportée et récupère ses PV d'avant.", "icon": "https://brawlify.com/images/gadgets/23000320.png" }
+  },
+  "JACKY": {
+    "pneumatic_booster": { "name": "Booster", "description": "Jacky reçoit une soudaine augmentation de sa vitesse de déplacement de 20%.", "icon": "https://brawlify.com/images/gadgets/23000298.png" },
+    "rebuild": { "name": "Reconstruction", "description": "Jacky reconstruit les murs détruits autour d'elle.", "icon": "https://brawlify.com/images/gadgets/23000321.png" }
+  },
+  "GALE": {
+    "spring_ejector": { "name": "Tremplin", "description": "Gaël pose un tremplin qui propulse les alliés et les ennemis en l'air.", "icon": "https://brawlify.com/images/gadgets/23000299.png" },
+    "twister": { "name": "Tornade", "description": "Gaël invoque une petite tornade qui repousse tous les ennemis qui essaient de la traverser.", "icon": "https://brawlify.com/images/gadgets/23000322.png" }
+  },
+  "NANI": {
+    "warp_blast": { "name": "Explosion de distorsion", "description": "Nani se téléporte à l'endroit exact où se trouve son drone Peep.", "icon": "https://brawlify.com/images/gadgets/23000300.png" },
+    "return_to_sender": { "name": "Retour à l'envoyeur", "description": "Nani absorbe 80% des prochains dégâts subis et les renvoie à l'attaquant.", "icon": "https://brawlify.com/images/gadgets/23000323.png" }
+  },
+  "SPROUT": {
+    "garden_mulcher": { "name": "Engrais", "description": "Sprout consomme un buisson pour récupérer 1500 points de vie.", "icon": "https://brawlify.com/images/gadgets/23000301.png" },
+    "transplant": { "name": "Transplantation", "description": "Sprout détruit son propre mur de ronces pour recharger instantanément son Super.", "icon": "https://brawlify.com/images/gadgets/23000324.png" }
+  },
+  "SURGE": {
+    "power_surge": { "name": "Surcharge", "description": "Surge se téléporte sur une courte distance, y compris à travers les murs.", "icon": "https://brawlify.com/images/gadgets/23000302.png" },
+    "power_shield": { "name": "Bouclier de puissance", "description": "Surge s'entoure d'un bouclier. Si on le touche, il recharge 2 munitions instantanément.", "icon": "https://brawlify.com/images/gadgets/23000325.png" }
+  },
+  "COLETTE": {
+    "na_ah": { "name": "Nan-an !", "description": "La prochaine attaque de Colette inflige des dégâts basés sur sa propre santé maximale.", "icon": "https://brawlify.com/images/gadgets/23000303.png" },
+    "gotcha": { "name": "Je t'ai eu !", "description": "Colette se soigne d'un montant égal à 80% des dégâts qu'elle inflige avec sa prochaine attaque.", "icon": "https://brawlify.com/images/gadgets/23000326.png" }
+  },
+  "AMBER": {
+    "fire_starters": { "name": "Allume-feu", "description": "Ambre court en laissant une traînée de liquide inflammable derrière elle.", "icon": "https://brawlify.com/images/gadgets/23000304.png" },
+    "dancing_flames": { "name": "Flammes dansantes", "description": "Ambre invoque 3 flammes qui tournent autour d'elle et infligent des dégâts.", "icon": "https://brawlify.com/images/gadgets/23000327.png" }
+  }
 }
