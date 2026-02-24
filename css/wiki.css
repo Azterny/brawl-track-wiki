@@ -24,7 +24,6 @@
 /* =========================================
    WIKI : CARTES DE NAVIGATION (Accueil & Liste)
    ========================================= */
-
 .category-grid {
     display: flex;
     flex-wrap: wrap;
@@ -50,7 +49,10 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
-.category-card h2 { margin: 0 0 10px 0; font-size: 2rem; }
+.category-card h2 { 
+    margin: 0 0 10px 0; 
+    font-size: 2rem; 
+}
 
 /* =========================================
    WIKI : COMPTEUR DE BRAWLERS
@@ -68,20 +70,16 @@
    ========================================= */
 .brawler-group {
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 }
 
 .brawler-group-header {
     display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 10px 18px;
-    background: #1e1e1e;
-    border-radius: 10px;
-    border-left: 5px solid #ffce00;
-    margin-bottom: 15px;
-    font-family: 'Lilita One', cursive;
+    align-items: baseline;
+    gap: 10px;
     text-align: left;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
 }
 
 .group-emoji {
@@ -90,18 +88,27 @@
 }
 
 .group-name {
-    font-size: 1.4rem;
-    flex: 1;
+    font-family: 'Lilita One', cursive;
+    font-size: 1.5rem;
+    line-height: 1;
 }
 
 .group-count {
-    font-size: 0.85rem;
     font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
     color: #888;
-    background: #252525;
-    padding: 3px 10px;
-    border-radius: 20px;
-    border: 1px solid #444;
+    font-weight: normal;
+    flex-shrink: 0;
+}
+
+.group-divider {
+    flex: 1;
+    height: 2px;
+    border-radius: 2px;
+    opacity: 0.35;
+    min-width: 40px;
+    align-self: center;
+    background-color: #888; /* Added a fallback color for the divider */
 }
 
 .brawlers-grid--group {
@@ -181,7 +188,6 @@
 /* =========================================
    WIKI : BADGES & RARETÉS
    ========================================= */
-
 .badge {
     display: inline-block;
     padding: 3px 8px;
@@ -213,7 +219,7 @@
 .border-legendary, .border-premium { border-color: #ffce00 !important; }
 
 /* =========================================
-   WIKI : EXTRAS DE CARTE (Date, HP, Vitesse, Portée)
+   WIKI : EXTRAS DE CARTE (Date, HP, Vitesse, Portée, Skins)
    ========================================= */
 
 /* --- Date d'ajout --- */
@@ -305,12 +311,11 @@
     font-weight: bold;
 }
 
-.brawler-extra-speed.speed-tres-lente,
-.brawler-extra-speed.speed-tres-lente { background: #2a1a1a; color: #ff4444; border: 1px solid #4a1a1a; }
-.brawler-extra-speed.speed-lente { background: #2a2010; color: #ff9944; border: 1px solid #4a3010; }
-.brawler-extra-speed.speed-normale { background: #1a2a1a; color: #44cc44; border: 1px solid #1a4a1a; }
-.brawler-extra-speed.speed-rapide { background: #1a1a3a; color: #44aaff; border: 1px solid #1a1a5a; }
-.brawler-extra-speed.speed-tres-rapide { background: #2a1a3a; color: #cc44ff; border: 1px solid #4a1a5a; }
+.speed-tres-lente { background: #2a1a1a; color: #ff4444; border: 1px solid #4a1a1a; }
+.speed-lente { background: #2a2010; color: #ff9944; border: 1px solid #4a3010; }
+.speed-normale { background: #1a2a1a; color: #44cc44; border: 1px solid #1a4a1a; }
+.speed-rapide { background: #1a1a3a; color: #44aaff; border: 1px solid #1a1a5a; }
+.speed-tres-rapide { background: #2a1a3a; color: #cc44ff; border: 1px solid #4a1a5a; }
 
 /* --- Portée --- */
 .brawler-extra-range {
@@ -327,10 +332,29 @@
     font-weight: bold;
 }
 
+/* --- Skins --- */
+.brawler-extra-skins {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #da70d6;
+    background: #1e1028;
+    border: 1px solid #3a1a4a;
+    border-radius: 6px;
+    padding: 4px 8px;
+    width: fit-content;
+    font-weight: bold;
+}
+
 /* =========================================
    WIKI : BOUTONS (Style 3D Brawl-Track)
    ========================================= */
-.wiki-btn-back { margin-bottom: 20px; display: flex; justify-content: flex-start; }
+.wiki-btn-back { 
+    margin-bottom: 20px; 
+    display: flex; 
+    justify-content: flex-start; 
+}
 
 .btn-back {
     background: linear-gradient(to bottom, #ffce00, #e6b800) !important;
@@ -381,14 +405,57 @@
     background-color: #222;
 }
 
-.brawler-info-left { flex: 1; min-width: 200px; text-align: left; }
-.brawler-info-left h1 { font-size: 3rem; margin: 0 0 10px 0; text-shadow: 2px 2px 0px #000; }
-.brawler-badges { display: flex; gap: 10px; align-items: center; }
-.brawler-desc-right { flex: 2; min-width: 300px; background: #252525; padding: 15px; border-radius: 8px; border-left: 4px solid #ffce00; font-size: 1.05rem; line-height: 1.5; color: #ddd; text-align: left; }
+.brawler-info-left { 
+    flex: 1; 
+    min-width: 200px; 
+    text-align: left; 
+}
+
+.brawler-info-left h1 { 
+    font-size: 3rem; 
+    margin: 0 0 10px 0; 
+    text-shadow: 2px 2px 0px #000; 
+}
+
+.brawler-badges { 
+    display: flex; 
+    gap: 10px; 
+    align-items: center; 
+}
+
+.brawler-desc-right { 
+    flex: 2; 
+    min-width: 300px; 
+    background: #252525; 
+    padding: 15px; 
+    border-radius: 8px; 
+    border-left: 4px solid #ffce00; 
+    font-size: 1.05rem; 
+    line-height: 1.5; 
+    color: #ddd; 
+    text-align: left; 
+}
 
 /* Sections Items (Gadgets, SP, Skins) */
-.wiki-section-title { text-align: left; margin-top: 30px; margin-bottom: 10px; font-size: 1.5rem; color: #ffce00; border-bottom: 2px solid #333; padding-bottom: 5px; }
-.horizontal-scroll-container { display: flex; gap: 15px; overflow-x: auto; padding-bottom: 15px; scrollbar-width: thin; scrollbar-color: #ffce00 #252525; }
+.wiki-section-title { 
+    text-align: left; 
+    margin-top: 30px; 
+    margin-bottom: 10px; 
+    font-size: 1.5rem; 
+    color: #ffce00; 
+    border-bottom: 2px solid #333; 
+    padding-bottom: 5px; 
+}
+
+.horizontal-scroll-container { 
+    display: flex; 
+    gap: 15px; 
+    overflow-x: auto; 
+    padding-bottom: 15px; 
+    scrollbar-width: thin; 
+    scrollbar-color: #ffce00 #252525; 
+}
+
 .horizontal-scroll-container::-webkit-scrollbar { height: 8px; }
 .horizontal-scroll-container::-webkit-scrollbar-track { background: #252525; border-radius: 4px; }
 .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #ffce00; border-radius: 4px; }
@@ -413,12 +480,321 @@
     transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s; 
 }
 
-.item-card h4 { display: flex; align-items: center; gap: 10px; margin: 0 0 10px 0; font-family: 'Lilita One', cursive; font-size: 1.3rem; }
-.item-icon-inline { width: 35px; height: 35px; object-fit: contain; flex-shrink: 0; }
-.item-card p { font-size: 0.9rem; color: #ccc; margin: 0; line-height: 1.4; }
+.item-card h4 { 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin: 0 0 10px 0; 
+    font-family: 'Lilita One', cursive; 
+    font-size: 1.3rem; 
+}
 
-.skin-card { text-align: center; min-width: 150px; }
-.skin-card img { width: 100%; height: 150px; object-fit: contain; background: #1a1a1a; border-radius: 8px; border: 1px solid #333; }
+.item-icon-inline { 
+    width: 35px; 
+    height: 35px; 
+    object-fit: contain; 
+    flex-shrink: 0; 
+}
+
+.item-card p { 
+    font-size: 0.9rem; 
+    color: #ccc; 
+    margin: 0; 
+    line-height: 1.4; 
+}
+
+.skin-card { 
+    text-align: center; 
+    min-width: 150px; 
+}
+
+.skin-card img { 
+    width: 100%; 
+    height: 150px; 
+    object-fit: contain; 
+    background: #1a1a1a; 
+    border-radius: 8px; 
+    border: 1px solid #333; 
+}
+
+/* =========================================
+   WIKI : SECTION STATISTIQUES
+   ========================================= */
+.section-stats { 
+    margin-top: 10px; 
+}
+
+.section-stats .wiki-section-title { 
+    color: #00d2ff; 
+    border-bottom-color: #00d2ff; 
+}
+
+/* Slider Niveau de Pouvoir */
+.power-level-slider {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 18px 20px 14px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.power-level-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.power-icon { 
+    font-size: 1.2rem; 
+}
+
+.power-label { 
+    font-family: 'Lilita One', cursive; 
+    font-size: 1.1rem; 
+    color: #ccc; 
+    flex: 1; 
+}
+
+.power-value-badge {
+    background: linear-gradient(135deg, #ffce00, #ff9900);
+    color: #000;
+    font-family: 'Lilita One', cursive;
+    font-size: 1rem;
+    padding: 4px 14px;
+    border-radius: 20px;
+    border: 2px solid #b38f00;
+    min-width: 48px;
+    text-align: center;
+    transition: background 0.2s;
+}
+
+.power-slider-track {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.power-min, .power-max { 
+    font-size: 0.85rem; 
+    color: #888; 
+    font-weight: bold; 
+    white-space: nowrap; 
+}
+
+.power-slider {
+    flex: 1;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 4px;
+    background: linear-gradient(to right, #ffce00, #ff6600);
+    outline: none;
+    cursor: pointer;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+}
+
+.power-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #fff;
+    border: 3px solid #ffce00;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    transition: transform 0.1s;
+}
+
+.power-slider::-webkit-slider-thumb:hover { 
+    transform: scale(1.15); 
+}
+
+.power-slider::-moz-range-thumb { 
+    width: 22px; 
+    height: 22px; 
+    border-radius: 50%; 
+    background: #fff; 
+    border: 3px solid #ffce00; 
+    cursor: pointer; 
+}
+
+.power-ticks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    padding: 0 2px;
+}
+
+.power-tick {
+    font-size: 0.72rem;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.15s;
+    text-align: center;
+    width: 22px;
+}
+
+.power-tick.active { 
+    color: #ffce00; 
+    font-weight: bold; 
+}
+
+/* Grille de stats */
+.stats-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: left;
+}
+
+.stat-row {
+    display: flex;
+    align-items: center;
+    background: #1e1e1e;
+    border: 1px solid #2a2a2a;
+    border-radius: 10px;
+    padding: 12px 16px;
+    gap: 12px;
+    transition: border-color 0.2s;
+}
+
+.stat-row:hover { 
+    border-color: #00d2ff44; 
+}
+
+.stat-label { 
+    font-size: 0.95rem; 
+    color: #bbb; 
+    min-width: 180px; 
+    flex-shrink: 0; 
+}
+
+.stat-right { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 6px; 
+    flex: 1; 
+}
+
+.stat-value {
+    font-family: 'Lilita One', cursive;
+    font-size: 1.25rem;
+    color: #fff;
+    transition: color 0.2s;
+}
+
+.stat-bar-bg { 
+    height: 6px; 
+    background: #2a2a2a; 
+    border-radius: 3px; 
+    overflow: hidden; 
+}
+
+.stat-bar-fill {
+    height: 100%;
+    background: linear-gradient(to right, #00d2ff, #0066cc);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+/* =========================================
+   WIKI : SECTION ÉQUILIBRAGE
+   ========================================= */
+.section-equilibrage { 
+    margin-top: 10px; 
+}
+
+.section-equilibrage .wiki-section-title { 
+    color: #ff9944; 
+    border-bottom-color: #ff9944; 
+}
+
+.eq-table-wrapper { 
+    overflow-x: auto; 
+    border-radius: 10px; 
+    border: 1px solid #2a2a2a; 
+}
+
+.eq-table { 
+    width: 100%; 
+    border-collapse: collapse; 
+    text-align: left; 
+}
+
+.eq-th { 
+    background: #1e1e1e; 
+    color: #888; 
+    font-size: 0.8rem; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    padding: 10px 14px; 
+    border-bottom: 1px solid #333; 
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold; 
+}
+
+.eq-row { 
+    border-bottom: 1px solid #222; 
+    transition: background 0.15s; 
+}
+
+.eq-row:last-child { 
+    border-bottom: none; 
+}
+
+.eq-row:hover { 
+    background: #1e1e1e; 
+}
+
+.eq-td { 
+    padding: 12px 14px; 
+    vertical-align: top; 
+    font-size: 0.9rem; 
+    color: #ccc; 
+}
+
+.eq-td-icon { 
+    width: 48px; 
+    text-align: center; 
+}
+
+.eq-td-date { 
+    white-space: nowrap; 
+    color: #888; 
+    font-size: 0.85rem; 
+    min-width: 80px; 
+}
+
+.eq-td-desc { 
+    line-height: 1.5; 
+}
+
+/* Icônes d'équilibrage */
+.eq-icon { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 30px; 
+    height: 30px; 
+    border-radius: 8px; 
+    font-size: 1.1rem; 
+    font-style: normal; 
+}
+
+.eq-buff   { background: #0d2e0d; color: #22cc22; border: 1px solid #1a4a1a; }
+.eq-nerf   { background: #2e0d0d; color: #cc2222; border: 1px solid #4a1a1a; }
+.eq-rework { background: #0d1a2e; color: #3399ff; border: 1px solid #1a2a4a; }
+.eq-other  { background: #252525; color: #fff; border: 1px solid #444; }
+
+/* Coloration subtile des lignes par type */
+.eq-type-buff td:last-child { border-left: 3px solid #22cc2244; }
+.eq-type-nerf td:last-child { border-left: 3px solid #cc222244; }
+.eq-type-rework td:last-child { border-left: 3px solid #3399ff44; }
 
 /* =========================================
    WIKI : BARRE DE CONTRÔLES (Recherche & Filtres)
@@ -547,9 +923,11 @@
 .filter-group {
     margin-bottom: 20px;
 }
+
 .filter-group:last-child {
     margin-bottom: 0;
 }
+
 .filter-group h4 {
     margin: 0 0 10px 0;
     color: #ffce00;
@@ -558,6 +936,7 @@
     padding-bottom: 5px;
     font-size: 1.1rem;
 }
+
 .filter-group label {
     display: flex;
     align-items: center;
@@ -568,9 +947,11 @@
     font-size: 0.9rem;
     transition: color 0.2s;
 }
+
 .filter-group label:hover {
     color: #fff;
 }
+
 .filter-group input[type="checkbox"] {
     width: 18px !important;
     height: 18px !important;
