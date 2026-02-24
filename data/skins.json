@@ -1,4 +1,158 @@
 {
+  "SHELLY": {
+    "Bandita_Shelly": {
+      "name": "Shelly Bandite",
+      "date de sortie": "2017-09",
+      "image": "images/skins/Shelly/Bandita_Shelly"
+    },
+    "Star_Shelly": {
+      "name": "Shelly Star",
+      "date de sortie": "2018-12",
+      "image": "images/skins/Shelly/Star_Shelly"
+    },
+    "Witch_Shelly": {
+      "name": "Shelly Sorcière",
+      "date de sortie": "2019-10",
+      "image": "images/skins/Shelly/Witch_Shelly"
+    },
+    "PSG_Shelly": {
+      "name": "Shelly PSG",
+      "date de sortie": "2020-03",
+      "image": "images/skins/Shelly/PSG_Shelly"
+    },
+    "True_Silver_Shelly": {
+      "name": "Shelly d'Argent",
+      "date de sortie": "2020-07",
+      "image": "images/skins/Shelly/True_Silver_Shelly"
+    },
+    "True_Gold_Shelly": {
+      "name": "Shelly d'Or",
+      "date de sortie": "2020-07",
+      "image": "images/skins/Shelly/True_Gold_Shelly"
+    },
+    "Boca_Juniors_Shelly": {
+      "name": "Shelly Boca Juniors",
+      "date de sortie": "2021-07",
+      "image": "images/skins/Shelly/Boca_Juniors_Shelly"
+    },
+    "Princess_Shelly": {
+      "name": "Shelly Princesse",
+      "date de sortie": "2021-08",
+      "image": "images/skins/Shelly/Princess_Shelly"
+    },
+    "Classic_Shelly": {
+      "name": "Shelly Classique",
+      "date de sortie": "2022-12",
+      "image": "images/skins/Shelly/Classic_Shelly"
+    },
+    "Hoot_Hoot_Shelly": {
+      "name": "Shelly Chouette",
+      "date de sortie": "2023-10",
+      "image": "images/skins/Shelly/Hoot_Hoot_Shelly"
+    },
+    "Shelly_Dancer": {
+      "name": "Shelly Danseuse",
+      "date de sortie": "2024-03",
+      "image": "images/skins/Shelly/Shelly_Dancer"
+    },
+    "Squad_Buster_Shelly": {
+      "name": "Shelly Squad Buster",
+      "date de sortie": "2024-05",
+      "image": "images/skins/Shelly/Squad_Buster_Shelly"
+    },
+    "Sheriff_Shelly": {
+      "name": "Shelly Shérif",
+      "date de sortie": "2024-07",
+      "image": "images/skins/Shelly/Sheriff_Shelly"
+    },
+    "Stellar_Shelly": {
+      "name": "Shelly Stellaire",
+      "date de sortie": "2024-07",
+      "image": "images/skins/Shelly/Stellar_Shelly"
+    }
+  },
+  "COLT": {
+    "Rockstar_Colt": {
+      "name": "Colt Rockstar",
+      "date de sortie": "2017-09",
+      "image": "images/skins/Colt/Rockstar_Colt"
+    },
+    "Royal_Agent_Colt": {
+      "name": "Colt Agent Royal",
+      "date de sortie": "2019-01",
+      "image": "images/skins/Colt/Royal_Agent_Colt"
+    },
+    "Outlaw_Colt": {
+      "name": "Colt Hors-la-loi",
+      "date de sortie": "2019-06",
+      "image": "images/skins/Colt/Outlaw_Colt"
+    },
+    "Corsair_Colt": {
+      "name": "Colt Corsaire",
+      "date de sortie": "2019-12",
+      "image": "images/skins/Colt/Corsair_Colt"
+    },
+    "Challenger_Colt": {
+      "name": "Colt Challenger",
+      "date de sortie": "2020-11",
+      "image": "images/skins/Colt/Challenger_Colt"
+    },
+    "Gunslinger_Colt": {
+      "name": "Colt Fine Gâchette",
+      "date de sortie": "2021-04",
+      "image": "images/skins/Colt/Gunslinger_Colt"
+    },
+    "True_Silver_Colt": {
+      "name": "Colt d'Argent",
+      "date de sortie": "2021-06",
+      "image": "images/skins/Colt/True_Silver_Colt"
+    },
+    "True_Gold_Colt": {
+      "name": "Colt d'Or",
+      "date de sortie": "2021-06",
+      "image": "images/skins/Colt/True_Gold_Colt"
+    },
+    "Handsome_Colt": {
+      "name": "Colt BG",
+      "date de sortie": "2021-08",
+      "image": "images/skins/Colt/Handsome_Colt"
+    },
+    "Sharktooth_Colt": {
+      "name": "Colt Dents de Requin",
+      "date de sortie": "2022-07",
+      "image": "images/skins/Colt/Sharktooth_Colt"
+    },
+    "Bananas_Colt": {
+      "name": "Colt Bananes",
+      "date de sortie": "2023-05",
+      "image": "images/skins/Colt/Bananas_Colt"
+    },
+    "Dark_Angel_Colt": {
+      "name": "Colt Ange Noir",
+      "date de sortie": "2023-12",
+      "image": "images/skins/Colt/Dark_Angel_Colt"
+    },
+    "Mecha_Colt": {
+      "name": "Colt Mecha",
+      "date de sortie": "2024-04",
+      "image": "images/skins/Colt/Mecha_Colt"
+    },
+    "Light_Angel_Colt": {
+      "name": "Colt Ange de Lumière",
+      "date de sortie": "2024-11",
+      "image": "images/skins/Colt/Light_Angel_Colt"
+    },
+    "Woody_Colt": {
+      "name": "Colt Woody",
+      "date de sortie": "2024-12",
+      "image": "images/skins/Colt/Woody_Colt"
+    },
+    "Jade_Agent_Colt": {
+      "name": "Colt Agent de Jade",
+      "date de sortie": "2025-01",
+      "image": "images/skins/Colt/Jade_Agent_Colt"
+    }
+  },
   "BULL": {
     "Viking_Bull": {
       "name": "Bull Viking",
