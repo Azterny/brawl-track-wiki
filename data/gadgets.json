@@ -3,12 +3,12 @@
     "bear_paws": {
       "name": "Griffes d'Ours",
       "description": "L'ours de Nita frappe le sol, étourdissant les ennemis à proximité pendant 1 seconde.",
-      "icon": "images/ui/gadget_bear_paws.png"
+      "icon": "https://brawlify.com/images/gadgets/23000249.png"
     },
     "faux_fur": {
       "name": "Fausse Fourrure",
       "description": "L'ours de Nita reçoit un bouclier qui réduit les dégâts subis de 35% pendant 3 secondes.",
-      "icon": "images/ui/gadget_faux_fur.png"
+      "icon": "https://brawlify.com/images/gadgets/23000314.png"
     }
   }
 }
