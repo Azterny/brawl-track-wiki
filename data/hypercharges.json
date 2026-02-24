@@ -1,9 +1,79 @@
 {
+  "SHELLY": {
+    "double_barrel": {
+      "name": "Double canon",
+      "description": "Le Super de Shelly tire deux vagues de plombs au lieu d'une, infligeant des dégâts ravageurs.",
+      "icon": "https://brawlify.com/images/hypercharges/Shelly.png"
+    }
+  },
+  "COLT": {
+    "dual_wield": {
+      "name": "Ambidextre",
+      "description": "Le Super de Colt s'élargit massivement pour couvrir une zone deux fois plus grande.",
+      "icon": "https://brawlify.com/images/hypercharges/Colt.png"
+    }
+  },
+  "BULL": {
+    "jaws_of_steel": {
+      "name": "Mâchoires d'acier",
+      "description": "Bull gagne une immunité massive aux dégâts (-80%) pendant sa charge avec son Super.",
+      "icon": "https://brawlify.com/images/hypercharges/Bull.png"
+    }
+  },
+  "BROCK": {
+    "rocket_rain": {
+      "name": "Pluie de roquettes",
+      "description": "Le Super de Brock tire encore plus de roquettes de façon ciblée vers les ennemis de la zone.",
+      "icon": "https://brawlify.com/images/hypercharges/Brock.png"
+    }
+  },
+  "SPIKE": {
+    "blooming_season": {
+      "name": "Saison des amours",
+      "description": "La zone du Super de Spike s'agrandit de 20% et ralentit encore plus les adversaires.",
+      "icon": "https://brawlify.com/images/hypercharges/Spike.png"
+    }
+  },
+  "JESSIE": {
+    "scrappy_2": {
+      "name": "Scrappy 2.0",
+      "description": "La tourelle de Jessie (Scrappy) devient beaucoup plus résistante et tire de plus gros projectiles.",
+      "icon": "https://brawlify.com/images/hypercharges/Jessie.png"
+    }
+  },
   "NITA": {
     "hyperbearing": {
-      "name": "Hyperbearing",
-      "description": "Bruce (l'ours) gagne un bonus de vitesse de déplacement et de résistance aux dégâts. Nita charge son super plus rapidement.",
-      "icon": "images/ui/hc_hyperbearing.png"
+      "name": "Hyper-Ours",
+      "description": "L'ours de Nita gagne en taille, en vitesse de déplacement et en points de vie.",
+      "icon": "https://brawlify.com/images/hypercharges/Nita.png"
+    }
+  },
+  "DYNAMIKE": {
+    "boomer": {
+      "name": "Boomer",
+      "description": "La bombe géante de Dynamike lâche des petites bombes secondaires tout autour d'elle lors de l'explosion.",
+      "icon": "https://brawlify.com/images/hypercharges/Dynamike.png"
+    }
+  },
+  "EL_PRIMO": {
+    "gravity_leap": {
+      "name": "Saut de l'ange",
+      "description": "L'impact du Super d'El Primo crée une zone qui attire les ennemis vers le centre.",
+      "icon": "https://brawlify.com/images/hypercharges/ElPrimo.png"
+    }
+  },
+  "CROW": {
+    "utility_knives": {
+      "name": "Couteaux suisses",
+      "description": "Les dagues du Super de Crow reviennent vers lui comme un boomerang après avoir été lancées.",
+      "icon": "https://brawlify.com/images/hypercharges/Crow.png"
+    }
+  },
+  "DARRYL": {
+    "barrel_roll": {
+      "name": "Trombe de plombs",
+      "description": "Darryl tire avec ses fusils à pompe tout autour de lui pendant qu'il roule avec son Super.",
+      "icon": "https://brawlify.com/images/hypercharges/Darryl.png"
     }
   }
 }
