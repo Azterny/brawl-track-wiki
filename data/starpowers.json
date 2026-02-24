@@ -1,14 +1,134 @@
 {
+  "SHELLY": {
+    "shell_shock": {
+      "name": "Étourdissement",
+      "description": "Les ennemis touchés par le Super de Shelly sont ralentis pendant 4,5 secondes.",
+      "icon": "https://brawlify.com/images/star-powers/23000076.png"
+    },
+    "band_aid": {
+      "name": "Pansement",
+      "description": "Quand Shelly a moins de 40% de santé, elle récupère instantanément 2000 PV. Se recharge en 15 secondes.",
+      "icon": "https://brawlify.com/images/star-powers/23000082.png"
+    }
+  },
+  "COLT": {
+    "slick_boots": {
+      "name": "Bottes profilées",
+      "description": "La vitesse de déplacement de Colt est augmentée de 13%.",
+      "icon": "https://brawlify.com/images/star-powers/23000077.png"
+    },
+    "magnum_special": {
+      "name": "Magnum spécial",
+      "description": "La portée et la vitesse des balles de Colt sont augmentées de 11%.",
+      "icon": "https://brawlify.com/images/star-powers/23000089.png"
+    }
+  },
+  "BULL": {
+    "berserker": {
+      "name": "Berserker",
+      "description": "Quand Bull a moins de 40% de santé, le temps de recharge de son arme est réduit de moitié.",
+      "icon": "https://brawlify.com/images/star-powers/23000078.png"
+    },
+    "tough_guy": {
+      "name": "Dur à cuire",
+      "description": "Quand Bull tombe sous 40% de santé, il gagne un bouclier qui réduit tous les dégâts subis de 30%.",
+      "icon": "https://brawlify.com/images/star-powers/23000092.png"
+    }
+  },
+  "BROCK": {
+    "incendiary": {
+      "name": "Incendiaire",
+      "description": "Les roquettes de Brock enflamment le sol à l'impact, infligeant des dégâts sur la durée.",
+      "icon": "https://brawlify.com/images/star-powers/23000079.png"
+    },
+    "rocket_no_four": {
+      "name": "Roquette N°4",
+      "description": "Brock gagne un quatrième emplacement de munitions pour ses roquettes.",
+      "icon": "https://brawlify.com/images/star-powers/23000083.png"
+    }
+  },
+  "RICO": {
+    "super_bouncy": {
+      "name": "Ricochet",
+      "description": "Les balles de Rico infligent des dégâts supplémentaires si elles ont rebondi sur un mur.",
+      "icon": "https://brawlify.com/images/star-powers/23000080.png"
+    },
+    "robo_retreat": {
+      "name": "Fuite",
+      "description": "Quand Rico tombe sous 40% de sa santé maximale, sa vitesse de déplacement augmente drastiquement.",
+      "icon": "https://brawlify.com/images/star-powers/23000096.png"
+    }
+  },
+  "SPIKE": {
+    "fertilize": {
+      "name": "Fertilisant",
+      "description": "Spike récupère 1000 PV par seconde lorsqu'il se trouve dans la zone de son propre Super.",
+      "icon": "https://brawlify.com/images/star-powers/23000081.png"
+    },
+    "curveball": {
+      "name": "Courbe",
+      "description": "Les épines projetées par le cactus de Spike se déplacent en suivant une trajectoire courbée.",
+      "icon": "https://brawlify.com/images/star-powers/23000104.png"
+    }
+  },
+  "BARLEY": {
+    "medical_use": {
+      "name": "À la vôtre",
+      "description": "Barley récupère 400 PV à chaque fois qu'il lance une bouteille.",
+      "icon": "https://brawlify.com/images/star-powers/23000085.png"
+    },
+    "extra_noxious": {
+      "name": "Dégâts bonus",
+      "description": "Les dégâts de l'attaque principale de Barley sont augmentés.",
+      "icon": "https://brawlify.com/images/star-powers/23000093.png"
+    }
+  },
+  "JESSIE": {
+    "energize": {
+      "name": "Énergisante",
+      "description": "Jessie peut réparer sa tourelle de 1060 PV en tirant dessus avec son attaque principale.",
+      "icon": "https://brawlify.com/images/star-powers/23000086.png"
+    },
+    "shocky": {
+      "name": "Rebond",
+      "description": "La tourelle de Jessie tire des orbes d'énergie qui rebondissent d'un ennemi à l'autre.",
+      "icon": "https://brawlify.com/images/star-powers/23000094.png"
+    }
+  },
   "NITA": {
     "bear_with_me": {
       "name": "Ours avec moi",
       "description": "Nita récupère 800 PV quand son ours frappe un ennemi. L'ours récupère 800 PV quand Nita frappe un ennemi.",
-      "icon": "images/ui/sp_bear_with_me.png"
+      "icon": "https://brawlify.com/images/star-powers/23000084.png"
     },
     "hyper_bear": {
       "name": "Hyper Ours",
       "description": "L'ours de Nita attaque plus vite. Le délai entre ses coups est réduit de 60%.",
-      "icon": "images/ui/sp_hyper_bear.png"
+      "icon": "https://brawlify.com/images/star-powers/23000095.png"
+    }
+  },
+  "DYNAMIKE": {
+    "dyna_jump": {
+      "name": "Saut dynamique",
+      "description": "Dynamike peut se propulser dans les airs en utilisant les explosions de ses propres attaques.",
+      "icon": "https://brawlify.com/images/star-powers/23000087.png"
+    },
+    "demolition": {
+      "name": "Démolition",
+      "description": "Le Super de Dynamike inflige 1000 points de dégâts supplémentaires.",
+      "icon": "https://brawlify.com/images/star-powers/23000102.png"
+    }
+  },
+  "EL_PRIMO": {
+    "el_fuego": {
+      "name": "El Fuego",
+      "description": "Les ennemis pris dans le Super d'El Primo sont enflammés et subissent 1200 points de dégâts sur 4 secondes.",
+      "icon": "https://brawlify.com/images/star-powers/23000088.png"
+    },
+    "meteor_rush": {
+      "name": "Météore",
+      "description": "El Primo obtient un bonus de vitesse de déplacement de 25% pendant 4 secondes après avoir utilisé son Super.",
+      "icon": "https://brawlify.com/images/star-powers/23000098.png"
     }
   }
 }
