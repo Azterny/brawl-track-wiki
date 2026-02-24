@@ -78,7 +78,7 @@
   "PENNY": {
     "last_blast": { "name": "Dernier souffle", "description": "Quand le canon est détruit, il tire 4 boulets sur les ennemis proches.", "icon": "https://brawlify.com/images/star-powers/23000114.png" },
     "balls_of_fire": { "name": "Boulets de feu", "description": "Les boulets du canon de Penny enflamment le sol pendant 3 secondes.", "icon": "https://brawlify.com/images/star-powers/23000115.png" }
-  }
+  },
   "FRANK": {
     "power_grab": { "name": "Vol de puissance", "description": "Frank vole la puissance d'un ennemi vaincu, augmentant ses dégâts de 50% pendant 12s.", "icon": "https://brawlify.com/images/star-powers/23000116.png" },
     "sponge": { "name": "Éponge", "description": "Frank gagne 1100 points de vie maximum supplémentaires.", "icon": "https://brawlify.com/images/star-powers/23000117.png" }
@@ -158,7 +158,7 @@
   "AMBER": {
     "wild_flames": { "name": "Flammes sauvages", "description": "Ambre peut avoir deux flaques d'huile actives et charge son Super près de celles-ci.", "icon": "https://brawlify.com/images/star-powers/23000154.png" },
     "scorchin_siphon": { "name": "Siphon brûlant", "description": "La vitesse de rechargement d'Ambre est augmentée de 50% lorsqu'elle se tient près de son liquide inflammable.", "icon": "https://brawlify.com/images/star-powers/23000155.png" }
-  }
+  },
   "LOU": {
     "supercool": { "name": "Cœur de glace", "description": "Les attaques de Lou réduisent les dégâts de l'ennemi en fonction de leur jauge de gel (jusqu'à -35%).", "icon": "https://brawlify.com/images/star-powers/23000156.png" },
     "hypothermia": { "name": "Hypothermie", "description": "Les ennemis dans la patinoire perdent 33% de leur vitesse de rechargement.", "icon": "https://brawlify.com/images/star-powers/23000166.png" }
