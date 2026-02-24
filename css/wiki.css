@@ -350,7 +350,11 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.8);
     z-index: 100;
     text-align: left;
-    display: block; 
+    display: block;
+}
+
+.hidden {
+    display: none !important;
 }
 
 /* Groupes de cases à cocher */
