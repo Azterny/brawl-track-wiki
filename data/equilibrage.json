@@ -1,4 +1,368 @@
 {
+  "SHELLY": {
+    "1": {
+      "type": "nerf",
+      "date": "2017-08",
+      "description": "Temps de recharge augmenté de 1.25s → 1.5s. Portée de l'attaque principale réduite de 7.67 → 6.67 tuiles. Dispersion des projectiles augmentée."
+    },
+    "2": {
+      "type": "other",
+      "date": "2017-09",
+      "description": "Remodelage de l'apparence de base."
+    },
+    "3": {
+      "type": "other",
+      "date": "2017-12",
+      "description": "Ajout du Pouvoir Star « Choc Terminal ». Santé et dégâts multipliés par 4 (mise à l'échelle globale)."
+    },
+    "4": {
+      "type": "nerf",
+      "date": "2018-01",
+      "description": "Durée du ralentissement de « Choc Terminal » diminuée de 3s → 2.5s."
+    },
+    "5": {
+      "type": "rework",
+      "date": "2018-03",
+      "description": "Dégâts diminués de 320 → 300 par projectile. Vitesse de déplacement augmentée de 650 → 720. Vitesse des projectiles augmentée de 9%."
+    },
+    "6": {
+      "type": "buff",
+      "date": "2018-05",
+      "description": "PV augmentés de 3200 → 3600."
+    },
+    "7": {
+      "type": "buff",
+      "date": "2018-05",
+      "description": "Portée de l'attaque principale augmentée de 6.67 → 7.33 tuiles."
+    },
+    "8": {
+      "type": "other",
+      "date": "2018-12",
+      "description": "Remodelage complet de l'apparence de base."
+    },
+    "9": {
+      "type": "buff",
+      "date": "2019-04",
+      "description": "Portée de l'attaque principale augmentée de 7.33 → 7.67 tuiles. Vitesse des projectiles augmentée de 5%."
+    },
+    "10": {
+      "type": "buff",
+      "date": "2019-06",
+      "description": "Durée du ralentissement de « Choc Terminal » augmentée de 2.5s → 3s."
+    },
+    "11": {
+      "type": "other",
+      "date": "2019-06",
+      "description": "Ajout du Pouvoir Star « Pansement »."
+    },
+    "12": {
+      "type": "nerf",
+      "date": "2019-08",
+      "description": "Soin de « Pansement » diminué (soigne désormais 2000 PV au lieu de la totalité)."
+    },
+    "13": {
+      "type": "nerf",
+      "date": "2019-09",
+      "description": "Soin de « Pansement » diminué de 2000 → 1800."
+    },
+    "14": {
+      "type": "other",
+      "date": "2019-10",
+      "description": "Refonte des animations."
+    },
+    "15": {
+      "type": "other",
+      "date": "2020-03",
+      "description": "Ajout du Gadget « Pas de Tir »."
+    },
+    "16": {
+      "type": "other",
+      "date": "2020-07",
+      "description": "Ajout d'animations faciales."
+    },
+    "17": {
+      "type": "other",
+      "date": "2020-09",
+      "description": "Ajout du Gadget « Tir au Pigeon »."
+    },
+    "18": {
+      "type": "buff",
+      "date": "2020-09",
+      "description": "PV augmentés de 3600 → 3800. Nombre de coups pour charger le Super diminué de 11 → 10. Vitesse de recharge du Super légèrement diminuée."
+    },
+    "19": {
+      "type": "buff",
+      "date": "2020-12",
+      "description": "Durée du ralentissement de « Choc Terminal » augmentée de 3s → 4s. « Pansement » se charge désormais en 15s (au lieu de 20s)."
+    },
+    "20": {
+      "type": "buff",
+      "date": "2021-05",
+      "description": "Portée du Gadget « Pas de Tir » augmentée de 3 → 3.33 tuiles. Ralentissement de « Choc Terminal » augmenté de 4s → 4.5s. Soin de « Pansement » augmenté de 1800 → 2000."
+    },
+    "21": {
+      "type": "buff",
+      "date": "2021-06",
+      "description": "Vitesse des projectiles du Gadget « Tir au Pigeon » augmentée de 20%."
+    },
+    "22": {
+      "type": "rework",
+      "date": "2021-08",
+      "description": "Refonte du Gadget « Tir au Pigeon » : augmente la portée pendant 5 secondes au lieu de seulement la prochaine attaque."
+    },
+    "23": {
+      "type": "other",
+      "date": "2021-10",
+      "description": "Classe changée de Combattant → Contrôleur."
+    },
+    "24": {
+      "type": "buff",
+      "date": "2023-04",
+      "description": "Vitesse de déplacement augmentée de 720 → 820."
+    },
+    "25": {
+      "type": "nerf",
+      "date": "2023-06",
+      "description": "PV diminués de 3800 → 3700. Ralentissement de « Choc Terminal » diminué de 4.5s → 2s."
+    },
+    "26": {
+      "type": "nerf",
+      "date": "2023-08",
+      "description": "Vitesse de déplacement diminuée de 820 → 770."
+    },
+    "27": {
+      "type": "other",
+      "date": "2023-09",
+      "description": "Ajout de l'Hypercharge « Double Canon »."
+    },
+    "28": {
+      "type": "nerf",
+      "date": "2023-10",
+      "description": "Vitesse de recharge du Super diminuée de 46%. Soin de « Pansement » ajusté à 1998 (progresse avec les niveaux)."
+    },
+    "29": {
+      "type": "other",
+      "date": "2023-12",
+      "description": "Légère refonte du modèle de base."
+    },
+    "30": {
+      "type": "rework",
+      "date": "2024-02",
+      "description": "Hypercharge : boost bouclier augmenté de 15% → 25%, mais multiplicateur diminué de 40% → 30% et boost dégâts de 25% → 5%. Durée non extensible."
+    },
+    "31": {
+      "type": "rework",
+      "date": "2025-02",
+      "description": "Les Gadgets n'ont plus 3 charges mais fonctionnent avec un temps de recharge (cooldown)."
+    },
+    "32": {
+      "type": "buff",
+      "date": "2025-09",
+      "description": "Le Gadget « Pas de Tir » recharge désormais instantanément toutes les munitions."
+    },
+    "33": {
+      "type": "nerf",
+      "date": "2025-10",
+      "description": "Hypercharge : boost vitesse diminué de 25% → 20%, bouclier diminué de 25% → 5%."
+    },
+    "34": {
+      "type": "rework",
+      "date": "2025-12",
+      "description": "PV augmentés de 3700 → 3900. Soin de « Pansement » de 1998 → 2106. Refonte des Gadgets : « Pas de Tir » est plus rapide mais avec moins de portée et un cooldown plus long. « Tir au Pigeon » affecte les 3 prochaines attaques au lieu d'une durée fixe."
+    },
+    "35": {
+      "type": "nerf",
+      "date": "2026-01",
+      "description": "Ralentissement des bonus de « Tir au Pigeon » diminué de 60% → 30%. Durée par projectile de 1s → 0.5s."
+    },
+    "36": {
+      "type": "patch",
+      "date": "2026-01",
+      "description": "Correction d'un bug permettant de tirer plus vite en alternant attaque et gadget."
+    }
+  },
+  "COLT": {
+    "1": {
+      "type": "buff",
+      "date": "2017-08",
+      "description": "Portée de l'attaque principale augmentée de 10 → 10.66 tuiles. Vitesse des projectiles augmentée de 9%."
+    },
+    "2": {
+      "type": "other",
+      "date": "2017-09",
+      "description": "Remodelage de l'apparence de base."
+    },
+    "3": {
+      "type": "buff",
+      "date": "2017-09",
+      "description": "PV augmentés de 600 → 700. Temps de recharge diminué de 1.5s → 1.25s."
+    },
+    "4": {
+      "type": "other",
+      "date": "2017-12",
+      "description": "Vitesse de recharge du Super diminuée de 17%. Ajout du Pouvoir Star « Bottes de Sept Lieues ». Santé et dégâts multipliés par 4."
+    },
+    "5": {
+      "type": "nerf",
+      "date": "2017-12",
+      "description": "Temps de recharge augmenté de 1.25s → 1.5s."
+    },
+    "6": {
+      "type": "nerf",
+      "date": "2017-12",
+      "description": "Portée de l'attaque principale diminuée de 10.66 → 10 tuiles."
+    },
+    "7": {
+      "type": "nerf",
+      "date": "2018-01",
+      "description": "Portée de l'attaque principale diminuée de 10 → 9 tuiles. Boost de vitesse de « Bottes de Sept Lieues » diminué de 100 → 50 points."
+    },
+    "8": {
+      "type": "rework",
+      "date": "2018-03",
+      "description": "Boost de vitesse de « Bottes de Sept Lieues » augmenté de 50 → 60 points. Taille des projectiles augmentée. Vitesse de déplacement de base augmentée de 650 → 720. Vitesse des projectiles augmentée de 9%."
+    },
+    "9": {
+      "type": "nerf",
+      "date": "2018-03",
+      "description": "Taille de l'attaque principale diminuée de 50%."
+    },
+    "10": {
+      "type": "nerf",
+      "date": "2018-04",
+      "description": "Dégâts de l'attaque principale et du Super diminués de 320 → 300 par balle."
+    },
+    "11": {
+      "type": "nerf",
+      "date": "2018-05",
+      "description": "Temps de recharge augmenté de 1.5s → 1.6s."
+    },
+    "12": {
+      "type": "nerf",
+      "date": "2018-05",
+      "description": "Dégâts de l'attaque principale diminués de 300 → 280 par balle."
+    },
+    "13": {
+      "type": "nerf",
+      "date": "2018-06",
+      "description": "Portée du Super diminuée de 13.33 → 11 tuiles."
+    },
+    "14": {
+      "type": "buff",
+      "date": "2018-12",
+      "description": "Dégâts de l'attaque principale augmentés de 280 → 300 par balle."
+    },
+    "15": {
+      "type": "other",
+      "date": "2019-01",
+      "description": "Remodelage de l'apparence et refonte des animations."
+    },
+    "16": {
+      "type": "other",
+      "date": "2019-07",
+      "description": "Ajout du Pouvoir Star « Magnum Spécial »."
+    },
+    "17": {
+      "type": "buff",
+      "date": "2019-08",
+      "description": "Boost de vitesse de « Bottes de Sept Lieues » augmenté de 8% → 10%."
+    },
+    "18": {
+      "type": "buff",
+      "date": "2020-02",
+      "description": "Dégâts de l'attaque principale et du Super augmentés de 300 → 320 par balle."
+    },
+    "19": {
+      "type": "other",
+      "date": "2020-03",
+      "description": "Ajout du Gadget « Recharge Rapide »."
+    },
+    "20": {
+      "type": "rework",
+      "date": "2020-09",
+      "description": "Vitesse de recharge du Super augmentée mais taux de chargement du Super diminué."
+    },
+    "21": {
+      "type": "other",
+      "date": "2020-11",
+      "description": "Ajout du Gadget « Balle d'Argent »."
+    },
+    "22": {
+      "type": "buff",
+      "date": "2020-12",
+      "description": "Dégâts de l'attaque principale augmentés de 320 → 360 par balle. Vitesse de « Bottes de Sept Lieues » augmentée de 10% → 13%."
+    },
+    "23": {
+      "type": "nerf",
+      "date": "2021-01",
+      "description": "Dégâts du Gadget « Balle d'Argent » diminués (équivaut désormais à 2 balles au lieu de 6). Temps de recharge augmenté de 1.6s → 1.7s."
+    },
+    "24": {
+      "type": "other",
+      "date": "2021-10",
+      "description": "Classe changée de Tireur d'élite → Contrôleur."
+    },
+    "25": {
+      "type": "buff",
+      "date": "2022-12",
+      "description": "Vitesse des projectiles augmentée de 3804 → 4000. Rareté changée en Rare."
+    },
+    "26": {
+      "type": "other",
+      "date": "2023-09",
+      "description": "Ajout de l'Hypercharge « Akimbo »."
+    },
+    "27": {
+      "type": "other",
+      "date": "2023-10",
+      "description": "Légère refonte du modèle et mise à jour de la description."
+    },
+    "28": {
+      "type": "buff",
+      "date": "2023-12",
+      "description": "Temps de recharge diminué de 1.7s → 1.4s."
+    },
+    "29": {
+      "type": "nerf",
+      "date": "2024-02",
+      "description": "Hypercharge : Multiplicateur (35%), vitesse (26%), dégâts (25%) et bouclier (5%) diminués. Durée non extensible."
+    },
+    "30": {
+      "type": "patch",
+      "date": "2024-09",
+      "description": "Correction d'un bug majeur faisant crash le jeu lors de la défaite de Colt."
+    },
+    "31": {
+      "type": "rework",
+      "date": "2025-02",
+      "description": "Les Gadgets n'ont plus 3 charges mais fonctionnent avec un temps de recharge."
+    },
+    "32": {
+      "type": "buff",
+      "date": "2025-07",
+      "description": "Temps de recharge du Gadget « Balle d'Argent » diminué de 16s → 14s."
+    },
+    "33": {
+      "type": "nerf",
+      "date": "2025-10",
+      "description": "Hypercharge : boost vitesse diminué de 26% → 20%, dégâts diminués de 25% → 5%."
+    },
+    "34": {
+      "type": "rework",
+      "date": "2025-12",
+      "description": "PV augmentés de 2800 → 3100. Temps de recharge diminué de 1.4s → 1.3s. Equipement Épique supprimé (compensé par la vitesse de recharge de base). Refonte du Gadget « Recharge Rapide » : tire 2 balles ralentissantes."
+    },
+    "35": {
+      "type": "nerf",
+      "date": "2025-12",
+      "description": "Dégâts du Gadget « Balle d'Argent » diminués de 200% → 167% de l'attaque principale. N'est plus affecté par « Magnum Spécial »."
+    },
+    "36": {
+      "type": "patch",
+      "date": "2026-01",
+      "description": "Correction d'équilibrage sur les bonus de gadget."
+    }
+  },
   "BULL": {
     "1": {
       "type": "buff",
