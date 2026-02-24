@@ -79,7 +79,7 @@
     "pocket_detonator": { "name": "Détonateur", "description": "Penny fait exploser son canon, détruisant les murs et infligeant des dégâts.", "icon": "https://brawlify.com/images/gadgets/23000272.png" },
     "captain_compass": { "name": "Boussole", "description": "Le canon de Penny tire une volée de boulets sur sa propre position.", "icon": "https://brawlify.com/images/gadgets/23000307.png" }
   }
-"FRANK": {
+  "FRANK": {
     "active_noise_canceling": { "name": "Annulation du bruit", "description": "Frank devient immunisé contre les étourdissements, ralentissements et repoussements pendant un court instant.", "icon": "https://brawlify.com/images/gadgets/23000273.png" },
     "irresistible_attraction": { "name": "Attraction irrésistible", "description": "La prochaine attaque de Frank attire tous les ennemis vers lui.", "icon": "https://brawlify.com/images/gadgets/23000308.png" }
   },
@@ -158,5 +158,85 @@
   "AMBER": {
     "fire_starters": { "name": "Allume-feu", "description": "Ambre court en laissant une traînée de liquide inflammable derrière elle.", "icon": "https://brawlify.com/images/gadgets/23000304.png" },
     "dancing_flames": { "name": "Flammes dansantes", "description": "Ambre invoque 3 flammes qui tournent autour d'elle et infligent des dégâts.", "icon": "https://brawlify.com/images/gadgets/23000327.png" }
+  }
+  "LOU": {
+    "ice_block": { "name": "Bloc de glace", "description": "Lou s'enveloppe de glace et devient invulnérable pendant 1 seconde.", "icon": "https://brawlify.com/images/gadgets/23000328.png" },
+    "cryo_syrup": { "name": "Sirop givré", "description": "Tous les ennemis pris dans la zone du Super de Lou voient leur jauge de gel remplie de 50%.", "icon": "https://brawlify.com/images/gadgets/23000350.png" }
+  },
+  "BYRON": {
+    "shot_in_the_arm": { "name": "Dose de rappel", "description": "Byron consomme une de ses munitions pour récupérer 800 PV par seconde pendant 3 secondes.", "icon": "https://brawlify.com/images/gadgets/23000329.png" },
+    "booster_shots": { "name": "Triple dose", "description": "La prochaine attaque de Byron tire 3 petites fléchettes d'un coup.", "icon": "https://brawlify.com/images/gadgets/23000366.png" }
+  },
+  "EDGAR": {
+    "lets_fly": { "name": "Vol au vent", "description": "La vitesse de rechargement du Super d'Edgar est augmentée de 527% pendant 3 secondes.", "icon": "https://brawlify.com/images/gadgets/23000330.png" },
+    "hardcore": { "name": "Bouclier stylé", "description": "Edgar obtient un bouclier de 2000 PV qui se dégrade au fil du temps.", "icon": "https://brawlify.com/images/gadgets/23000378.png" }
+  },
+  "RUFFS": {
+    "take_cover": { "name": "À couvert", "description": "Médor déploie 3 sacs de sable autour de lui pour se protéger des tirs ennemis.", "icon": "https://brawlify.com/images/gadgets/23000331.png" },
+    "air_support": { "name": "Soutien aérien", "description": "Médor demande un bombardement aérien qui cible l'ennemi le plus proche.", "icon": "https://brawlify.com/images/gadgets/23000382.png" }
+  },
+  "STU": {
+    "speed_zone": { "name": "Zone de vitesse", "description": "Stu déploie un booster qui augmente la vitesse de déplacement de lui-même et de ses alliés.", "icon": "https://brawlify.com/images/gadgets/23000332.png" },
+    "breakthrough": { "name": "Percée", "description": "Le prochain Super de Stu lui permet de foncer à travers les murs en les détruisant.", "icon": "https://brawlify.com/images/gadgets/23000388.png" }
+  },
+  "BELLE": {
+    "nest_egg": { "name": "Œuf de nid", "description": "Belle pose un piège au sol qui explose et ralentit les ennemis.", "icon": "https://brawlify.com/images/gadgets/23000333.png" },
+    "reverse_polarity": { "name": "Polarité inversée", "description": "La prochaine attaque de Belle rebondit sur les murs.", "icon": "https://brawlify.com/images/gadgets/23000392.png" }
+  },
+  "SQUEAK": {
+    "windup": { "name": "Étirement", "description": "La portée de la prochaine attaque de Squeak est augmentée de 100%.", "icon": "https://brawlify.com/images/gadgets/23000334.png" },
+    "residue": { "name": "Résidu", "description": "L'explosion de l'attaque de Squeak laisse une flaque qui ralentit les ennemis pendant 10 secondes.", "icon": "https://brawlify.com/images/gadgets/23000405.png" }
+  },
+  "GROM": {
+    "watchtower": { "name": "Tour de guet", "description": "Grom éjecte une tour de guet qui permet de voir dans les buissons sur une large zone.", "icon": "https://brawlify.com/images/gadgets/23000335.png" },
+    "radio_check": { "name": "Contrôle radio", "description": "La prochaine attaque de Grom lance 3 bombes d'un coup.", "icon": "https://brawlify.com/images/gadgets/23000412.png" }
+  },
+  "BUZZ": {
+    "reserve_buoy": { "name": "Bouée de secours", "description": "Buzz recharge instantanément son Super, mais il n'étourdira pas l'ennemi.", "icon": "https://brawlify.com/images/gadgets/23000336.png" },
+    "xray_shades": { "name": "Rayons X", "description": "Buzz peut voir les ennemis dans les buissons situés dans la zone de charge de son Super pendant 12s.", "icon": "https://brawlify.com/images/gadgets/23000418.png" }
+  },
+  "GRIFF": {
+    "piggy_bank": { "name": "Tirelire", "description": "Griff lâche une tirelire explosive qui détruit les murs après un court délai.", "icon": "https://brawlify.com/images/gadgets/23000337.png" },
+    "coin_shower": { "name": "Pluie de pièces", "description": "La prochaine attaque de Griff lance un tiers de pièces en plus.", "icon": "https://brawlify.com/images/gadgets/23000424.png" }
+  },
+  "ASH": {
+    "chill_pill": { "name": "Pilule de calme", "description": "Ash utilise sa rage accumulée pour se soigner instantanément.", "icon": "https://brawlify.com/images/gadgets/23000338.png" },
+    "rotten_banana": { "name": "Banane pourrie", "description": "Ash perd 40% de sa santé actuelle, mais sa jauge de rage se remplit instantanément.", "icon": "https://brawlify.com/images/gadgets/23000430.png" }
+  },
+  "MEG": {
+    "jolting_volts": { "name": "Recharge", "description": "Le mécha de Meg récupère 450 PV par seconde pendant 5 secondes.", "icon": "https://brawlify.com/images/gadgets/23000339.png" },
+    "toolbox": { "name": "Boîte à outils", "description": "Meg dépose une station qui augmente sa vitesse de recharge et celle de ses alliés.", "icon": "https://brawlify.com/images/gadgets/23000438.png" }
+  },
+  "LOLA": {
+    "freeze_frame": { "name": "Arrêt sur image", "description": "Le clone de Lola s'arrête de bouger et gagne un bouclier de 75% pendant 4 secondes.", "icon": "https://brawlify.com/images/gadgets/23000340.png" },
+    "stunt_double": { "name": "Cascadeur", "description": "Lola et son clone échangent de place instantanément et récupèrent 350 PV.", "icon": "https://brawlify.com/images/gadgets/23000445.png" }
+  },
+  "FANG": {
+    "corn_fu": { "name": "Corn Fu", "description": "Fang lance une pluie de pop-corn en l'air qui explose au sol.", "icon": "https://brawlify.com/images/gadgets/23000341.png" },
+    "roundhouse_kick": { "name": "Tourbillon", "description": "Fang tourne sur lui-même, infligeant des dégâts et étourdissant les ennemis pendant 0.5s.", "icon": "https://brawlify.com/images/gadgets/23000452.png" }
+  },
+  "EVE": {
+    "gotta_go": { "name": "Fuite", "description": "Ève bondit au loin, laissant derrière elle un bébé alien.", "icon": "https://brawlify.com/images/gadgets/23000343.png" },
+    "motherly_love": { "name": "Amour maternel", "description": "Les aliens issus du Super d'Ève soignent les alliés au lieu d'attaquer les ennemis.", "icon": "https://brawlify.com/images/gadgets/23000465.png" }
+  },
+  "JANET": {
+    "drop_the_bass": { "name": "Basses lourdes", "description": "Janet pose une enceinte qui inflige 100 dégâts par seconde aux ennemis dans la zone.", "icon": "https://brawlify.com/images/gadgets/23000344.png" },
+    "backstage_pass": { "name": "Pass VIP", "description": "La prochaine attaque de Janet la propulse en arrière.", "icon": "https://brawlify.com/images/gadgets/23000473.png" }
+  },
+  "BONNIE": {
+    "sugar_rush": { "name": "Crash", "description": "La vitesse d'attaque et de déplacement de Bonnie est augmentée sous sa forme de canon.", "icon": "https://brawlify.com/images/gadgets/23000345.png" },
+    "crash_test": { "name": "Test de collision", "description": "Bonnie fonce en avant, infligeant des dégâts sous sa forme hors-canon.", "icon": "https://brawlify.com/images/gadgets/23000481.png" }
+  },
+  "OTIS": {
+    "dormant_star": { "name": "Étoile dormante", "description": "Si le Super d'Otis ne touche pas d'ennemi, l'étoile de mer reste au sol comme un piège.", "icon": "https://brawlify.com/images/gadgets/23000346.png" },
+    "ink_refill": { "name": "Recharge d'encre", "description": "La prochaine attaque d'Otis tire une flaque d'encre géante qui blesse sur la durée.", "icon": "https://brawlify.com/images/gadgets/23000489.png" }
+  },
+  "SAM": {
+    "magnetic_field": { "name": "Champ magnétique", "description": "Lorsque les gantelets sont au sol, Sam peut les attirer vers lui, rapprochant les ennemis sur la trajectoire.", "icon": "https://brawlify.com/images/gadgets/23000347.png" },
+    "repulse": { "name": "Répulsion", "description": "Lorsque Sam ramasse ses gantelets, les ennemis proches sont repoussés.", "icon": "https://brawlify.com/images/gadgets/23000497.png" }
+  },
+  "GUS": {
+    "kooky_popper": { "name": "Ballon piégé", "description": "Tous les esprits non collectés au sol explosent, infligeant 1400 points de dégâts.", "icon": "https://brawlify.com/images/gadgets/23000348.png" },
+    "soul_switcher": { "name": "Échange d'âme", "description": "Gus sacrifie 15% de ses PV pour remplir instantanément sa jauge d'esprit.", "icon": "https://brawlify.com/images/gadgets/23000505.png" }
   }
 }
