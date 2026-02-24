@@ -242,3 +242,153 @@
 
 .skin-card { text-align: center; min-width: 150px; }
 .skin-card img { width: 100%; height: 150px; object-fit: contain; background: #1a1a1a; border-radius: 8px; border: 1px solid #333; }
+
+/* =========================================
+   WIKI : BARRE DE CONTRÔLES (Recherche & Filtres)
+   ========================================= */
+.wiki-controls-bar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 30px 0;
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Inputs & Selects spécifiques à la barre */
+.wiki-input, .wiki-select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 2px solid #333;
+    background: #252525;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+    /* Annule le width: 100% de style.css pour un affichage inline */
+    width: auto !important; 
+    margin: 0 !important;
+}
+
+.wiki-input:focus, .wiki-select:focus {
+    border-color: #ffce00;
+    background: #333;
+}
+
+.wiki-input {
+    flex: 1;
+    min-width: 200px;
+}
+
+.wiki-select {
+    cursor: pointer;
+}
+
+/* Boutons de la barre */
+.wiki-btn {
+    background: #333 !important; /* Force la surcharge du bouton jaune global */
+    color: white !important;
+    border: 1px solid #444 !important;
+    padding: 10px 15px !important;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s;
+    box-shadow: none !important;
+    margin: 0 !important;
+    width: auto !important;
+}
+
+.wiki-btn:hover {
+    background: #444 !important;
+    border-color: #ffce00 !important;
+    color: #ffce00 !important;
+}
+
+/* Bouton Flèche (Toggle Ordre) */
+.wiki-btn-icon {
+    background: #333;
+    color: #ffce00;
+    border: 1px solid #444;
+    width: 42px;
+    height: 42px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.wiki-btn-icon:hover {
+    background: #444;
+    border-color: #ffce00;
+    transform: scale(1.05);
+}
+
+/* --- Menu Déroulant Filtres (Checkboxes) --- */
+.wiki-dropdown {
+    position: relative;
+}
+
+.wiki-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background: #252525;
+    border: 1px solid #444;
+    border-radius: 12px;
+    padding: 20px;
+    min-width: 200px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.8);
+    z-index: 100;
+    text-align: left;
+    display: block; 
+}
+
+/* Groupes de cases à cocher */
+.filter-group {
+    margin-bottom: 20px;
+}
+.filter-group:last-child {
+    margin-bottom: 0;
+}
+.filter-group h4 {
+    margin: 0 0 10px 0;
+    color: #ffce00;
+    font-family: 'Lilita One', cursive;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    font-size: 1.2rem;
+}
+.filter-group label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+.filter-group label:hover {
+    color: #fff;
+}
+.filter-group input[type="checkbox"] {
+    /* Nettoyage du style d'input global */
+    width: 18px !important;
+    height: 18px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    cursor: pointer;
+    accent-color: #ffce00;
+    background: #111;
+    border: 1px solid #555;
+}
