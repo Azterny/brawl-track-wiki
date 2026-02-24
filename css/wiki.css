@@ -115,7 +115,7 @@
 .badge {
     display: inline-block;
     padding: 4px 10px;
-    border-radius: 20px; /* Modifié ici pour arrondir les angles */
+    border-radius: 20px; 
     font-size: 0.85rem;
     font-weight: bold;
     text-transform: uppercase;
@@ -178,23 +178,31 @@
 .horizontal-scroll-container::-webkit-scrollbar-track { background: #252525; border-radius: 4px; }
 .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #ffce00; border-radius: 4px; }
 
-/* Code Couleurs Spécifiques pour les Sections */
-.section-gadget .wiki-section-title { color: #00d000; border-bottom-color: #00d000; }
-.section-gadget .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #00d000; }
-.gadget-card:hover { border-color: #00d000; box-shadow: 0 5px 15px rgba(0, 208, 0, 0.2); }
-.gadget-card h4 { color: #00d000; }
+/* =========================================
+   NOUVEAUX CODES COULEURS SPÉCIFIQUES
+   ========================================= */
 
-.section-starpower .wiki-section-title { color: #f8a123; border-bottom-color: #f8a123; }
-.section-starpower .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #f8a123; }
-.starpower-card:hover { border-color: #f8a123; box-shadow: 0 5px 15px rgba(248, 161, 35, 0.2); }
-.starpower-card h4 { color: #f8a123; }
+/* GADGET (Vert Néon : #0cff0c) */
+.section-gadget .wiki-section-title { color: #0cff0c; border-bottom-color: #0cff0c; }
+.section-gadget .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #0cff0c; }
+.gadget-card:hover { border-color: #0cff0c; box-shadow: 0 5px 15px rgba(12, 255, 12, 0.2); }
+.gadget-card h4 { color: #0cff0c; }
 
-.section-hypercharge .wiki-section-title { color: #fa08ff; border-bottom-color: #fa08ff; }
-.section-hypercharge .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #fa08ff; }
-.hypercharge-card:hover { border-color: #fa08ff; box-shadow: 0 5px 15px rgba(250, 8, 255, 0.2); }
-.hypercharge-card h4 { color: #fa08ff; }
+/* POUVOIR STAR (Jaune Éclatant : #ffd420) */
+.section-starpower .wiki-section-title { color: #ffd420; border-bottom-color: #ffd420; }
+.section-starpower .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #ffd420; }
+.starpower-card:hover { border-color: #ffd420; box-shadow: 0 5px 15px rgba(255, 212, 32, 0.2); }
+.starpower-card h4 { color: #ffd420; }
 
-/* Cartes d'objets (Gadget etc) */
+/* HYPERCHARGE (Rose Violet Néon : #fa00ff) */
+.section-hypercharge .wiki-section-title { color: #fa00ff; border-bottom-color: #fa00ff; }
+.section-hypercharge .horizontal-scroll-container::-webkit-scrollbar-thumb { background: #fa00ff; }
+.hypercharge-card:hover { border-color: #fa00ff; box-shadow: 0 5px 15px rgba(250, 0, 255, 0.2); }
+.hypercharge-card h4 { color: #fa00ff; }
+
+/* =========================================
+   ARCHITECTURE DES CARTES
+   ========================================= */
 .item-card { 
     background: #252525; 
     border: 1px solid #444; 
