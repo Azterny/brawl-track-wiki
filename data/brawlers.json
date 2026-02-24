@@ -7,10 +7,10 @@
     "description": "L'arme de prédilection de Shelly est un fusil à pompe. Son Super détruit les abris et maintient les ennemis à distance !",
     "image": "images/brawlers/16000000.png",
     "date_added": "2017-06",
-    "hp": { "p1": 3400, "p11": 6800 },
+    "hp": 3400,
     "speed": 720,
     "range": 5.33,
-    "attack_damage": { "p1": 1260, "p11": 2520 }
+    "attack_damage": 1260
   },
   "COLT": {
     "id": "COLT",
@@ -20,10 +20,10 @@
     "description": "Le shérif de la ville tire une rafale de balles de ses deux pistolets. Son Super détruit les abris et traverse les ennemis !",
     "image": "images/brawlers/16000001.png",
     "date_added": "2017-06",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 720,
     "range": 7.67,
-    "attack_damage": { "p1": 336, "p11": 672 }
+    "attack_damage": 336
   },
   "BULL": {
     "id": "BULL",
@@ -33,10 +33,10 @@
     "description": "Bull fait d'énormes dégâts de près avec son fusil à double canon. Son Super lui permet de charger à travers les murs pour écraser les ennemis.",
     "image": "images/brawlers/16000002.png",
     "date_added": "2017-06",
-    "hp": { "p1": 5000, "p11": 10000 },
+    "hp": 5000,
     "speed": 720,
     "range": 3.33,
-    "attack_damage": { "p1": 800, "p11": 1600 }
+    "attack_damage": 800
   },
   "BROCK": {
     "id": "BROCK",
@@ -46,10 +46,10 @@
     "description": "Brock tire des roquettes explosives à très longue portée. Son Super est un barrage de roquettes qui détruit les obstacles et incinère la zone.",
     "image": "images/brawlers/16000003.png",
     "date_added": "2017-06",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 720,
     "range": 9.67,
-    "attack_damage": { "p1": 1600, "p11": 3200 }
+    "attack_damage": 1600
   },
   "RICO": {
     "id": "RICO",
@@ -59,10 +59,10 @@
     "description": "Les balles de Rico rebondissent sur les murs, ce qui lui permet d'atteindre des cibles à couvert. Son Super tire une longue rafale de balles rebondissantes perforantes.",
     "image": "images/brawlers/16000004.png",
     "date_added": "2017-06",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 720,
     "range": 8.0,
-    "attack_damage": { "p1": 300, "p11": 600 }
+    "attack_damage": 300
   },
   "SPIKE": {
     "id": "SPIKE",
@@ -72,10 +72,10 @@
     "description": "Spike lance des cactus explosifs qui projettent des épines. Son Super crée une zone remplie de piquants qui ralentit et blesse les ennemis.",
     "image": "images/brawlers/16000005.png",
     "date_added": "2017-06",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 720,
     "range": 6.67,
-    "attack_damage": { "p1": 672, "p11": 1344 }
+    "attack_damage": 672
   },
   "BARLEY": {
     "id": "BARLEY",
@@ -85,10 +85,10 @@
     "description": "Barley attaque en lançant des bouteilles d'acide par-dessus les murs. Son Super lance un barrage de bouteilles qui couvre une vaste zone.",
     "image": "images/brawlers/16000006.png",
     "date_added": "2017-06",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 670,
     "range": 7.33,
-    "attack_damage": { "p1": 400, "p11": 800 }
+    "attack_damage": 400
   },
   "JESSIE": {
     "id": "JESSIE",
@@ -98,10 +98,10 @@
     "description": "L'arme de Jessie tire des orbes d'énergie qui rebondissent d'un ennemi à l'autre. Son Super déploie une tourelle automatique adorable mais mortelle.",
     "image": "images/brawlers/16000007.png",
     "date_added": "2017-06",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 720,
     "range": 7.0,
-    "attack_damage": { "p1": 1120, "p11": 2240 }
+    "attack_damage": 1120
   },
   "NITA": {
     "id": "NITA",
@@ -111,10 +111,10 @@
     "description": "Nita frappe ses ennemis avec une onde de choc fulgurante. Son Super invoque un ours massif nommé Bruce qui se bat à ses côtés !",
     "image": "images/brawlers/16000008.png",
     "date_added": "2017-06",
-    "hp": { "p1": 3600, "p11": 7200 },
+    "hp": 3600,
     "speed": 720,
     "range": 6.67,
-    "attack_damage": { "p1": 1200, "p11": 2400 }
+    "attack_damage": 1200
   },
   "DYNAMIKE": {
     "id": "DYNAMIKE",
@@ -124,10 +124,10 @@
     "description": "Dynamike lance deux bâtons de dynamite qui explosent après un court délai. Son Super est un énorme baril d'explosifs qui fait d'énormes dégâts.",
     "image": "images/brawlers/16000009.png",
     "date_added": "2017-06",
-    "hp": { "p1": 2400, "p11": 4800 },
+    "hp": 2400,
     "speed": 670,
     "range": 7.0,
-    "attack_damage": { "p1": 700, "p11": 1400 }
+    "attack_damage": 700
   },
   "EL_PRIMO": {
     "id": "EL_PRIMO",
@@ -137,10 +137,10 @@
     "description": "El Primo donne une rafale de coups de poing redoutables à courte portée. Son Super lui permet de sauter et d'écraser ses adversaires.",
     "image": "images/brawlers/16000010.png",
     "date_added": "2017-06",
-    "hp": { "p1": 5200, "p11": 10400 },
+    "hp": 5200,
     "speed": 720,
     "range": 2.33,
-    "attack_damage": { "p1": 560, "p11": 1120 }
+    "attack_damage": 560
   },
   "MORTIS": {
     "id": "MORTIS",
@@ -150,10 +150,10 @@
     "description": "Mortis se précipite vers l'avant à chaque coup de pelle. Son Super invoque une nuée de chauves-souris qui draine la vie des ennemis.",
     "image": "images/brawlers/16000011.png",
     "date_added": "2017-06",
-    "hp": { "p1": 3200, "p11": 6400 },
+    "hp": 3200,
     "speed": 800,
     "range": 3.33,
-    "attack_damage": { "p1": 1200, "p11": 2400 }
+    "attack_damage": 1200
   },
   "CROW": {
     "id": "CROW",
@@ -163,10 +163,10 @@
     "description": "Crow lance trois dagues empoisonnées. En utilisant son Super, il s'envole et lance des dagues dans toutes les directions au décollage et à l'atterrissage.",
     "image": "images/brawlers/16000012.png",
     "date_added": "2017-06",
-    "hp": { "p1": 2400, "p11": 4800 },
+    "hp": 2400,
     "speed": 800,
     "range": 6.67,
-    "attack_damage": { "p1": 280, "p11": 560 }
+    "attack_damage": 280
   },
   "POCO": {
     "id": "POCO",
@@ -176,10 +176,10 @@
     "description": "Poco émet des ondes sonores mortelles avec sa guitare. Son Super soigne ses alliés et lui-même dans une large zone.",
     "image": "images/brawlers/16000013.png",
     "date_added": "2017-06",
-    "hp": { "p1": 3200, "p11": 6400 },
+    "hp": 3200,
     "speed": 720,
     "range": 6.33,
-    "attack_damage": { "p1": 560, "p11": 1120 }
+    "attack_damage": 560
   },
   "BO": {
     "id": "BO",
@@ -189,10 +189,10 @@
     "description": "Bo tire trois flèches explosives. Son Super déploie un trio de mines cachées qui explosent quand les ennemis marchent dessus.",
     "image": "images/brawlers/16000014.png",
     "date_added": "2017-06",
-    "hp": { "p1": 3600, "p11": 7200 },
+    "hp": 3600,
     "speed": 720,
     "range": 7.67,
-    "attack_damage": { "p1": 600, "p11": 1200 }
+    "attack_damage": 600
   },
   "PIPER": {
     "id": "PIPER",
@@ -202,10 +202,10 @@
     "description": "Les tirs de fusil-parapluie de Piper font plus de dégâts plus ils voyagent loin. Son Super lui permet de fuir en laissant des grenades derrière elle.",
     "image": "images/brawlers/16000015.png",
     "date_added": "2018-03",
-    "hp": { "p1": 2400, "p11": 4800 },
+    "hp": 2400,
     "speed": 720,
     "range": 10.0,
-    "attack_damage": { "p1": 2380, "p11": 4760 }
+    "attack_damage": 2380
   },
   "PAM": {
     "id": "PAM",
@@ -215,10 +215,10 @@
     "description": "Pam tire une large rafale de ferraille. Son Super déploie une tourelle qui soigne d'un flux continu elle-même et ses alliés proches.",
     "image": "images/brawlers/16000016.png",
     "date_added": "2018-03",
-    "hp": { "p1": 4200, "p11": 8400 },
+    "hp": 4200,
     "speed": 720,
     "range": 6.0,
-    "attack_damage": { "p1": 180, "p11": 360 }
+    "attack_damage": 180
   },
   "TARA": {
     "id": "TARA",
@@ -228,10 +228,10 @@
     "description": "Tara attaque en lançant trois cartes de tarot qui transpercent ses ennemis. Son Super est un trou noir qui aspire les adversaires avant d'exploser.",
     "image": "images/brawlers/16000017.png",
     "date_added": "2018-03",
-    "hp": { "p1": 3200, "p11": 6400 },
+    "hp": 3200,
     "speed": 720,
     "range": 7.0,
-    "attack_damage": { "p1": 560, "p11": 1120 }
+    "attack_damage": 560
   },
   "DARRYL": {
     "id": "DARRYL",
@@ -241,10 +241,10 @@
     "description": "Darryl tire une double rafale dévastatrice avec ses fusils. Son Super est une roulade rapide dans son tonneau qui rebondit sur les murs.",
     "image": "images/brawlers/16000018.png",
     "date_added": "2018-06",
-    "hp": { "p1": 3600, "p11": 7200 },
+    "hp": 3600,
     "speed": 720,
     "range": 3.67,
-    "attack_damage": { "p1": 640, "p11": 1280 }
+    "attack_damage": 640
   },
   "PENNY": {
     "id": "PENNY",
@@ -254,10 +254,10 @@
     "description": "L'attaque de Penny tire des pièces qui traversent les ennemis. Son Super déploie un canon qui bombarde les ennemis même à couvert.",
     "image": "images/brawlers/16000019.png",
     "date_added": "2018-06",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 670,
     "range": 7.67,
-    "attack_damage": { "p1": 1200, "p11": 2400 }
+    "attack_damage": 1200
   },
   "FRANK": {
     "id": "FRANK",
@@ -267,10 +267,10 @@
     "description": "Frank frappe le sol avec son marteau pour créer une onde de choc. Son Super est un coup massif qui étourdit tous les ennemis touchés.",
     "image": "images/brawlers/16000020.png",
     "date_added": "2018-09",
-    "hp": { "p1": 6400, "p11": 12800 },
+    "hp": 6400,
     "speed": 720,
     "range": 2.33,
-    "attack_damage": { "p1": 1200, "p11": 2400 }
+    "attack_damage": 1200
   },
   "GENE": {
     "id": "GENE",
@@ -280,10 +280,10 @@
     "description": "Geni utilise sa lampe magique pour tirer une boule d'énergie qui se divise. Son Super est une main magique qui attrape un ennemi et le tire vers lui.",
     "image": "images/brawlers/16000021.png",
     "date_added": "2018-12",
-    "hp": { "p1": 3600, "p11": 7200 },
+    "hp": 3600,
     "speed": 720,
     "range": 7.67,
-    "attack_damage": { "p1": 800, "p11": 1600 }
+    "attack_damage": 800
   },
   "TICK": {
     "id": "TICK",
@@ -293,10 +293,10 @@
     "description": "Tick jette des amas de mines. Son Super détache sa propre tête, qui se précipite vers l'ennemi le plus proche pour exploser !",
     "image": "images/brawlers/16000022.png",
     "date_added": "2019-03",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 670,
     "range": 7.0,
-    "attack_damage": { "p1": 560, "p11": 1120 }
+    "attack_damage": 560
   },
   "LEON": {
     "id": "LEON",
@@ -306,10 +306,10 @@
     "description": "Léon tire une volée rapide de lames. Son Super lui donne l'invisibilité totale pendant un court instant, idéal pour les attaques surprises.",
     "image": "images/brawlers/16000023.png",
     "date_added": "2018-09",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 800,
     "range": 4.67,
-    "attack_damage": { "p1": 440, "p11": 880 }
+    "attack_damage": 440
   },
   "ROSA": {
     "id": "ROSA",
@@ -319,10 +319,10 @@
     "description": "Cette botaniste assène une rafale de coups de poing perforants. Son Super l'enveloppe d'un bouclier de plantes qui réduit considérablement les dégâts.",
     "image": "images/brawlers/16000024.png",
     "date_added": "2019-04",
-    "hp": { "p1": 5200, "p11": 10400 },
+    "hp": 5200,
     "speed": 800,
     "range": 2.33,
-    "attack_damage": { "p1": 640, "p11": 1280 }
+    "attack_damage": 640
   },
   "CARL": {
     "id": "CARL",
@@ -332,10 +332,10 @@
     "description": "Carl lance sa pioche comme un boomerang. Son Super le fait tourbillonner frénétiquement en infligeant des dégâts à tous ceux qu'il touche.",
     "image": "images/brawlers/16000025.png",
     "date_added": "2019-05",
-    "hp": { "p1": 3600, "p11": 7200 },
+    "hp": 3600,
     "speed": 720,
     "range": 7.0,
-    "attack_damage": { "p1": 1120, "p11": 2240 }
+    "attack_damage": 1120
   },
   "BIBI": {
     "id": "BIBI",
@@ -345,10 +345,10 @@
     "description": "Bibi frappe fort avec sa batte et possède une jauge qui repousse les ennemis quand elle est chargée. Son Super crache une bulle rebondissante géante.",
     "image": "images/brawlers/16000026.png",
     "date_added": "2019-08",
-    "hp": { "p1": 4200, "p11": 8400 },
+    "hp": 4200,
     "speed": 720,
     "range": 2.67,
-    "attack_damage": { "p1": 1200, "p11": 2400 }
+    "attack_damage": 1200
   },
   "8_BIT": {
     "id": "8_BIT",
@@ -358,10 +358,10 @@
     "description": "Bien qu'il soit lent, A.R.K.A.D tire un faisceau laser très puissant. Son Super déploie un amplificateur qui augmente les dégâts de ses alliés.",
     "image": "images/brawlers/16000027.png",
     "date_added": "2019-09",
-    "hp": { "p1": 4200, "p11": 8400 },
+    "hp": 4200,
     "speed": 650,
     "range": 7.67,
-    "attack_damage": { "p1": 480, "p11": 960 }
+    "attack_damage": 480
   },
   "SANDY": {
     "id": "SANDY",
@@ -371,10 +371,10 @@
     "description": "Émeri jette du sable perçant. Son Super invoque une tempête de sable massive qui dissimule ses alliés et lui-même à l'intérieur.",
     "image": "images/brawlers/16000028.png",
     "date_added": "2019-11",
-    "hp": { "p1": 3200, "p11": 6400 },
+    "hp": 3200,
     "speed": 720,
     "range": 7.33,
-    "attack_damage": { "p1": 480, "p11": 960 }
+    "attack_damage": 480
   },
   "BEA": {
     "id": "BEA",
@@ -384,10 +384,10 @@
     "description": "Les tirs de sniper de Béa sont redoutables : si le premier touche, le suivant est surchargé. Son Super lance une colonie d'abeilles ralentissantes.",
     "image": "images/brawlers/16000029.png",
     "date_added": "2019-11",
-    "hp": { "p1": 2400, "p11": 4800 },
+    "hp": 2400,
     "speed": 720,
     "range": 9.0,
-    "attack_damage": { "p1": 880, "p11": 1760 }
+    "attack_damage": 880
   },
   "EMZ": {
     "id": "EMZ",
@@ -397,10 +397,10 @@
     "description": "Eliz@beth pulvérise de la laque toxique qui blesse sur la durée. Son Super crée une aura qui ralentit et blesse les ennemis proches.",
     "image": "images/brawlers/16000030.png",
     "date_added": "2019-12",
-    "hp": { "p1": 3200, "p11": 6400 },
+    "hp": 3200,
     "speed": 720,
     "range": 6.67,
-    "attack_damage": { "p1": 400, "p11": 800 }
+    "attack_damage": 400
   },
   "MR_P": {
     "id": "MR_P",
@@ -410,10 +410,10 @@
     "description": "Monsieur M. lance des valises qui rebondissent sur les obstacles. Son Super déploie une base générant des pingouins-porteurs à l'infini.",
     "image": "images/brawlers/16000031.png",
     "date_added": "2020-03",
-    "hp": { "p1": 3200, "p11": 6400 },
+    "hp": 3200,
     "speed": 720,
     "range": 7.0,
-    "attack_damage": { "p1": 960, "p11": 1920 }
+    "attack_damage": 960
   },
   "MAX": {
     "id": "MAX",
@@ -423,10 +423,10 @@
     "description": "Max court très vite et tire de nombreuses décharges rapides. Son Super booste sa vitesse de déplacement et celle de ses alliés proches.",
     "image": "images/brawlers/16000032.png",
     "date_added": "2020-01",
-    "hp": { "p1": 3200, "p11": 6400 },
+    "hp": 3200,
     "speed": 900,
     "range": 5.33,
-    "attack_damage": { "p1": 360, "p11": 720 }
+    "attack_damage": 360
   },
   "JACKY": {
     "id": "JACKY",
@@ -436,10 +436,10 @@
     "description": "Jacky saute sur son marteau-piqueur pour infliger des dégâts de zone autour d'elle sans avoir besoin de viser. Son Super attire les ennemis.",
     "image": "images/brawlers/16000034.png",
     "date_added": "2020-01",
-    "hp": { "p1": 5600, "p11": 11200 },
+    "hp": 5600,
     "speed": 720,
     "range": 2.67,
-    "attack_damage": { "p1": 400, "p11": 800 }
+    "attack_damage": 400
   },
   "GALE": {
     "id": "GALE",
@@ -449,10 +449,10 @@
     "description": "Gaël tire un mur de boules de neige. Son Super souffle une rafale de vent et de neige qui repousse violemment tous les ennemis.",
     "image": "images/brawlers/16000035.png",
     "date_added": "2020-03",
-    "hp": { "p1": 3200, "p11": 6400 },
+    "hp": 3200,
     "speed": 720,
     "range": 7.0,
-    "attack_damage": { "p1": 800, "p11": 1600 }
+    "attack_damage": 800
   },
   "NANI": {
     "id": "NANI",
@@ -462,10 +462,10 @@
     "description": "Nani tire trois orbes lumineux qui convergent vers une cible. Son Super lui permet de piloter à distance son ami explosif, Peep !",
     "image": "images/brawlers/16000036.png",
     "date_added": "2020-05",
-    "hp": { "p1": 2400, "p11": 4800 },
+    "hp": 2400,
     "speed": 720,
     "range": 8.33,
-    "attack_damage": { "p1": 640, "p11": 1280 }
+    "attack_damage": 640
   },
   "SPROUT": {
     "id": "SPROUT",
@@ -475,10 +475,10 @@
     "description": "Sprout lance des boules de graines rebondissantes. Son Super crée un mur de ronces impénétrable pour bloquer le passage.",
     "image": "images/brawlers/16000037.png",
     "date_added": "2020-06",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 670,
     "range": 7.67,
-    "attack_damage": { "p1": 680, "p11": 1360 }
+    "attack_damage": 680
   },
   "SURGE": {
     "id": "SURGE",
@@ -488,10 +488,10 @@
     "description": "L'attaque de Surge se divise au contact de l'ennemi. Son Super améliore ses statistiques de façon permanente au fil du match.",
     "image": "images/brawlers/16000038.png",
     "date_added": "2020-08",
-    "hp": { "p1": 3200, "p11": 6400 },
+    "hp": 3200,
     "speed": 720,
     "range": 6.67,
-    "attack_damage": { "p1": 680, "p11": 1360 }
+    "attack_damage": 680
   },
   "COLETTE": {
     "id": "COLETTE",
@@ -501,10 +501,10 @@
     "description": "Colette inflige des dégâts proportionnels à la santé actuelle de la cible. Son Super est une charge aller-retour qui frappe deux fois.",
     "image": "images/brawlers/16000039.png",
     "date_added": "2020-10",
-    "hp": { "p1": 3600, "p11": 7200 },
+    "hp": 3600,
     "speed": 800,
     "range": 6.67,
-    "attack_damage": { "p1": 680, "p11": 1360 }
+    "attack_damage": 680
   },
   "AMBER": {
     "id": "AMBER",
@@ -514,10 +514,10 @@
     "description": "Ambre crache un flot de flammes continu. Son Super projette une flasque de liquide inflammable qu'elle peut embraser.",
     "image": "images/brawlers/16000040.png",
     "date_added": "2020-12",
-    "hp": { "p1": 3600, "p11": 7200 },
+    "hp": 3600,
     "speed": 720,
     "range": 6.0,
-    "attack_damage": { "p1": 480, "p11": 960 }
+    "attack_damage": 480
   },
   "LOU": {
     "id": "LOU",
@@ -527,10 +527,10 @@
     "description": "Lou jette des cornets de glace qui gèlent progressivement l'ennemi. Son Super crée une patinoire glissante très difficile à traverser.",
     "image": "images/brawlers/16000041.png",
     "date_added": "2020-12",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 720,
     "range": 6.67,
-    "attack_damage": { "p1": 600, "p11": 1200 }
+    "attack_damage": 600
   },
   "BYRON": {
     "id": "BYRON",
@@ -540,10 +540,10 @@
     "description": "Byron tire des fléchettes qui soignent ses alliés ou empoisonnent ses ennemis. Son Super est une fiole qui a le même effet sur une large zone.",
     "image": "images/brawlers/16000042.png",
     "date_added": "2020-10",
-    "hp": { "p1": 2400, "p11": 4800 },
+    "hp": 2400,
     "speed": 670,
     "range": 8.33,
-    "attack_damage": { "p1": 640, "p11": 1280 }
+    "attack_damage": 640
   },
   "EDGAR": {
     "id": "EDGAR",
@@ -553,10 +553,10 @@
     "description": "Edgar donne des coups d'écharpe rapides et se soigne légèrement à chaque coup. Son Super (qui se charge tout seul) le fait bondir sur sa proie.",
     "image": "images/brawlers/16000043.png",
     "date_added": "2021-01",
-    "hp": { "p1": 4200, "p11": 8400 },
+    "hp": 4200,
     "speed": 800,
     "range": 2.33,
-    "attack_damage": { "p1": 640, "p11": 1280 }
+    "attack_damage": 640
   },
   "RUFFS": {
     "id": "RUFFS",
@@ -566,10 +566,10 @@
     "description": "Le Colonel Médor tire deux lasers parallèles qui rebondissent sur les murs. Son Super déploie un ravitaillement qui blesse les ennemis et améliore un allié.",
     "image": "images/brawlers/16000044.png",
     "date_added": "2021-03",
-    "hp": { "p1": 3600, "p11": 7200 },
+    "hp": 3600,
     "speed": 720,
     "range": 8.0,
-    "attack_damage": { "p1": 640, "p11": 1280 }
+    "attack_damage": 640
   },
   "STU": {
     "id": "STU",
@@ -579,10 +579,10 @@
     "description": "Stu tire des feux d'artifice. Toucher un ennemi recharge instantanément son Super, qui lui permet de faire une courte ruée enflammée.",
     "image": "images/brawlers/16000045.png",
     "date_added": "2021-04",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 800,
     "range": 6.67,
-    "attack_damage": { "p1": 840, "p11": 1680 }
+    "attack_damage": 840
   },
   "BELLE": {
     "id": "BELLE",
@@ -592,10 +592,10 @@
     "description": "Belle tire un éclair électrique qui rebondit d'une cible à l'autre. Son Super marque un ennemi, augmentant tous les dégâts qu'il subit.",
     "image": "images/brawlers/16000046.png",
     "date_added": "2021-06",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 720,
     "range": 9.0,
-    "attack_damage": { "p1": 1120, "p11": 2240 }
+    "attack_damage": 1120
   },
   "SQUEAK": {
     "id": "SQUEAK",
@@ -605,10 +605,10 @@
     "description": "Squeak jette des boules de bave qui collent aux ennemis et aux murs avant d'exploser. Son Super est une méga-bombe qui se divise en six petites bombes.",
     "image": "images/brawlers/16000047.png",
     "date_added": "2021-06",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 720,
     "range": 7.0,
-    "attack_damage": { "p1": 600, "p11": 1200 }
+    "attack_damage": 600
   },
   "GROM": {
     "id": "GROM",
@@ -618,10 +618,10 @@
     "description": "Grom lance un talkie-walkie explosif qui se divise en croix. Son Super est une bombe massive avec le même schéma mais qui détruit les murs.",
     "image": "images/brawlers/16000048.png",
     "date_added": "2021-08",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 670,
     "range": 9.0,
-    "attack_damage": { "p1": 840, "p11": 1680 }
+    "attack_damage": 840
   },
   "BUZZ": {
     "id": "BUZZ",
@@ -631,10 +631,10 @@
     "description": "Buzz donne des coups de sifflet à courte portée. Son Super lance une bouée de sauvetage qui s'accroche aux murs et aux ennemis pour le tirer vers eux et les étourdir.",
     "image": "images/brawlers/16000049.png",
     "date_added": "2021-08",
-    "hp": { "p1": 4200, "p11": 8400 },
+    "hp": 4200,
     "speed": 720,
     "range": 2.67,
-    "attack_damage": { "p1": 680, "p11": 1360 }
+    "attack_damage": 680
   },
   "GRIFF": {
     "id": "GRIFF",
@@ -644,10 +644,10 @@
     "description": "Griff lance des pièces de monnaie en éventail. Son Super projette des billets de banque tranchants qui reviennent vers lui comme des boomerangs.",
     "image": "images/brawlers/16000050.png",
     "date_added": "2021-10",
-    "hp": { "p1": 3200, "p11": 6400 },
+    "hp": 3200,
     "speed": 720,
     "range": 7.0,
-    "attack_damage": { "p1": 760, "p11": 1520 }
+    "attack_damage": 760
   },
   "ASH": {
     "id": "ASH",
@@ -657,10 +657,10 @@
     "description": "Ash frappe le sol avec son balai. En subissant ou infligeant des dégâts, sa jauge de rage se remplit, le rendant plus rapide et plus fort.",
     "image": "images/brawlers/16000051.png",
     "date_added": "2021-10",
-    "hp": { "p1": 5600, "p11": 11200 },
+    "hp": 5600,
     "speed": 720,
     "range": 2.67,
-    "attack_damage": { "p1": 560, "p11": 1120 }
+    "attack_damage": 560
   },
   "MEG": {
     "id": "MEG",
@@ -670,10 +670,10 @@
     "description": "Meg commence dans son mécha blindé. S'il est détruit, elle s'éjecte avec un petit pistolet, et doit charger son Super pour remonter dans un nouveau mécha.",
     "image": "images/brawlers/16000052.png",
     "date_added": "2021-11",
-    "hp": { "p1": 4200, "p11": 8400 },
+    "hp": 4200,
     "speed": 720,
     "range": 5.0,
-    "attack_damage": { "p1": 880, "p11": 1760 }
+    "attack_damage": 880
   },
   "LOLA": {
     "id": "LOLA",
@@ -683,10 +683,10 @@
     "description": "Lola tire une rafale d'étoiles avec son écharpe-renard. Son Super invoque un clone d'elle-même qui reproduit exactement ses mouvements et ses attaques.",
     "image": "images/brawlers/16000053.png",
     "date_added": "2022-03",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 720,
     "range": 7.67,
-    "attack_damage": { "p1": 480, "p11": 960 }
+    "attack_damage": 480
   },
   "FANG": {
     "id": "FANG",
@@ -696,10 +696,10 @@
     "description": "Fang donne de puissants coups de pied au corps à corps (et sa chaussure s'envole s'il rate). Son Super le fait bondir et rebondir sur plusieurs ennemis.",
     "image": "images/brawlers/16000054.png",
     "date_added": "2022-03",
-    "hp": { "p1": 3600, "p11": 7200 },
+    "hp": 3600,
     "speed": 800,
     "range": 2.67,
-    "attack_damage": { "p1": 1200, "p11": 2400 }
+    "attack_damage": 1200
   },
   "EVE": {
     "id": "EVE",
@@ -709,10 +709,10 @@
     "description": "Ève tire 3 œufs de tailles différentes et peut marcher sur l'eau ! Son Super déploie un gros œuf qui libère des petits aliens cherchant des cibles.",
     "image": "images/brawlers/16000056.png",
     "date_added": "2022-06",
-    "hp": { "p1": 3200, "p11": 6400 },
+    "hp": 3200,
     "speed": 720,
     "range": 7.0,
-    "attack_damage": { "p1": 600, "p11": 1200 }
+    "attack_damage": 600
   },
   "JANET": {
     "id": "JANET",
@@ -722,10 +722,10 @@
     "description": "L'attaque vocale de Janet augmente en portée et se rétrécit plus elle vise longtemps. Son Super lui permet de s'envoler en jetant des bombes au sol.",
     "image": "images/brawlers/16000057.png",
     "date_added": "2022-06",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 720,
     "range": 9.0,
-    "attack_damage": { "p1": 800, "p11": 1600 }
+    "attack_damage": 800
   },
   "BONNIE": {
     "id": "BONNIE",
@@ -735,10 +735,10 @@
     "description": "Bonnie tire de loin depuis son canon. Son Super la propulse hors du canon, changeant sa forme pour des attaques au corps à corps dévastatrices.",
     "image": "images/brawlers/16000058.png",
     "date_added": "2022-08",
-    "hp": { "p1": 2400, "p11": 4800 },
+    "hp": 2400,
     "speed": 720,
     "range": 9.67,
-    "attack_damage": { "p1": 1440, "p11": 2880 }
+    "attack_damage": 1440
   },
   "OTIS": {
     "id": "OTIS",
@@ -748,10 +748,10 @@
     "description": "Otis tire des gouttes d'encre avec son bras-tuyau. Son Super est une étoile de mer (Cil) qui se colle à un ennemi et l'empêche d'attaquer ou d'utiliser ses gadgets.",
     "image": "images/brawlers/16000059.png",
     "date_added": "2022-10",
-    "hp": { "p1": 2800, "p11": 5600 },
+    "hp": 2800,
     "speed": 720,
     "range": 8.0,
-    "attack_damage": { "p1": 480, "p11": 960 }
+    "attack_damage": 480
   },
   "SAM": {
     "id": "SAM",
@@ -761,10 +761,10 @@
     "description": "Sam commence chaque combat avec son Super chargé. Il lance ses gantelets pour infliger des dégâts, puis court plus vite pour les récupérer.",
     "image": "images/brawlers/16000060.png",
     "date_added": "2023-01",
-    "hp": { "p1": 4200, "p11": 8400 },
+    "hp": 4200,
     "speed": 800,
     "range": 3.67,
-    "attack_damage": { "p1": 1040, "p11": 2080 }
+    "attack_damage": 1040
   },
   "GUS": {
     "id": "GUS",
@@ -774,9 +774,9 @@
     "description": "Les attaques de Gus chargent une jauge qui déploie un esprit guérisseur au sol. Son Super donne un gros bouclier à lui-même ou à un allié.",
     "image": "images/brawlers/16000061.png",
     "date_added": "2022-08",
-    "hp": { "p1": 3200, "p11": 6400 },
+    "hp": 3200,
     "speed": 720,
     "range": 6.67,
-    "attack_damage": { "p1": 520, "p11": 1040 }
+    "attack_damage": 520
   }
 }
