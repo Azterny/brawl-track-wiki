@@ -75,7 +75,7 @@
       "description": "Darryl tire avec ses fusils à pompe tout autour de lui pendant qu'il roule avec son Super.",
       "icon": "https://brawlify.com/images/hypercharges/Darryl.png"
     }
-  }
+  },
   "FRANK": {
     "seismic_smash": {
       "name": "Écrasement Sismique",
@@ -166,7 +166,7 @@
       "description": "L'ombre de Colette fait l'aller-retour avec elle lors du Super, infligeant des dégâts supplémentaires massifs.",
       "icon": "https://brawlify.com/images/hypercharges/Colette.png"
     }
-  }
+  },
   "LOU": {
     "slushie_storm": {
       "name": "Tempête de Neige",
