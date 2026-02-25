@@ -1,0 +1,31 @@
+name: Mise à jour automatique des Brawlers
+on:
+  schedule:
+    - cron: '0 2 * * *' # S'exécute tous les jours à 2h du matin
+  workflow_dispatch: # Permet de le lancer manuellement avec un bouton
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout du code
+        uses: actions/checkout@v3
+
+      # (Optionnel) Ici, vous pouvez configurer Node.js pour lancer un script javascript 
+      # qui appellera l'API de Brawl Stars et écrasera "data/brawlers.json"
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          
+      # Exemple si vous créez un script scripts/fetch-data.js :
+      # - run: node scripts/fetch-data.js
+      
+      # Commit automatique si brawlers.json a été modifié
+      - name: Commit et Push des changements
+        run: |
+          git config --global user.name "BrawlOpédia Bot"
+          git config --global user.email "bot@brawl-track.com"
+          git add data/brawlers.json
+          git diff-index --quiet HEAD || git commit -m "🤖 Update automatique des Brawlers (API)"
+          git push
