@@ -17,7 +17,6 @@ const brawlersState = {
     }
 };
 
-// Ordre hiérarchique des raretés — Rare AVANT Super Rare
 const RARITY_ORDER = {
     'brawler de départ': 1,
     'rare': 2,
@@ -53,7 +52,7 @@ async function fetchJSON(file) {
         const r = await fetch('data/' + file);
         return await r.json();
     } catch (e) {
-        console.error('Erreur de chargement ' + file + ':', e);
+        console.warn('Fichier ' + file + ' non trouvé, utilisation de données vides.');
         return {};
     }
 }
@@ -124,10 +123,20 @@ function getBrawlerExtraHtml(brawler, sortBy) {
 }
 
 async function initApp() {
-    [db.brawlers, db.skins] = await Promise.all([
+    let rawBrawlers;
+    [rawBrawlers, db.skins] = await Promise.all([
         fetchJSON('brawlers.json'),
         fetchJSON('skins.json')
     ]);
+
+    // Rétrocompatibilité et adaptation au format API officiel
+    db.brawlers = {};
+    if (rawBrawlers && rawBrawlers.items) {
+        rawBrawlers.items.forEach(b => db.brawlers[b.id] = b);
+    } else {
+        db.brawlers = rawBrawlers || {};
+    }
+
     const params = new URLSearchParams(window.location.search);
     const page = params.get('page') || 'home';
     if (page === 'brawlers') {
@@ -143,8 +152,8 @@ function renderHome() {
 }
 
 function renderBrawlersPageLayout() {
-    const classes  = [...new Set(Object.values(db.brawlers).map(b => b.class))].filter(Boolean).sort();
-    const rarities = [...new Set(Object.values(db.brawlers).map(b => b.rarity))].filter(Boolean)
+    const classes  = [...new Set(Object.values(db.brawlers).map(b => b.class).filter(Boolean))].sort();
+    const rarities = [...new Set(Object.values(db.brawlers).map(b => b.rarity).filter(Boolean))]
                        .sort((a, b) => getRarityValue(a) - getRarityValue(b));
 
     let filtersHtml = '<div class="filter-group"><h4>Classes</h4>'
@@ -244,7 +253,7 @@ function updateBrawlersGrid() {
     });
 
     list = list.filter(function(b) {
-        if (brawlersState.search && !b.name.toLowerCase().includes(brawlersState.search.toLowerCase())) return false;
+        if (brawlersState.search && (!b.name || !b.name.toLowerCase().includes(brawlersState.search.toLowerCase()))) return false;
         if (brawlersState.filters.classes.size  > 0 && !brawlersState.filters.classes.has(b.class))   return false;
         if (brawlersState.filters.rarities.size > 0 && !brawlersState.filters.rarities.has(b.rarity)) return false;
         if (brawlersState.filters.hpMin    !== null && b.hp    && b.hp    < brawlersState.filters.hpMin)    return false;
@@ -255,9 +264,9 @@ function updateBrawlersGrid() {
     list.sort(function(a, b) {
         let res = 0;
         switch (brawlersState.sortBy) {
-            case 'name':       res = a.name.localeCompare(b.name, 'fr'); break;
+            case 'name':       res = (a.name||'').localeCompare(b.name||'', 'fr'); break;
             case 'rarity':     res = getRarityValue(a.rarity) - getRarityValue(b.rarity);
-                               if (!res) res = a.name.localeCompare(b.name, 'fr'); break;
+                               if (!res) res = (a.name||'').localeCompare(b.name||'', 'fr'); break;
             case 'class':      res = (a.class||'').localeCompare(b.class||'', 'fr');
                                if (!res) res = getRarityValue(a.rarity) - getRarityValue(b.rarity); break;
             case 'date_added': res = (a.date_added||'0000').localeCompare(b.date_added||'0000'); break;
@@ -325,11 +334,18 @@ function buildBrawlerCard(brawler) {
     const rarityClass = getRarityClass(brawler.rarity);
     const borderClass = rarityClass.replace('badge-', 'border-');
     const extraHtml   = getBrawlerExtraHtml(brawler, sortBy);
+    
+    // Génération automatique de l'image via CDN Brawlify si non fournie localement
+    const imageUrl = brawler.image || `https://cdn.brawlify.com/brawler/${brawler.id}.png`;
+    
+    // Badge classe uniquement s'il y a une classe
+    const classBadge = brawler.class ? `<span class="badge badge-basic">${brawler.class}</span>` : '';
+    const rarityBadge = brawler.rarity ? `<span class="badge ${rarityClass}">${brawler.rarity}</span>` : '';
+
     return '<div class="brawler-list-card" onclick="window.location.href=\'brawler.html?id=' + brawler.id + '\'">'
-        + '<img src="' + (brawler.image || 'images/ui/placeholder.svg') + '" alt="' + brawler.name + '" class="' + borderClass + '" onerror="this.src=\'images/ui/placeholder.svg\'; this.classList.remove(\'' + borderClass + '\')">'
+        + '<img src="' + imageUrl + '" alt="' + brawler.name + '" class="' + borderClass + '" onerror="this.src=\'images/ui/placeholder.svg\'; this.classList.remove(\'' + borderClass + '\')">'
         + '<div class="brawler-list-info"><h3>' + brawler.name + '</h3>'
-        + '<div class="badges-row"><span class="badge badge-basic">' + brawler.class + '</span>'
-        + '<span class="badge ' + rarityClass + '">' + brawler.rarity + '</span></div>'
+        + '<div class="badges-row">' + classBadge + rarityBadge + '</div>'
         + extraHtml + '</div></div>';
 }
 
