@@ -21,12 +21,11 @@ async function fetchJSON(file) {
         const r = await fetch('data/' + file);
         return await r.json();
     } catch (e) {
-        console.error('Erreur de chargement ' + file + ':', e);
+        console.warn('Fichier ' + file + ' introuvable, fallback activé.');
         return {};
     }
 }
 
-// Calcule la valeur d'une stat à un niveau donné (P1 + 10% par niveau au-delà de 1)
 function statAtLevel(base, level) {
     return Math.round(base * (1 + (level - 1) * 0.1));
 }
@@ -40,17 +39,34 @@ function formatSpeed(speed) {
     return 'Très rapide';
 }
 
+// Fonction refondue pour accepter les anciens objets et les nouveaux tableaux de l'API officielle
 function generateSectionHtml(items, sectionClass, sectionTitle, cardClass) {
-    if (!items || Object.keys(items).length === 0) return '';
+    if (!items) return '';
+    
+    // Convertit objet en array si nécessaire
+    let itemsArray = Array.isArray(items) ? items : Object.values(items);
+    if (itemsArray.length === 0) return '';
+
     let cardsHtml = '<div class="horizontal-scroll-container">';
-    for (const [, itemData] of Object.entries(items)) {
-        const iconHtml = itemData.icon
-            ? '<img src="' + itemData.icon + '" alt="" class="item-icon-inline" onerror="this.style.display=\'none\'">'
+    
+    for (const itemData of itemsArray) {
+        // Déduction automatique du dossier Brawlify
+        let brawlifyFolder = cardClass === 'starpower' ? 'star-power' : cardClass;
+        let iconUrl = itemData.icon || (itemData.id ? `https://cdn.brawlify.com/${brawlifyFolder}/${itemData.id}.png` : '');
+        
+        const iconHtml = iconUrl
+            ? `<img src="${iconUrl}" alt="" class="item-icon-inline" onerror="this.style.display='none'">`
             : '';
-        cardsHtml += '<div class="item-card ' + cardClass + '-card"><h4>' + iconHtml + itemData.name + '</h4><p>' + itemData.description + '</p></div>';
+            
+        // Fallback textuel pour l'API qui ne fournit pas toujours de descriptions
+        const description = itemData.description || "Description non disponible.";
+        const name = itemData.name || "Équipement";
+
+        cardsHtml += `<div class="item-card ${cardClass}-card"><h4>${iconHtml}${name}</h4><p>${description}</p></div>`;
     }
     cardsHtml += '</div>';
-    return '<div class="' + sectionClass + '"><h2 class="wiki-section-title">' + sectionTitle + '</h2>' + cardsHtml + '</div>';
+    
+    return `<div class="${sectionClass}"><h2 class="wiki-section-title">${sectionTitle}</h2>${cardsHtml}</div>`;
 }
 
 function formatDateSkin(dateStr) {
@@ -86,15 +102,10 @@ function generateSkinsHtml(skins) {
         + '</div>';
 }
 
-// ==========================================
-// SECTION STATISTIQUES
-// ==========================================
 function generateStatsHtml(brawler) {
     if (!brawler.hp && !brawler.attack_damage && !brawler.speed && !brawler.range) return '';
 
     const statsId = 'stats-brawler-' + brawler.id;
-
-    // Lignes de stats : [label, baseValue, unit, hasLevelScaling]
     const rows = [];
     if (brawler.hp)            rows.push({ label: '❤️ Points de Vie',    key: 'hp',            base: brawler.hp,            unit: '',       scales: true });
     if (brawler.attack_damage) rows.push({ label: '⚔️ Dégâts (attaque)', key: 'attack_damage', base: brawler.attack_damage, unit: '',       scales: true });
@@ -106,11 +117,9 @@ function generateStatsHtml(brawler) {
             ? ('<span class="stat-value" id="' + statsId + '-' + row.key + '">' + row.base.toLocaleString('fr-FR') + '</span>' + row.unit)
             : ('<span class="stat-value">' + (row.label2 || (row.base + row.unit)) + '</span>');
 
-        // Barre de progression (pour hp et attack_damage, basée sur les valeurs max connues)
         let barHtml = '';
         if (row.scales) {
-            const maxHp  = 7000, maxDmg = 2500;
-            const maxVal = row.key === 'hp' ? maxHp : maxDmg;
+            const maxVal = row.key === 'hp' ? 7000 : 2500;
             const pct    = Math.min(100, Math.round((row.base / maxVal) * 100));
             barHtml = '<div class="stat-bar-bg"><div class="stat-bar-fill" id="' + statsId + '-bar-' + row.key + '" style="width:' + pct + '%"></div></div>';
         }
@@ -121,7 +130,6 @@ function generateStatsHtml(brawler) {
             + '</div>';
     }).join('');
 
-    // Slider de niveau de pouvoir
     const sliderHtml = '<div class="power-level-slider">'
         + '<div class="power-level-header">'
         + '<span class="power-icon">&#9889;</span>'
@@ -144,14 +152,12 @@ function generateStatsHtml(brawler) {
         + '<div class="stats-grid" id="' + statsId + '">' + rowsHtml + '</div>'
         + '</div>';
 
-    // On attache le listener après insertion dans le DOM via un defer
     const scalingRows = rows.filter(function(r) { return r.scales; });
     setTimeout(function() {
         const slider = document.getElementById(statsId + '-slider');
         if (!slider) return;
         function updateStats(level) {
             document.getElementById(statsId + '-badge').textContent = 'P' + level;
-            // Mettre à jour les ticks
             for (let i = 1; i <= 11; i++) {
                 const tick = document.getElementById(statsId + '-tick-' + i);
                 if (tick) tick.classList.toggle('active', i === level);
@@ -159,7 +165,6 @@ function generateStatsHtml(brawler) {
             scalingRows.forEach(function(row) {
                 const el = document.getElementById(statsId + '-' + row.key);
                 if (el) el.textContent = statAtLevel(row.base, level).toLocaleString('fr-FR');
-                // Barre
                 const barEl = document.getElementById(statsId + '-bar-' + row.key);
                 if (barEl) {
                     const maxVal = row.key === 'hp' ? 14000 : 5000;
@@ -174,9 +179,6 @@ function generateStatsHtml(brawler) {
     return html;
 }
 
-// ==========================================
-// SECTION EQUILIBRAGE
-// ==========================================
 function generateEquilibrageHtml(balanceData) {
     if (!balanceData || Object.keys(balanceData).length === 0) return '';
 
@@ -238,9 +240,6 @@ function generateEquilibrageHtml(balanceData) {
         + '</div>';
 }
 
-// ==========================================
-// TOGGLE ÉQUILIBRAGE (global, appelé via onclick)
-// ==========================================
 function toggleEquilibrage() {
     const hidden = document.getElementById('eq-hidden-rows');
     const btn    = document.getElementById('eq-toggle-btn');
@@ -257,9 +256,6 @@ function toggleEquilibrage() {
     }
 }
 
-// ==========================================
-// INITIALISATION
-// ==========================================
 async function initBrawlerPage() {
     const params    = new URLSearchParams(window.location.search);
     const brawlerId = params.get('id');
@@ -269,7 +265,8 @@ async function initBrawlerPage() {
         return;
     }
 
-    const [brawlersData, gadgetsData, starpowersData, hyperchargesData, skinsData, equilibrageData] = await Promise.all([
+    // On charge tous les fichiers possibles pour garantir zéro bug, même avec l'ancienne base
+    const [rawBrawlers, gadgetsData, starpowersData, hyperchargesData, skinsData, equilibrageData] = await Promise.all([
         fetchJSON('brawlers.json'),
         fetchJSON('gadgets.json'),
         fetchJSON('starpowers.json'),
@@ -278,9 +275,16 @@ async function initBrawlerPage() {
         fetchJSON('equilibrage.json')
     ]);
 
+    let brawlersData = {};
+    if (rawBrawlers && rawBrawlers.items) {
+        rawBrawlers.items.forEach(b => brawlersData[b.id] = b);
+    } else {
+        brawlersData = rawBrawlers || {};
+    }
+
     const brawler = brawlersData[brawlerId];
     if (!brawler) {
-        brawlerContent.innerHTML = '<h2 style="color:#dc3545;">Brawler "' + brawlerId + '" introuvable.</h2>';
+        brawlerContent.innerHTML = '<h2 style="color:#dc3545;">Brawler introuvable.</h2>';
         return;
     }
 
@@ -288,24 +292,34 @@ async function initBrawlerPage() {
 
     const rarityClass = getRarityClass(brawler.rarity);
     const borderClass = rarityClass.replace('badge-', 'border-');
+    
+    // Génération automatique URL image Brawlify
+    const brawlerImage = brawler.image || `https://cdn.brawlify.com/brawler/${brawler.id}.png`;
+
+    const classBadge = brawler.class ? `<span class="badge badge-basic">${brawler.class}</span>` : '';
+    const rarityBadge = brawler.rarity ? `<span class="badge ${rarityClass}">${brawler.rarity}</span>` : '';
 
     let html = '<div class="wiki-btn-back">'
         + '<button class="btn-back" onclick="window.location.href=\'index.html?page=brawlers\'">&#x2B05; Retour à la liste</button>'
         + '</div>'
         + '<div class="brawler-top-section">'
-        + '<img src="' + (brawler.image || 'images/ui/placeholder.png') + '" alt="' + brawler.name + '" class="brawler-detail-icon ' + borderClass + '" onerror="this.src=\'images/ui/placeholder.png\'; this.classList.remove(\'' + borderClass + '\')">'
+        + '<img src="' + brawlerImage + '" alt="' + brawler.name + '" class="brawler-detail-icon ' + borderClass + '" onerror="this.src=\'images/ui/placeholder.png\'; this.classList.remove(\'' + borderClass + '\')">'
         + '<div class="brawler-info-left">'
         + '<h1>' + brawler.name + '</h1>'
-        + '<div class="brawler-badges">'
-        + '<span class="badge badge-basic">' + brawler.class + '</span>'
-        + '<span class="badge ' + rarityClass + '">' + brawler.rarity + '</span>'
-        + '</div></div>'
-        + '<div class="brawler-desc-right">' + brawler.description + '</div>'
+        + '<div class="brawler-badges">' + classBadge + rarityBadge + '</div></div>'
+        + '<div class="brawler-desc-right">' + (brawler.description || "") + '</div>'
         + '</div>';
 
-    html += generateSectionHtml(gadgetsData[brawlerId],      'section-gadget',      'GADGETS',        'gadget');
-    html += generateSectionHtml(starpowersData[brawlerId],   'section-starpower',   'POUVOIRS STARS', 'starpower');
-    html += generateSectionHtml(hyperchargesData[brawlerId], 'section-hypercharge', 'HYPERCHARGE',    'hypercharge');
+    // Utilise soit les tableaux natifs du nouveau JSON API, soit les anciens fichiers JSON externes (Rétrocompatibilité parfaite)
+    html += generateSectionHtml(brawler.gadgets || gadgetsData[brawlerId],           'section-gadget',      'GADGETS',        'gadget');
+    html += generateSectionHtml(brawler.starPowers || starpowersData[brawlerId],     'section-starpower',   'POUVOIRS STARS', 'starpower');
+    html += generateSectionHtml(brawler.hyperCharges || hyperchargesData[brawlerId], 'section-hypercharge', 'HYPERCHARGE',    'hypercharge');
+    
+    // Ajout section gears si présente dans la nouvelle API
+    if (brawler.gears) {
+        html += generateSectionHtml(brawler.gears, 'section-gear', 'ÉQUIPEMENTS', 'gear');
+    }
+
     html += generateStatsHtml(brawler);
     html += generateSkinsHtml(skinsData[brawlerId]);
     html += generateEquilibrageHtml(equilibrageData[brawlerId]);
